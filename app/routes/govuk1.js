@@ -12,7 +12,7 @@ router.use((req, res, next) => {
 
 
 // Page 1
-router.post('/version1/page1', function(req, res) {
+router.post('/govuk1/page1', function(req, res) {
   if (req.body['page1'] === 'yes') {
     res.redirect('page2');
   } else {
