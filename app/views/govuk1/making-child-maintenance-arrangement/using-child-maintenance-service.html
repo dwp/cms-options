@@ -1,0 +1,248 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-breadcrumbs ">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/browse/births-deaths-marriages">Births, deaths, marriages and care</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="https://www.gov.uk/browse/births-deaths-marriages/child-adoption">Having a child, parenting and adoption</a>
+    </li>
+  </ol>
+</div>
+
+<h1 class="govuk-heading-xl">Making a child maintenance<br> arrangement</h1>
+
+
+<h2 class="govuk-body-m">Contents</h2>
+<ul class="govuk-list">
+  <li>
+    — <a class="govuk-link" href="overview">Overview</a>
+  </li>
+  <li>
+    — <a class="govuk-link" href="arrange-child-maintenance-yourself">Arrange child maintenance yourself</a>
+  </li>
+  <li>
+    — Use the Child Maintenance Service
+  </li>
+</ul>
+
+<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+
+
+              <h2 class="govuk-heading-m">Using the Child Maintenance Service</h2>
+              <p class="govuk-body">The Child Maintenance Service is for parents who have not been able to make a <a class="govuk-link" href="arrange-child-maintenance-yourself">private arrangement</a> about how their child’s living costs will be paid. The payments are a fixed amount on a schedule.</p>
+              <p class="govuk-body">Once the Child Maintenance Service calculates the maintenance amount, <a class="govuk-link" href="https://www.gov.uk/manage-child-maintenance-case">payments</a> are usually managed between parents. The payments are fixed amounts paid on a schedule.</p>
+              <p class="govuk-body">If you use the service to collect and transfer payments, you’ll pay a fee each time you make or receive a payment.</p>
+              <p class="govuk-body">The Child Maintenance Service can:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  <a class="govuk-link" href="https://www.gov.uk/how-child-maintenance-is-worked-out">work out</a> child maintenance payment amounts (you can do this yourself with the <a class="govuk-link" href="https://www.gov.uk/calculate-child-maintenance">calculator</a>)
+                </li>
+                <li>
+                  arrange for the other parent to pay child maintenance and <a class="govuk-link" href="https://www.gov.uk/manage-child-maintenance-case/nonpayment-what-happens">take action</a> if payments are not made
+                </li>
+                <li>
+                  help find the other parent (they’ll need information from you and will not be able to set up a case if they cannot be found)
+                </li>
+                <li>
+                  sort out <a class="govuk-link" href="https://www.gov.uk/manage-child-maintenance-case/disagreements-about-parentage">disagreements about parentage</a>
+                </li>
+                <li>
+                  look at the payments if <a class="govuk-link" href="https://www.gov.uk/manage-child-maintenance-case/changes-you-need-to-report">changes in parents’ circumstances</a> are reported
+                </li>
+              </ul>
+              <p class="govuk-body">You can switch to <a class="govuk-link" href="arrange-child-maintenance-yourself">arranging child maintenance yourself</a> later on.</p>
+
+
+              <h2 class="govuk-heading-m">If you’ve experienced domestic abuse or controlling behaviour from your child’s other parent</h2>
+              <p class="govuk-body">If you’re worried about your child’s other parent contacting you, tell the Child Maintenance Service. You do not need to be in contact with the other parent.</p>
+              <p class="govuk-body">Tell the Child Maintenance Service if it’s not safe for the other parent to know your location or personal information, for example if you’ve changed your name.</p>
+
+              <h3 class="govuk-heading-s">Getting payments without sharing your location</h3>
+              <p class="govuk-body">There are ways to get payments from your child’s other parent without sharing your location.</p>
+              <p class="govuk-body">You can ask your bank to set up a ‘non-geographical’ bank account if you do not want the other parent to know your address. Ask the Child Maintenance Service to give you a letter to explain why you need it.</p>
+              <p class="govuk-body">You can also set up a pre-payment card which is not connected to a bank account. The paying parent can set up a standing order to your pre-payment card.</p>
+
+              <h2 class="govuk-heading-m">Eligibility</h2>
+              <p class="govuk-body">Your child needs to be under 16 (or under 20 if they stay in <a class="govuk-link" href="https://www.gov.uk/child-benefit-16-19">approved education or training)</a>.</p>
+              <p class="govuk-body">You need to live in the UK as your main home and have the right to live here.</p>
+              <p class="govuk-body">You can apply if you’re:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  either parent (you do not need to live with the child)
+                </li>
+                <li>
+                  a grandparent or other guardian of the child
+                </li>
+                <li>
+                  a child over 12 living in Scotland
+                </li>
+              </ul>
+              <p class="govuk-body">If you’re in prison or a full-time student with no income, you do not have to pay child maintenance - there’s no need to apply.</p>
+              <div class="govuk-inset-text">
+                <p class="govuk-body">cannot use this service if you have an existing consent order approved by a court that is either less than a year old or made before 3 March 2003.</p>
+              </div>
+
+              <h3 class="govuk-heading-s">If one of the parents lives outside the UK<h3>
+              <p class="govuk-body">You cannot apply if the child and the parent with main day-to-day care live outside the UK.</p>
+              <p class="govuk-body">The service can only help <a class="govuk-link" href="https://www.gov.uk/child-maintenance-if-one-parent-lives-abroad/other-parent-works-for-british-organisation">if the paying parent works outside the UK for a British organisation</a>.</p>
+
+              <h2 class="govuk-heading-m">Fees<h2>
+              <p class="govuk-body">The application fee is £20.</p>
+              <p class="govuk-body">You will not have to pay this if you:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  have experienced domestic abuse
+                </li>
+                <li>
+                  are under 19 years old
+                </li>
+                <li>
+                  live in Northern Ireland
+                </li>
+              </ul>
+
+              <h2 class="govuk-heading-m">How to apply<h2>
+              <p class="govuk-body">Contact Child Maintenance Options before you apply.</p>
+              <p class="govuk-body">They’ll discuss your maintenance arrangements with you, give you a reference number and explain how to apply.</p>
+              <div class="govuk-inset-text">
+                <strong>Child Maintenance Options</strong><br>
+                Telephone: 0800 953 0191<br>
+                <a href="https://www.timeforstorm.com/IM/endpoint/guest/5465/CMO%20Webchat/7281ae0010fa609cec9d53f872458b01ecddd9ce016f3c464a3c8d2a97f58026">Webchat</a><br>
+                <a href="https://www2.dwp.gov.uk/contact-cmoptions/en/new-contact.asp">Online form</a><br>
+                Monday to Friday, 8am to 8pm<br>
+                <br>
+                <a href="https://dwpcmgoptions.signvideo.net">Video relay service</a> for British Sign Language (BSL) users - <a href="https://www.youtube.com/watch?v=Osx7FFxFpNY">check you can use the service</a><br>
+                Monday to Friday, 8am to 5pm<br>
+                <br>
+                Welsh language: 0800 408 0308<br>
+                Monday to Friday, 8am to 5pm<br>
+                <a href="https://www.gov.uk/call-charges">Find out about call charges</a>
+              </div>
+              <div class="govuk-inset-text">
+                There are different contact details if you live in <a href="https://www.nidirect.gov.uk/contacts/contacts-az/child-maintenance-choices">Northern Ireland</a>.
+              </div>
+
+
+              <h3 class="govuk-heading-s">What you'll need to provide<h2>
+              <p class="govuk-body">You’ll need to give information about you and your family, for example:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  details about the child you’re applying for - including the full names of their parents
+                </li>
+                <li>
+                  your National Insurance number
+                </li>
+                <li>
+                  your bank account details (tell the Child Maintenance Service if it’s not safe to tell the other parent your name, if you’ve changed it, or location)
+                </li>
+              </ul>
+
+              <h3 class="govuk-heading-s">How your information is used<h2>
+              <p class="govuk-body">Your information is used to set up and manage child maintenance payments, and sometimes to try to find the paying parent.</p>
+              <p class="govuk-body">The Child Maintenance Service will share your name and your child’s name with the other parent. They will not share your address.</p>
+              <p class="govuk-body">They may share your contact details with other government organisations, debt collection agencies or the courts. They will not share details of your case.</p>
+              <p class="govuk-body">If the Child Maintenance Service cannot get the information from either parent, they might ask others, for example:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>
+                  the paying parent’s employer
+                </li>
+                <li>
+                  government organisations like Jobcentre Plus
+                </li>
+                <li>
+                  prison services or local councils
+                </li>
+                <li>
+                  the paying parent’s bank or building society
+                </li>
+              </ul>
+
+              <br>
+              <br>
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+              <h2 class="govuk-heading-s">&#8592; Previous</h2>
+              <p class="govuk-body"><a class="govuk-link" href="arrange-child-maintenance-yourself">Arrange child maintenance yourself</a></p>
+
+
+                <br>
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+              <h2 class="govuk-heading-s">Explore the topic</h2>
+              <ul class="govuk-list">
+                <li>
+                  <a class="govuk-link" href="https://www.gov.uk/browse/births-deaths-marriages/child-adoption">Having a child, parenting and adoption</a>
+                </li>
+                <li>
+                  <a class="govuk-link" href="https://www.gov.uk/browse/births-deaths-marriages/marriage-divorce">Marriage, civil partnership and divorce</a>
+                </li>
+                <li>
+                  <a class="govuk-link" href="https://www.gov.uk/browse/childcare-parenting/divorce-separation-legal">Divorce, separation and legal issues</a>
+                </li>
+              </ul>
+
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h2 class="govuk-heading-m" id="subsection-title">
+            Brexit
+          </h2>
+            <a class="govuk-link" href="https://www.gov.uk/transition">Check how the new Brexit rules affect you</a>
+        </div>
+      </div>
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related content
+        </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list govuk-!-font-size-16">
+              <li>
+                <a class="govuk-link" href="https://www.gov.uk/manage-child-maintenance-case">
+                  Manage your Child Maintenance Service case
+                </a>
+              </li>
+              <li>
+                <a class="govuk-link" href="https://www.gov.uk/calculate-child-maintenance">
+                  Calculate your child maintenance
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+
+
+
+
+    </div>
+
+</main>
+</div>
+
+{% endblock %}
