@@ -1,0 +1,80 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                                <h1 class="govuk-fieldset__heading">
+                                    Your options
+                                </h1>
+                            </legend>
+
+
+                            <h2 class="govuk-heading-m">Use the Child Maintenance Service</h2>
+
+                            <p class="govuk-body">You can use the Child Maintenance Service to arrange child maintenance for you. This is less flexible than making your own arrangement because they will decide how much maintenance will be paid.</p>
+                            <p class="govuk-body">Using the Child Maintenance Service might be a good option for if you don't feel safe dealing with the other parent, or you don't think they will pay.</p>
+
+
+                            <p class="govuk-body">The Child Maintenance Service will:</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>
+                                work out child maintenance payment amounts
+                              </li>
+                              <li>
+                                arrange for the other parent to pay
+                              </li>
+                              <li>
+                              take action if payments are not made
+                              </li>
+                              <li>
+                                help find the other parent if you've lost contact
+                              </li>
+                              <li>
+                                look at the payments if changes in parents’ circumstances are reported
+                              </li>
+                              <li>
+                                help if someone denies they’re the parent of a child
+                              </li>
+                            </ul>
+
+                            <p class="govuk-body"><a href="http://localhost:3000/govuk2/making-child-maintenance-arrangement/using-child-maintenance-service" target="_blank" rel="noopener noreferrer">Find out more about the Child Maintenance Service</a> (opens in a new window)</p>
+
+                            <!--end-->
+                        <a href="choice" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                            Continue
+
+                        </a>
+                </form>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            </div>
+    </main>
+    </div>
+    {% endblock %}
