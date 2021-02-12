@@ -12,7 +12,7 @@ router.use((req, res, next) => {
 
 
 // Choice
-router.post('/experimental1/choice', function(req, res) {
+router.post('/cycle2/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
   } else {
@@ -22,7 +22,7 @@ router.post('/experimental1/choice', function(req, res) {
 
 
 // Apply
-router.post('/experimental1/apply', function(req, res) {
+router.post('/cycle2/apply', function(req, res) {
   if (req.body['apply-type'] === 'online') {
     res.redirect('intro');
   } else {
