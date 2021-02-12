@@ -16,7 +16,7 @@ router.post('/experimental1/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
   } else {
-    res.redirect('intro');
+    res.redirect('apply');
   }
 });
 
