@@ -1,6 +1,5 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Feedback banner start-->
-
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -28,43 +27,51 @@
                                 </h1>
                             </legend>
 
+                            <h2 class="govuk-heading-m">Make your own child maintenance arrangement</h2>
 
-                            <h2 class="govuk-heading-m">Use the Child Maintenance Service</h2>
-
-                            <p class="govuk-body">You can use the Child Maintenance Service to arrange child maintenance for you. This is less flexible than making your own arrangement because they will decide how much maintenance will be paid.</p>
-                            <p class="govuk-body">Using the Child Maintenance Service might be a good option for if you don't feel safe dealing with the other parent, or you don't think they will pay.</p>
-
-
-                            <p class="govuk-body">The Child Maintenance Service will:</p>
+                            <p class="govuk-body">You can make your own maintenance arrangements between parents. No one else has to be involved and it can whatever you agree. For example, you can:</p>
                             <ul class="govuk-list govuk-list--bullet">
                               <li>
-                                work out child maintenance payment amounts
+                                decide how much one parent will pay
                               </li>
                               <li>
-                                arrange for the other parent to pay
+                                change the amount when needed
                               </li>
                               <li>
-                              take action if payments are not made
+                                decide how often payments will be made
                               </li>
                               <li>
-                                help find the other parent if you've lost contact
-                              </li>
-                              <li>
-                                look at the payments if changes in parents’ circumstances are reported
-                              </li>
-                              <li>
-                                help if someone denies they’re the parent of a child
+                                agree for a parent to pay for specific things, like school uniforms or trips
                               </li>
                             </ul>
 
-                            <p class="govuk-body"><a href="http://localhost:3000/govuk2/making-child-maintenance-arrangement/using-child-maintenance-service" target="_blank" rel="noopener noreferrer">Find out more about the Child Maintenance Service (opens in new tab)</a></p>
+                            <p class="govuk-body">Making your own arrangement might not work if:</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>
+                                you don’t think the other parent will pay
+                              </li>
+                              <li>
+                                you don’t feel safe dealing with the other parent
+                              </li>
+                            </ul>
+
+                            <p class="govuk-body"><a href="http://localhost:3000/govuk2/making-child-maintenance-arrangement/arrange-child-maintenance-yourself" target="_blank" rel="noopener noreferrer">Find out more about making your own arrangement (opens in new tab)</a></p>
 
                             <!--end-->
-                        <a href="choice" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                        <a href="option2" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
                             Continue
 
                         </a>
                 </form>
+                </div>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-button--sticky">
+                    <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                        data-module="govuk-button">
+                        Hide this page
+                    </a>
                 </div>
             </div>
 
@@ -74,7 +81,6 @@
 
 
 
-            </div>
     </main>
     </div>
     {% endblock %}
