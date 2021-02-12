@@ -31,4 +31,25 @@ router.post('/cycle2/apply', function(req, res) {
 });
 
 
+// Choice NOURN
+router.post('/cycle2/no-urn/choice', function(req, res) {
+  if (req.body['choice'] === 'private') {
+    res.redirect('private');
+  } else {
+    res.redirect('apply');
+  }
+});
+
+
+// Apply NOURN
+router.post('/cycle2/no-urn/apply', function(req, res) {
+  if (req.body['apply-type'] === 'online') {
+    res.redirect('intro');
+  } else {
+    res.redirect('phone');
+  }
+});
+
+
+
 module.exports = router;
