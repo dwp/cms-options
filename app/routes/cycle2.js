@@ -30,6 +30,24 @@ router.post('/cycle2/apply', function(req, res) {
   }
 });
 
+// Live in UK
+router.post('/cycle2/live-in-uk', function(req, res) {
+  if (req.body['live-uk'] === 'yes') {
+    res.redirect('court-order');
+  } else {
+    res.redirect('not-eligible-uk');
+  }
+});
+
+// Court Order
+router.post('/cycle2/court-order', function(req, res) {
+  if (req.body['maintenance-liability'] === 'yes') {
+    res.redirect('not-eligible-court');
+  } else {
+    res.redirect('eligible');
+  }
+});
+
 
 // Choice NOURN
 router.post('/cycle2/no-urn/choice', function(req, res) {
