@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                                <h1 class="govuk-fieldset__heading">
+                                    Get more information.
+                                </h1>
+                            </legend>
+
+                            <p class="govuk-body">Short generic intro text to page.</p>
+
+                            <h3 class="govuk-heading-m"> On the internet</h3>
+                            <p class="govuk-body">You can read about different types of things online.</p>
+                            <p class="govuk-body">Make it clear that the links will open in a new tab and you can come back here whenever you want.</p>
+                            <p class="govuk-body"><a href="">Making your own arrangement</a>
+                            <span class="govuk-hint"> Something about what this stuff is and what you'll get out of it.</span></p>
+
+                            <p class="govuk-body"><a href="">Using the Child Maintenance Service</a>
+                            <span class="govuk-hint"> Something about what this stuff is and what you'll get out of it.</span></p>
+
+                            <p class="govuk-body"><a href="">The calculator</a>
+                            <span class="govuk-hint"> Something about what this stuff is and what you'll get out of it.</span></p>
+
+                            <h3 class="govuk-heading-m"">Talk to someone</h3>
+                            <p class="govuk-body">You can get in touch and talk to a person etc.</p>
+                            <div class="govuk-inset-text">
+                              Telephone: 0800 953 0191<br>
+                              Monday to Friday, 8am to 8pm<br>
+                              <br>
+                              <a href="https://dwpcmgoptions.signvideo.net">Video relay service</a> for British Sign Language (BSL) users - <a href="https://www.youtube.com/watch?v=Osx7FFxFpNY">check you can use the service</a><br>
+                              Monday to Friday, 8am to 5pm<br>
+                              <br>
+                              Welsh language: 0800 408 0308<br>
+                              Monday to Friday, 8am to 5pm<br>
+                              <a href="https://www.gov.uk/call-charges">Find out about call charges</a>
+                            </div>
+
+                            <!--end-->
+                </form>
+                </div>
+
+
+
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-button--sticky">
+                    <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                        data-module="govuk-button">
+                        Hide this page
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+
+    </main>
+    </div>
+    {% endblock %}

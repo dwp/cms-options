@@ -15,8 +15,10 @@ router.use((req, res, next) => {
 router.post('/cycle4/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
-  } else {
+  } else if (req.body['choice'] === 'use-cms'){
     res.redirect('apply');
+  } else {
+    res.redirect('help');
   }
 });
 
@@ -53,8 +55,10 @@ router.post('/cycle4/court-order', function(req, res) {
 router.post('/cycle4/no-urn/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
-  } else {
+  } else if (req.body['choice'] === 'use-cms'){
     res.redirect('apply');
+  } else {
+    res.redirect('help');
   }
 });
 
