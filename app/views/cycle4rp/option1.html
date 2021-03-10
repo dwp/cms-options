@@ -1,0 +1,87 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl govuk-!-margin-bottom-9">
+                                <h1 class="govuk-fieldset__heading">
+                                    Your options
+                                </h1>
+                            </legend>
+
+                            <h2 class="govuk-heading-m">Make your own child maintenance arrangement</h2>
+
+                            <p class="govuk-body">You can make your own maintenance arrangements between parents. No one else has to be involved and it can be whatever you agree. For example, you and the other parent can:</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>
+                                decide how much you will be paid
+                              </li>
+                              <li>
+                                change the amount when needed
+                              </li>
+                              <li>
+                                decide how often you will be paid
+                              </li>
+                              <li>
+                                agree for the other parent to pay for specific things, like school uniforms or trips
+                              </li>
+                            </ul>
+
+                            <p class="govuk-body">Making your own arrangement might be a good option if:</p>
+                            <ul class="govuk-list govuk-list--bullet">
+                              <li>
+                                you feel safe dealing with the other parent
+                              </li>
+                              <li>
+                                the other parent will cooperate to make an arrangement
+                              </li>
+                              <li>
+                                you think the other parent will stick to an agreement
+                              </li>
+                            </ul>
+
+                            <!--end-->
+                        <a href="option2" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                            Continue
+
+                        </a>
+                </form>
+                </div>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-button--sticky">
+                    <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                        data-module="govuk-button">
+                        Hide this page
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+    </main>
+    </div>
+    {% endblock %}
