@@ -1,0 +1,63 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--l ">
+                                <h1 class="govuk-fieldset__heading">
+                                    You will need to apply by phone if you:
+                                </h1>
+                            </legend>
+
+                            <ul class="govuk-list govuk-list--bullet">
+                                <li>do not have a UK bank account</li>
+                                <li>do not have a National Insurance number</li>
+                                <li>have more than 9 children</li>
+                                <li>have an active case with the Child Maintenance Service for the same parent that you're applying for now</li>
+                            </ul>
+                          </fieldset>
+
+            <p class="govuk-body"><a href="" target="_blank" rel="noopener noreferrer">I need to apply by phone</a></p>
+
+
+
+                    </div>
+                    <!--end-->
+                    <button type="submit" class="govuk-button">
+                        Continue online
+                    </button>
+                </form>
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-button--sticky">
+                    <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                        data-module="govuk-button">
+                        Hide this page
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+{% endblock %}
