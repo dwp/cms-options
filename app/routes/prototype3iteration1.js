@@ -51,12 +51,44 @@ router.post('/prototype3iteration1/where-do-you-live', function(req, res) {
 
 router.post('/prototype3iteration1/where-does-the-other-parent-live', function(req, res) {
   if (req.body['where-does-the-other-parent-live'] === 'op-lives-in-uk') {
-    res.redirect('have-you-had-a-court-decision');
+    res.redirect('will-you-be-paying-or-receiving');
   } else {
     res.redirect('you-need-to-call');
   }
 });
 
+
+// will-you-be-paying-or-receiving
+
+router.post('/prototype3iteration1/will-you-be-paying-or-receiving', function(req, res) {
+  if (req.body['will-you-be-paying-or-receiving'] === 'paying') {
+    res.redirect('you-need-to-call');
+  } else {
+    res.redirect('have-you-had-a-court-decision');
+  }
+});
+
+
+// have-you-had-a-court-decision
+
+router.post('/prototype3iteration1/have-you-had-a-court-decision', function(req, res) {
+  if (req.body['have-you-had-a-court-decision'] === 'yes') {
+    res.redirect('you-need-to-call');
+  } else {
+    res.redirect('how-do-you-want-to-apply');
+  }
+});
+
+
+// how-do-you-want-to-apply
+
+router.post('/prototype3iteration1/how-do-you-want-to-apply', function(req, res) {
+  if (req.body['how-do-you-want-to-apply'] === 'online') {
+    res.redirect('eligibility-for-online-application');
+  } else {
+    res.redirect('apply-by-phone');
+  }
+});
 
 
 // Routes end
