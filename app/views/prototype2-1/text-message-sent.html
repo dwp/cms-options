@@ -24,18 +24,18 @@
 
 
                 <h1 class="govuk-heading-l">
-                  An email has been sent to:<br>
+                  A text message has been sent to:<br>
                   <span>
-                    {% if data['contact-by-email'] %}
-                    {{data['contact-by-email']}}
+                    {% if data['contact-by-text'] %}
+                    {{data['contact-by-text']}}
                     {% else %}
-                    anthony@email.com
+                    07123 456 789
                     {% endif %}
                   </span>
                 </h1>
 
-                <p class="govuk-body">The sender: will be child-maintenance@dwp.gov.uk</p>
-                <p class="govuk-body">The email will include:</p>
+                <p class="govuk-body">The sender: will be 'DWP Child Maintenance'</p>
+                <p class="govuk-body">The text message will include:</p>
                 <ul class="govuk-list govuk-list--bullet">
                   <li>
                     Your application reference number
@@ -44,7 +44,7 @@
                     A link to complete your application online
                   </li>
                   <li>
-                    Information about what you'll need before you start
+                    Information about what you need before you start
                   </li>
                 </ul>
 
