@@ -1,0 +1,133 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+
+
+            <h1 class="govuk-heading-l">Your options</h1>
+
+
+            <h2 class="govuk-heading-m">Make your own arrangement</h2>
+
+
+            <p class="govuk-body">You can make your own maintenance arrangements between parents. No one else has to be involved and it can be whatever you agree. For example, you and the other parent can:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                decide how much you will pay or receive
+              </li>
+              <li>
+                change the amount when needed
+              </li>
+              <li>
+                decide how often payments will be made
+              </li>
+              <li>
+                agree for a parent to pay for specific things, like school uniforms or trips
+              </li>
+            </ul>
+
+
+            <p class="govuk-body">Making your own arrangement might be a good option if:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                you feel safe dealing with the other parent
+              </li>
+              <li>
+                you think the other parent will stick to an agreement
+              </li>
+            </ul>
+
+
+            <h2 class="govuk-heading-m">Use the Child Maintenance Service</h2>
+
+
+            <p class="govuk-body">The Child Maintenance Service may be able to arrange child maintenance for you. This is less flexible than making your own arrangement because the calculation is a fixed amount based on the paying parent’s earnings.</p>
+
+
+            <p class="govuk-body">The Child Maintenance Service will:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+                work out child maintenance payment amounts
+              </li>
+              <li>
+                arrange for payments to be made between the parents
+              </li>
+              <li>
+                take action if payments are not made
+              </li>
+              <li>
+                help find the other parent if you've lost contact
+              </li>
+              <li>
+                recalculate the payment amount if changes in parents’ circumstances are reported
+              </li>
+              <li>
+                help if someone denies they’re the parent of a child
+              </li>
+            </ul>
+
+
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-fieldset__legend--m ">
+                <h2 class="govuk-fieldset__heading">
+                  What do you want to do?
+                </h2>
+              </legend>
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="make-own-arrangement" name="choice" type="radio" value="make-own-arrangement">
+                  <label class="govuk-label govuk-radios__label" for="make-own-arrangement">
+                    I want to make my own child maintenance arrangement
+                  </label> </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="use-cms" name="choice" type="radio" value="use-cms">
+                    <label class="govuk-label govuk-radios__label" for="use-cms">
+                      I want to use the Child Maintenance Service
+                    </label> </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="get-more-information" name="choice" type="radio" value="get-more-information">
+                      <label class="govuk-label govuk-radios__label" for="get-more-information">
+                        I want more information to help me decide
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+
+              <button type="submit" class="govuk-button">
+                Continue
+              </button>
+            </form>
+          </div>
+
+
+          <div class="govuk-grid-column-one-third">
+            <div class="govuk-button--sticky">
+              <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+              data-module="govuk-button">
+              Hide this page
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}
