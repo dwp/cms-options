@@ -25,15 +25,16 @@
                         <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--l ">
                                 <h1 class="govuk-fieldset__heading">
-                                    Your application reference number is:<br> 981234567?
+                                  You have said your mobile phone number is:<span>
+                                    {% if data['contact-by-text'] %}
+                                      {{data['contact-by-text']}}
+                                    {% else %}
+                                      anthony@email.com
+                                    {% endif %}
+                                 </span>
                                 </h1>
                             </legend>
-
-                            <p class="govuk-body">You'll need this reference number to complete your application.</p>
-                            <p class="govuk-body">You can write it down or we can send it to you by email or text</p>
-
-                      <h2 class="govuk-heading-s">Do you want your application reference number to be sent to you?</h2>
-
+                            <h2 class="govuk-heading-s">Is this the correct mobile phone number?</h2>
 
 
                             <div class="govuk-radios govuk-radios--inline">
