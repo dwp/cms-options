@@ -16,7 +16,7 @@ router.use((req, res, next) => {
 // your-options
 router.post('/prototype3iteration1/your-options', function(req, res) {
   if (req.body['choice'] === 'make-own-arrangement') {
-    res.redirect('your-options');
+    res.redirect('help-making-your-own-arrangement');
   } else if (req.body['choice'] === 'use-cms'){
     res.redirect('where-do-you-live');
   } else {
@@ -28,7 +28,7 @@ router.post('/prototype3iteration1/your-options', function(req, res) {
 // get-more-information
 router.post('/prototype3iteration1/get-more-information', function(req, res) {
   if (req.body['more-info-choice'] === 'more-info-make-own-arrangement') {
-    res.redirect('get-more-information');
+    res.redirect('help-making-your-own-arrangement');
   } else {
     res.redirect('where-do-you-live');
   }
@@ -120,6 +120,16 @@ router.post('/prototype3iteration1/confirm-mobile-number', function(req, res) {
     res.redirect('text-message-sent');
   } else {
     res.redirect('email-or-text-message');
+  }
+});
+
+// start-your-application
+
+router.post('/prototype3iteration1/start-your-application', function(req, res) {
+  if (req.body['start-your-application'] === 'yes') {
+    res.redirect('start-apply-journey');
+  } else {
+    res.redirect('apply-later');
   }
 });
 
