@@ -82,11 +82,44 @@ router.post('/prototype3iteration1/have-you-had-a-court-decision', function(req,
 
 // how-do-you-want-to-apply
 
-router.post('/prototype3iteration1/how-do-you-want-to-apply', function(req, res) {
-  if (req.body['how-do-you-want-to-apply'] === 'online') {
-    res.redirect('eligibility-for-online-application');
+router.post('/prototype3iteration1/your-application-reference-number', function(req, res) {
+  if (req.body['send-reference'] === 'yes') {
+    res.redirect('email-or-text-message');
   } else {
-    res.redirect('apply-by-phone');
+    res.redirect('write-down-your-reference');
+  }
+});
+
+
+// email-or-text-message
+
+router.post('/prototype3iteration1/email-or-text-message', function(req, res) {
+  if (req.body['email-or-text-message'] === 'email') {
+    res.redirect('confirm-email');
+  } else {
+    res.redirect('confirm-mobile-number');
+  }
+});
+
+
+// confirm-email
+
+router.post('/prototype3iteration1/confirm-email', function(req, res) {
+  if (req.body['confirm-email'] === 'yes') {
+    res.redirect('email-sent');
+  } else {
+    res.redirect('email-or-text-message');
+  }
+});
+
+
+// confirm-mobile-number
+
+router.post('/prototype3iteration1/confirm-mobile-number', function(req, res) {
+  if (req.body['confirm-mobile-number'] === 'yes') {
+    res.redirect('text-message-sent');
+  } else {
+    res.redirect('email-or-text-message');
   }
 });
 
