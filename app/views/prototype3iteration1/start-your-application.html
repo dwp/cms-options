@@ -22,25 +22,58 @@
                 <form method="post" novalidate>
                     <!--start of radio-->
                     <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--l ">
-                                <h1 class="govuk-fieldset__heading">
+
+                                <h1 class="govuk-heading-l">
                                     Start your application
                                 </h1>
-                            </legend>
-                            <span id="maintenance-liability-hint" class="govuk-hint">
-                                 Placeholder
 
-                            </span>
+                            {% if data['email-or-text-message'] === 'email' %}
+                            <div class="govuk-inset-text">
+                              <p class="govuk-body">You can apply later by using the information in the email you've been sent.</p>
+                            </div>
+                            {% endif %}
+
+                            {% if data['email-or-text-message'] === 'text' %}
+                            <div class="govuk-inset-text">
+                              <p class="govuk-body">You can come back and apply later by using the information in the text message you've been sent.</p>
+                            </div>
+                            {% endif %}
+
+                            <p class="govuk-body">Before you start you will need:
+
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                  your application reference number
+                                </li>
+                                <li>
+                                  your National Insurance number
+                                </li>
+                                <li>
+                                  details of the children you're applying for
+                                </li>
+                                <li>
+                                  the other parent's name and as much information about them as you can give - for example, where they live or their phone number
+                                </li>
+                                <li>
+                                  your bank or building society account details, if you need us to give them to the other patent.
+                                </li>
+                              </ul>
+
+                              <fieldset class="govuk-fieldset">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-fieldset__legend--m ">
+                                  <h2 class="govuk-fieldset__heading">
+                                    Do you want to start your application now?
+                                  </h2>
+                                </legend>
                             <div class="govuk-radios govuk-radios--inline">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="yes" name="maintenance-liability" type="radio" value="yes">
+                                    <input class="govuk-radios__input" id="yes" name="start-your-application" type="radio" value="yes">
                                     <label class="govuk-label govuk-radios__label" for="yes">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="no" name="maintenance-liability" type="radio" value="no">
+                                    <input class="govuk-radios__input" id="no" name="start-your-application" type="radio" value="no">
                                     <label class="govuk-label govuk-radios__label" for="no">
                                         No
                                     </label>
