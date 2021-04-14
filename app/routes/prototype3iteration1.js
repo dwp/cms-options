@@ -85,8 +85,10 @@ router.post('/prototype3iteration1/have-you-had-a-court-decision', function(req,
 router.post('/prototype3iteration1/how-do-you-want-to-apply', function(req, res) {
   if (req.body['how-do-you-want-to-apply'] === 'online') {
     res.redirect('eligibility-for-online-application');
-  } else {
+  } else if (req.body['how-do-you-want-to-apply'] === 'phone'){
     res.redirect('apply-by-phone');
+  } else {
+    res.redirect('end');
   }
 });
 
