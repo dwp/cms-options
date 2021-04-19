@@ -12,7 +12,7 @@ router.use((req, res, next) => {
 
 
 // Choice
-router.post('/prototype2iteration1/choice', function(req, res) {
+router.post('/prototype1iteration2/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
   } else if (req.body['choice'] === 'use-cms'){
@@ -24,7 +24,7 @@ router.post('/prototype2iteration1/choice', function(req, res) {
 
 
 // Apply
-router.post('/prototype2iteration1/apply', function(req, res) {
+router.post('/prototype1iteration2/apply', function(req, res) {
   if (req.body['apply-type'] === 'online') {
     res.redirect('intro');
   } else {
@@ -33,7 +33,7 @@ router.post('/prototype2iteration1/apply', function(req, res) {
 });
 
 // Live in UK
-router.post('/prototype2iteration1/live-in-uk', function(req, res) {
+router.post('/prototype1iteration2/live-in-uk', function(req, res) {
   if (req.body['live-uk'] === 'yes') {
     res.redirect('court-order');
   } else {
@@ -42,36 +42,13 @@ router.post('/prototype2iteration1/live-in-uk', function(req, res) {
 });
 
 // Court Order
-router.post('/prototype2iteration1/court-order', function(req, res) {
+router.post('/prototype1iteration2/court-order', function(req, res) {
   if (req.body['maintenance-liability'] === 'yes') {
     res.redirect('not-eligible-court');
   } else {
     res.redirect('eligible');
   }
 });
-
-
-// Choice NOURN
-router.post('/prototype2iteration1/no-urn/choice', function(req, res) {
-  if (req.body['choice'] === 'private') {
-    res.redirect('private');
-  } else if (req.body['choice'] === 'use-cms'){
-    res.redirect('apply');
-  } else {
-    res.redirect('help');
-  }
-});
-
-
-// Apply NOURN
-router.post('/prototype2iteration1/no-urn/apply', function(req, res) {
-  if (req.body['apply-type'] === 'online') {
-    res.redirect('intro');
-  } else {
-    res.redirect('phone');
-  }
-});
-
 
 
 module.exports = router;

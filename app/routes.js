@@ -7,20 +7,16 @@ const router = express.Router()
 const version1 = require('./routes/version1');;
 const govuk1 = require('./routes/govuk1');;
 const cycle2 = require('./routes/cycle2');;
-const cycle4 = require('./routes/cycle4');;
-const cycle4pp = require('./routes/cycle4pp');;
-const cycle4rp = require('./routes/cycle4rp');;
-const personalised = require('./routes/personalised');;
+const prototype1iteration2 = require('./routes/prototype1iteration2');;
+const prototype2iteration1 = require('./routes/prototype2iteration1');;
 const prototype3iteration1 = require('./routes/prototype3iteration1');;
 
 //copy the router use and update the sprint version
 router.use(version1);
 router.use(govuk1);
 router.use(cycle2);
-router.use(cycle4);
-router.use(cycle4pp);
-router.use(cycle4rp);
-router.use(personalised);
+router.use(prototype1iteration2);
+router.use(prototype2iteration1);
 router.use(prototype3iteration1)
 
 module.exports = router
