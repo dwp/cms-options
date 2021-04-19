@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block header %}
-{% include './_header-govuk.html' %}
+{% include './_header-options.html' %}
 {% endblock %}
 
 {% block pageTitle %}
@@ -13,32 +13,136 @@ GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">GOV.UK prototype</h1>
+    <h1 class="govuk-heading-xl">Options service prototype</h1>
 
   </div>
 
   <div class="govuk-grid-column-one-third">
     <br>
-    <h1 class="govuk-heading-m"><a href="/govuk2/making-child-maintenance-arrangement/overview" class="govuk-link">Latest version</a></h1>
+    <h1 class="govuk-heading-m"><a href="/prototype2iteration1/index" class="govuk-link">Latest version</a></h1>
 
   </div>
 
-  <div class="govuk-grid-column-full">
 
+  <div class="govuk-grid-column-full">
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Internal telephony tool prototype
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+          <span class="govuk-tag govuk-tag--red">First iteration</span>
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <dl>
+                <dt class="govuk-heading-s">Date created</dt>
+                <dt class="govuk-body">April 2021</dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s"><a href="">Jira or confluence link</a></dt>
+              </dl>
+              <dl>
+                <dt class="govuk-heading-s">What it is</dt>
+                <dt class="govuk-body">First go at creating an internal tool to be used by telephony agents - it creates a structure for the call, and will provide prompts and language choices we anticipate agents would need to use.
+                </dt>
+              </dl>
+            </div>
+          </div>
+
+          <a href="telephonytool/welcome" class="govuk-button govuk-button--start">Prototype</a>
+        </div>
+      </div>
+
+
+
+<div class="govuk-accordion__section ">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+        Third prototype
+      </span>
+    </h2>
+  </div>
+  <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+    <span class="govuk-tag govuk-tag--red">First iteration</span>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <dl>
+          <dt class="govuk-heading-s">Date created</dt>
+          <dt class="govuk-body">March 2021</dt>
+        </dl>
+        <dl>
+          <dt class="govuk-heading-s"><a href="">Jira or confluence link</a></dt>
+        </dl>
+        <dl>
+          <dt class="govuk-heading-s">What it is</dt>
+          <dt class="govuk-body">This prototype puts FBA and CMS information on a single page and prompts an action.<br>
+            Also includes the ability to receive Application Reference by email or text.
+          </dt>
+        </dl>
+      </div>
+    </div>
+
+    <a href="prototype3iteration1/index" class="govuk-button govuk-button--start">Prototype</a>
+  </div>
+</div>
+
+
+<div class="govuk-accordion__section ">
+  <div class="govuk-accordion__section-header">
+    <h2 class="govuk-accordion__section-heading">
+      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+        Second prototype
+      </span>
+    </h2>
+  </div>
+  <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+    <span class="govuk-tag govuk-tag--red">First iteration</span>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <dl>
+          <dt class="govuk-heading-s">Date created</dt>
+          <dt class="govuk-body">March 2021</dt>
+        </dl>
+        <dl>
+          <dt class="govuk-heading-s"><a href="">Jira or confluence link</a></dt>
+        </dl>
+        <dl>
+          <dt class="govuk-heading-s">What it is</dt>
+          <dt class="govuk-body">This prototype asks common eligibility questions up front to screen out users who need to call.<br>
+          It also personalises the journey to RP or PP applications.
+          </dt>
+        </dl>
+      </div>
+    </div>
+
+    <a href="/prototype2iteration1/personalised/welcome" class="govuk-button govuk-button--start">Prototype</a>
+  </div>
+</div>
 
 
       <div class="govuk-accordion__section ">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
-            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-              Proposed improved 'Options' GOV.UK content
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              First prototype
             </span>
           </h2>
         </div>
-        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 
-          <span class="govuk-tag govuk-tag--orange">Second iteration</span>
+          <span class="govuk-tag govuk-tag--red">Second iteration</span>
 
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-third">
@@ -47,55 +151,25 @@ GOV.UK Prototype Kit
                 <dt class="govuk-body">January 2021</dt>
               </dl>
               <dl>
-                <dt class="govuk-heading-s"><a href="https://jira.service.dwpcloud.uk/browse/CMGO-14">Jira link</a></dt>
+                <dt class="govuk-heading-s"><a href="">Jira or confluence link</a></dt>
               </dl>
               <dl>
-                <dt class="govuk-heading-s">What it is/what has changed</dt>
-                <dt class="govuk-body">Variations to draft 1</dt>
-                <p class="govuk-body">Added new introductions to pages 2 and 3 to meet policy requirement of promoting effective FBA where possible.</p>
-                <p class="govuk-body">Attempted to do so by outlining pros and cons of each arrangement type, to allow user to make an informed choice</p>
+                <dt class="govuk-heading-s">What it is</dt>
+                <dt class="govuk-body">First version prototype for online Options journey based on 'simplest thing' principles.</dt>
               </dl>
             </div>
           </div>
-          <a href="/govuk/index" class="govuk-button govuk-button--start">Prototype</a>
-        </div>
-        </div>
 
-
-        <div class="govuk-accordion__section ">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                Current options GOV.UK content
-              </span>
-            </h2>
-          </div>
-          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-
-            <span class="govuk-tag govuk-tag--red">First iteration</span>
-
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-one-third">
-                <dl>
-                  <dt class="govuk-heading-s">Date created</dt>
-                  <dt class="govuk-body">January 2021</dt>
-                </dl>
-                <dl>
-                  <dt class="govuk-heading-s">What it is</dt>
-                  <dt class="govuk-body">This is the Options content as it existed on GOV.UK in January 2021</dt>
-                </dl>
-              </div>
-            </div>
-
-            <a href="/govuk/making-child-maintenance-arrangement/overview" class="govuk-button govuk-button--start">Prototype</a>
-          </div>
+          <a href="/prototype1index/index" class="govuk-button govuk-button--start">Prototype</a>
         </div>
       </div>
-
     </div>
 
   </div>
+</div>
 
 
+</div>
+</div>
 
 {% endblock %}
