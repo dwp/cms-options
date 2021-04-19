@@ -13,7 +13,7 @@ router.use((req, res, next) => {
 
 
 // live-in-uk / Where do you live?
-router.post('/cycle4/personalised/live-in-uk', function(req, res) {
+router.post('/prototype2iteration1/personalised/live-in-uk', function(req, res) {
   if (req.body['live-uk'] === 'gb') {
     res.redirect('other-parent-lives');
   } else if (req.body['live-uk'] === 'ni'){
@@ -26,7 +26,7 @@ router.post('/cycle4/personalised/live-in-uk', function(req, res) {
 
 
 // other-parent-lives / Does the other parent live in England, Scotland, Wales or Northern Ireland?
-router.post('/cycle4/personalised/other-parent-lives', function(req, res) {
+router.post('/prototype2iteration1/personalised/other-parent-lives', function(req, res) {
   if (req.body['other-parent-lives'] === 'uk') {
     res.redirect('court-order');
   } else {
@@ -36,7 +36,7 @@ router.post('/cycle4/personalised/other-parent-lives', function(req, res) {
 
 
 // court-order / Have you got a court decision about child maintenance payments?
-router.post('/cycle4/personalised/court-order', function(req, res) {
+router.post('/prototype2iteration1/personalised/court-order', function(req, res) {
   if (req.body['maintenance-liability'] === 'yes') {
     res.redirect('call');
   } else {
@@ -45,11 +45,11 @@ router.post('/cycle4/personalised/court-order', function(req, res) {
 });
 
 // paying-or-receiving / Have you got a court decision about child maintenance payments?
-router.post('/cycle4/personalised/paying-or-receiving', function(req, res) {
+router.post('/prototype2iteration1/personalised/paying-or-receiving', function(req, res) {
   if (req.body['paying-or-receiving'] === 'paying') {
-    res.redirect('../../cycle4pp/option1');
+    res.redirect('../../prototype2iteration1pp/option1');
   } else {
-    res.redirect('../../cycle4rp/option1');
+    res.redirect('../../prototype2iteration1rp/option1');
   }
 });
 

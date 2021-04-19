@@ -12,7 +12,7 @@ router.use((req, res, next) => {
 
 
 // Choice
-router.post('/cycle4/choice', function(req, res) {
+router.post('/prototype2iteration1/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
   } else if (req.body['choice'] === 'use-cms'){
@@ -24,7 +24,7 @@ router.post('/cycle4/choice', function(req, res) {
 
 
 // Apply
-router.post('/cycle4/apply', function(req, res) {
+router.post('/prototype2iteration1/apply', function(req, res) {
   if (req.body['apply-type'] === 'online') {
     res.redirect('intro');
   } else {
@@ -33,7 +33,7 @@ router.post('/cycle4/apply', function(req, res) {
 });
 
 // Live in UK
-router.post('/cycle4/live-in-uk', function(req, res) {
+router.post('/prototype2iteration1/live-in-uk', function(req, res) {
   if (req.body['live-uk'] === 'yes') {
     res.redirect('court-order');
   } else {
@@ -42,7 +42,7 @@ router.post('/cycle4/live-in-uk', function(req, res) {
 });
 
 // Court Order
-router.post('/cycle4/court-order', function(req, res) {
+router.post('/prototype2iteration1/court-order', function(req, res) {
   if (req.body['maintenance-liability'] === 'yes') {
     res.redirect('not-eligible-court');
   } else {
@@ -52,7 +52,7 @@ router.post('/cycle4/court-order', function(req, res) {
 
 
 // Choice NOURN
-router.post('/cycle4/no-urn/choice', function(req, res) {
+router.post('/prototype2iteration1/no-urn/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
   } else if (req.body['choice'] === 'use-cms'){
@@ -64,7 +64,7 @@ router.post('/cycle4/no-urn/choice', function(req, res) {
 
 
 // Apply NOURN
-router.post('/cycle4/no-urn/apply', function(req, res) {
+router.post('/prototype2iteration1/no-urn/apply', function(req, res) {
   if (req.body['apply-type'] === 'online') {
     res.redirect('intro');
   } else {
