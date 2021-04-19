@@ -13,7 +13,7 @@ router.use((req, res, next) => {
 
 
 // live-in-uk / Where do you live?
-router.post('/prototype2iteration1/personalised/live-in-uk', function(req, res) {
+router.post('/prototype2/iteration1/personalised/live-in-uk', function(req, res) {
   if (req.body['live-uk'] === 'gb') {
     res.redirect('other-parent-lives');
   } else if (req.body['live-uk'] === 'ni'){
@@ -26,7 +26,7 @@ router.post('/prototype2iteration1/personalised/live-in-uk', function(req, res) 
 
 
 // other-parent-lives / Does the other parent live in England, Scotland, Wales or Northern Ireland?
-router.post('/prototype2iteration1/personalised/other-parent-lives', function(req, res) {
+router.post('/prototype2/iteration1/personalised/other-parent-lives', function(req, res) {
   if (req.body['other-parent-lives'] === 'uk') {
     res.redirect('court-order');
   } else {
@@ -36,7 +36,7 @@ router.post('/prototype2iteration1/personalised/other-parent-lives', function(re
 
 
 // court-order / Have you got a court decision about child maintenance payments?
-router.post('/prototype2iteration1/personalised/court-order', function(req, res) {
+router.post('/prototype2/iteration1/personalised/court-order', function(req, res) {
   if (req.body['maintenance-liability'] === 'yes') {
     res.redirect('call');
   } else {
@@ -45,18 +45,18 @@ router.post('/prototype2iteration1/personalised/court-order', function(req, res)
 });
 
 // paying-or-receiving / Have you got a court decision about child maintenance payments?
-router.post('/prototype2iteration1/personalised/paying-or-receiving', function(req, res) {
+router.post('/prototype2/iteration1/personalised/paying-or-receiving', function(req, res) {
   if (req.body['paying-or-receiving'] === 'paying') {
-    res.redirect('../../prototype2iteration1/pp/option1');
+    res.redirect('../pp/option1');
   } else {
-    res.redirect('../../prototype2iteration1/rp/option1');
+    res.redirect('../rp/option1');
   }
 });
 
 //START PAYING PARENT / (Subfolder /pp)
 
 // Choice PP
-router.post('/prototype2iteration1/pp/choice', function(req, res) {
+router.post('/prototype2/iteration1/pp/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
   } else if (req.body['choice'] === 'use-cms'){
@@ -68,7 +68,7 @@ router.post('/prototype2iteration1/pp/choice', function(req, res) {
 
 
 // Apply PP
-router.post('/prototype2iteration1/pp/apply', function(req, res) {
+router.post('/prototype2/iteration1/pp/apply', function(req, res) {
   if (req.body['apply-type'] === 'online') {
     res.redirect('intro');
   } else {
@@ -77,7 +77,7 @@ router.post('/prototype2iteration1/pp/apply', function(req, res) {
 });
 
 // Live in UK PP
-router.post('/prototype2iteration1/pp/live-in-uk', function(req, res) {
+router.post('/prototype2/iteration1/pp/live-in-uk', function(req, res) {
   if (req.body['live-uk'] === 'yes') {
     res.redirect('court-order');
   } else {
@@ -86,7 +86,7 @@ router.post('/prototype2iteration1/pp/live-in-uk', function(req, res) {
 });
 
 // Court Order PP
-router.post('/prototype2iteration1/pp/court-order', function(req, res) {
+router.post('/prototype2/iteration1/pp/court-order', function(req, res) {
   if (req.body['maintenance-liability'] === 'yes') {
     res.redirect('not-eligible-court');
   } else {
@@ -96,7 +96,7 @@ router.post('/prototype2iteration1/pp/court-order', function(req, res) {
 
 
 // Choice NOURN PP
-router.post('/prototype2iteration1/pp/no-urn/choice', function(req, res) {
+router.post('/prototype2/iteration1/pp/no-urn/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
   } else if (req.body['choice'] === 'use-cms'){
@@ -108,7 +108,7 @@ router.post('/prototype2iteration1/pp/no-urn/choice', function(req, res) {
 
 
 // Apply NOURN PP
-router.post('/prototype2iteration1/pp/no-urn/apply', function(req, res) {
+router.post('/prototype2/iteration1/pp/no-urn/apply', function(req, res) {
   if (req.body['apply-type'] === 'online') {
     res.redirect('intro');
   } else {
@@ -119,7 +119,7 @@ router.post('/prototype2iteration1/pp/no-urn/apply', function(req, res) {
 //START RECEIVING PARENT / (Subfolder /rp)
 
 // Choice RP
-router.post('/prototype2iteration1/rp/choice', function(req, res) {
+router.post('/prototype2/iteration1/rp/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
   } else if (req.body['choice'] === 'use-cms'){
@@ -131,7 +131,7 @@ router.post('/prototype2iteration1/rp/choice', function(req, res) {
 
 
 // Apply RP
-router.post('/prototype2iteration1/rp/apply', function(req, res) {
+router.post('/prototype2/iteration1/rp/apply', function(req, res) {
   if (req.body['apply-type'] === 'online') {
     res.redirect('intro');
   } else {
@@ -140,7 +140,7 @@ router.post('/prototype2iteration1/rp/apply', function(req, res) {
 });
 
 // Live in UK RP
-router.post('/prototype2iteration1/rp/live-in-uk', function(req, res) {
+router.post('/prototype2/iteration1/rp/live-in-uk', function(req, res) {
   if (req.body['live-uk'] === 'yes') {
     res.redirect('court-order');
   } else {
@@ -149,7 +149,7 @@ router.post('/prototype2iteration1/rp/live-in-uk', function(req, res) {
 });
 
 // Court Order RP
-router.post('/prototype2iteration1/rp/court-order', function(req, res) {
+router.post('/prototype2/iteration1/rp/court-order', function(req, res) {
   if (req.body['maintenance-liability'] === 'yes') {
     res.redirect('not-eligible-court');
   } else {
@@ -159,7 +159,7 @@ router.post('/prototype2iteration1/rp/court-order', function(req, res) {
 
 
 // Choice NOURN RP
-router.post('/prototype2iteration1/rp/no-urn/choice', function(req, res) {
+router.post('/prototype2/iteration1/rp/no-urn/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
   } else if (req.body['choice'] === 'use-cms'){
@@ -171,7 +171,7 @@ router.post('/prototype2iteration1/rp/no-urn/choice', function(req, res) {
 
 
 // Apply NOURN RP
-router.post('/prototype2iteration1/rp/no-urn/apply', function(req, res) {
+router.post('/prototype2/iteration1/rp/no-urn/apply', function(req, res) {
   if (req.body['apply-type'] === 'online') {
     res.redirect('intro');
   } else {
