@@ -12,7 +12,7 @@ router.use((req, res, next) => {
 
 
 // Choice
-router.post('\/choice', function(req, res) {
+router.post('/prototype1/iteration2/choice', function(req, res) {
   if (req.body['choice'] === 'private') {
     res.redirect('private');
   } else if (req.body['choice'] === 'use-cms'){
@@ -24,7 +24,7 @@ router.post('\/choice', function(req, res) {
 
 
 // Apply
-router.post('\/apply', function(req, res) {
+router.post('/prototype1/iteration2/apply', function(req, res) {
   if (req.body['apply-type'] === 'online') {
     res.redirect('intro');
   } else {
@@ -33,7 +33,7 @@ router.post('\/apply', function(req, res) {
 });
 
 // Live in UK
-router.post('\/live-in-uk', function(req, res) {
+router.post('/prototype1/iteration2/live-in-uk', function(req, res) {
   if (req.body['live-uk'] === 'yes') {
     res.redirect('court-order');
   } else {
@@ -42,7 +42,7 @@ router.post('\/live-in-uk', function(req, res) {
 });
 
 // Court Order
-router.post('\/court-order', function(req, res) {
+router.post('/prototype1/iteration2/court-order', function(req, res) {
   if (req.body['maintenance-liability'] === 'yes') {
     res.redirect('not-eligible-court');
   } else {
