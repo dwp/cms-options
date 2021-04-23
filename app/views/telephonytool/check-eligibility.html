@@ -1,0 +1,228 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Check if the caller is eligible to use the Child Maintenance Service</h1>
+
+
+<p> I need to ask you a few questions so we can work out how the Child Maintenance Service can help you. Is that ok? </p>
+
+
+    <div class="">
+        <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h3 class="govuk-heading-m">
+                1. Where abouts in the UK do you live?
+                    </h3>
+
+                  <p> Just in general area is fine, for example England, Scotland or Wales.
+                  </legend>
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="pension-1" name="pension" type="radio" value="yes~3-fixed-income">
+                      <label class="govuk-label govuk-radios__label" for="pension-1">
+                        England
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="pension-2" name="pension" type="radio" value="no~3-flexible-income">
+                      <label class="govuk-label govuk-radios__label" for="pension-2">
+                        Scotland
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="pension-2" name="pension" type="radio" value="no~3-flexible-income">
+                      <label class="govuk-label govuk-radios__label" for="pension-2">
+                  Wales
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="pension-2" name="pension" type="radio" value="no~3-flexible-income">
+                      <label class="govuk-label govuk-radios__label" for="pension-2">
+                None
+                      </label>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
+            <br>
+
+
+        </form>
+    </div>
+
+
+
+        <div class="">
+            <form method="post" novalidate>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h3 class="govuk-heading-m">
+                    Does the other parent also live in xxxx?
+                        </h3>
+                      </legend>
+                      <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="pension-1" name="pension" type="radio" value="yes~3-fixed-income">
+                          <label class="govuk-label govuk-radios__label" for="pension-1">
+                            England
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="pension-2" name="pension" type="radio" value="no~3-flexible-income">
+                          <label class="govuk-label govuk-radios__label" for="pension-2">
+                            Scotland
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="pension-2" name="pension" type="radio" value="no~3-flexible-income">
+                          <label class="govuk-label govuk-radios__label" for="pension-2">
+                      Wales
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="pension-2" name="pension" type="radio" value="no~3-flexible-income">
+                          <label class="govuk-label govuk-radios__label" for="pension-2">
+                    None
+                          </label>
+                        </div>
+                      </div>
+
+                    </fieldset>
+                  </div>
+                <br>
+
+
+            </form>
+        </div>
+
+        <div class="">
+            <form method="post" novalidate>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h3 class="govuk-heading-m">
+                  2. Can I just confirm that you will be paying/receiving child maintenance payments?
+                        </h3>
+                      </legend>
+                      <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="pension-1" name="pension" type="radio" value="yes~3-fixed-income">
+                          <label class="govuk-label govuk-radios__label" for="pension-1">
+                          Paying
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="pension-2" name="pension" type="radio" value="no~3-flexible-income">
+                          <label class="govuk-label govuk-radios__label" for="pension-2">
+                            Receiving
+                          </label>
+                        </div>
+                    </fieldset>
+                  </div>
+                <br>
+            </form>
+        </div>
+
+        <div class="">
+            <form method="post" novalidate>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h3 class="govuk-heading-m">
+              3.	Have you ever been to court for anything to do with your children or the other parent?
+                        </h3>
+                      </legend>
+                      <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="pension-1" name="pension" type="radio" value="yes~3-fixed-income">
+                          <label class="govuk-label govuk-radios__label" for="pension-1">
+                        Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="pension-2" name="pension" type="radio" value="no~3-flexible-income">
+                          <label class="govuk-label govuk-radios__label" for="pension-2">
+                        No
+                          </label>
+                        </div>
+                    </fieldset>
+                  </div>
+                <br>
+            </form>
+        </div>
+
+        <div class="">
+            <form method="post" novalidate>
+
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h3 class="govuk-heading-m">
+            Do you know if a court decision was put in place
+                        </h3>
+                        <p>This is sometimes called a ‘court order’ or ‘maintenance order’ or ‘minute of agreement’. It’s something that the court may have put in place for you to [get/ pay] child maintenance payments. </p>
+                      </legend>
+                      <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="pension-1" name="pension" type="radio" value="yes~3-fixed-income">
+                          <label class="govuk-label govuk-radios__label" for="pension-1">
+                        Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="pension-2" name="pension" type="radio" value="no~3-flexible-income">
+                          <label class="govuk-label govuk-radios__label" for="pension-2">
+                        No
+                          </label>
+                        </div>
+                    </fieldset>
+                  </div>
+                <br>
+            </form>
+        </div>
+
+
+        <button type="submit" class="govuk-button">
+          Next: Options
+        </button>
+
+
+        <div class="govuk-grid-row">
+
+<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
+<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
+
+</div>
+
+
+
+{% endblock %}
