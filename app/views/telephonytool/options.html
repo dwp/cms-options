@@ -1,0 +1,118 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Options</h1>
+
+
+<p> I’m going to tell you about your child maintenance options now. Feel free to stop me at any point to ask questions or if anything is unclear. <br/><br/>
+
+There are 2 options available to you. You can make your own child maintenance arrangement, or you can use the Child Maintenance Service.
+<br/><br/>
+
+<b> If the user has experienced any domestic abuse or has a poor relationship with the other parent </b> <br/><br/>
+I know that making your own arrangement might not be the best option for you, but I still need to give you all the information so you know what options are available and then you can make an informed decision about what you want to do. <br/><br/>
+<b> If the user has a preference for one option </b> <br/> <br/>
+I know you mentioned that you want to [use the Child Maintenance Service/ set up your own arrangement], but I’ll go through both options with you anyway so that you have all the information and then you can make a decision about what you want to do
+
+</p>
+
+
+<!-- accordian - options -->
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+About making your own arrangement:
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <p class='govuk-body'>You can choose to make your own arrangement. This will be a private agreement between you and the other parent. No one else will be involved and it can be whatever you both agree to. <br/><br/>
+
+      Some parents prefer to make their own arrangement because:
+</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>
+          you can come to an agreement with the other parent about how much payments should be
+        </li>
+        <li>
+          it can be totally flexible, so you can change the amount if you need to
+        </li>
+        <li>
+          you can decide how often payments will be made
+        </li>
+        <li>
+      You can agree payments for specific things, like school uniform or trips
+        </li>
+      </ul>
+<p>
+      This type of arrangement usually works best with parents who feel safe dealing with each other and who think they can both stick to whatever is agreed.<br/> <br/>
+      Do you have any questions about making your own arrangement, before I tell you more about using the Child Maintenance Service?
+    </p>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+        About using the Child Maintenance Service
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <p class='govuk-body'>Using the Child Maintenance Service is less flexible than making your own arrangement because the amount of money you [get/ pay] is fixed based on [your/ the other parents] earnings. <br/><br/>
+<b> If no DA / Under 19 </b> <br/>
+There is a £20 fee to make an application. This is non-refundable and unfortunately, we cannot always guarantee an arrangement. <br/><br/>
+
+<b> If they ask why?</b> <br/>
+Because we cannot always find the other parent, but the more information you can tell us about them if you choose to apply, the more likely we’ll be able to set something up for you.
+       </p>
+
+
+       <p> Using the Child Maintenance Service might be a good option if you don’t want to have any contact with the other parent. If you choose to use Child Maintenance Service, you’ll need to complete an application online or on the phone then the Child Maintenance Service will work out how much maintenance you should [get/ pay] and arrange for payments to be made, </p>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+        <button type="submit" class="govuk-button">
+          Next: Applicant's choice
+        </button>
+
+
+        <div class="govuk-grid-row">
+
+<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
+<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
+
+</div>
+
+
+
+{% endblock %}

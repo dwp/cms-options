@@ -147,6 +147,14 @@ router.post('/prototype3/iteration1/start-your-application', function(req, res) 
 });
 
 
+
+//telephony
+
+
+router.post('/telephonytool/check-eligibility', function(req, res) {
+    res.redirect('options');
+});
+
 // Routes end
 
 module.exports = router;
