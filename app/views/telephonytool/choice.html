@@ -1,0 +1,135 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">What do you want to do</h1>
+
+
+              <ul class="govuk-list govuk-list--bullet">
+
+                  <li>
+                  make your own arrangement
+                  </li>
+                  <li>
+                  use the Child Maintenance Service
+                  </li>
+                  <li>
+                 get more information
+                  </li>
+                </ul>
+
+
+<!-- accordian - options -->
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+Get more information
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+<p> What do you need more information about?
+      <ul class="govuk-list govuk-list--bullet">
+
+          <li>
+          how much will I get if I use the Child Maintenance Service
+          </li>
+          <li>
+        more information about my options
+          </li>
+
+
+        </ul>
+
+      <p> or </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+
+
+          <li>
+      I need more time to think about it before I decide
+          </li>
+        </ul>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+  <!-- CMS Option -->
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+        Calculator
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+<p> To get a calculation, you will need to know: </p>
+      <ul class="govuk-list govuk-list--bullet">
+          <li>
+        the other parent's income, including State Pension
+          </li>
+          <li> details of the other parent's benefits
+          </li>
+          <li> the number of nights your child stays with the other parent</li>
+        </ul>
+
+        <p> <b> What do you want to do? </b> </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li> get a calculation on the phone </li>
+            <li> use the online calculator in my own time</li>
+            </ul>
+
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+
+        <button type="submit" class="govuk-button">
+          Next: Make a choice
+        </button>
+
+
+        <div class="govuk-grid-row">
+
+<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
+<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
+
+</div>
+
+
+
+{% endblock %}

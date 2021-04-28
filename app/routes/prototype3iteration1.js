@@ -155,6 +155,10 @@ router.post('/telephonytool/check-eligibility', function(req, res) {
     res.redirect('options');
 });
 
+router.post('/telephonytool/options', function(req, res) {
+    res.redirect('choice');
+});
+
 // Routes end
 
 module.exports = router;
