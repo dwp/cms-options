@@ -1,5 +1,4 @@
-
-const express = require('express');
+const express = require('express')
 const router = express.Router()
 
 
@@ -158,6 +157,34 @@ router.post('/telephonytool/check-eligibility', function(req, res) {
 router.post('/telephonytool/options', function(req, res) {
     res.redirect('choice');
 });
+
+
+// court-order / Have you got a court decision about child maintenance payments?
+router.post('/telephonytool/organisations', function(req, res) {
+  if (req.body['organisation-choice'] === 'yes') {
+    res.redirect('court');
+  } else {
+    res.redirect('other');
+  }
+});
+
+router.post('telephonytool/other-parent-live', function(req, res) {
+  if (req.body['organisation-choice'] === 'yes') {
+    res.redirect('court');
+  } else {
+    res.redirect('other');
+  }
+});
+
+router.post('telephonytool/court', function(req, res) {
+  if (req.body['court-choice'] === 'yes') {
+    res.redirect('court-decision');
+  } else {
+    res.redirect('domestic-abuse');
+  }
+});
+
+
 
 // Routes end
 

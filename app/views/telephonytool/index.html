@@ -11,6 +11,7 @@
     </span>
   </p>
 </div>
+{{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
 <!--Feedback banner stop-->
 
@@ -22,140 +23,42 @@
         <div class="govuk-grid-row">
 
             <div class="govuk-grid-column-two-thirds">
-              <h1 class="govuk-heading-l">Internal telephony tool prototype</h1>
+              <h1 class="govuk-heading-l">Child Maintenance</h1>
 
-  <h2 class="govuk-heading-m">Application incomplete<h2>
-<p> Hello, thanks for calling Child Maintenance Options. My name is XXXXX, how can I help you today?  </p>
+    <form method="post" novalidate>
+        <h2 class="govuk-heading-m">What can I help you with today?<h2>
+        <div class="govuk-form-group">
+            <!--  <label class="govuk-label" for="urn-number" style="visibility:hidden">
+      Invitation code
+    </label> -->
+            <span id="urnNumberInformation" class="govuk-hint">
+              If the caller has a question that is not about setting up a new case or finding out about their options, transfer them to the right place now.
+            </span>
+            <input class="govuk-input govuk-input--width-10" id="free-text" type="text" name="free-text" type="text" aria-describedby="urnNumberInformation"
+                spellcheck="false">
+        </div>
 
-
-
-
-
-
-<table class="govuk-table">
-<thead class="govuk-table__head">
-<tr class="govuk-table__row">
-<th class="govuk-table__header" scope="col"> 1. About the applicant </th>
-<th class="govuk-table__header" scope="col">  </th>
-</tr>
-</thead>
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">
-<a href="">Reason for the call</a>
-</td>
-<td class="govuk-table__cell">
-<strong class="govuk-tag govuk-tag--grey">
-Not started
-</strong>
-
-</td>
-</tr>
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">
-<a href="">Applicant's details</a>
-</td>
-<td class="govuk-table__cell">
-<strong class="govuk-tag govuk-tag--grey">
-Not started
-</strong>
-
-</td>
-
-</tbody>
-</table>
+    </form>
 
 
+    <p class="govuk-body">We will:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>ask you a few questions to make sure you’re in the right place</li>
+      <li>ask you a few questions to make sure you’re in the right place</li>
+      <li>answer any questions you have, to help you choose the option that’s best for you</li>
+    </ul>
 
+    <form method="post" novalidate>
+        <h2 class="govuk-heading-m">what is your name?<h2>
+        <div class="govuk-form-group">
 
-<table class="govuk-table">
-<thead class="govuk-table__head">
-<tr class="govuk-table__row">
-<th class="govuk-table__header" scope="col"> 2. Check eligibility </th>
-<th class="govuk-table__header" scope="col">  </th>
-</tr>
-</thead>
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">
-<a href="check-eligibility">Check eligibility</a>
-</td>
-<td class="govuk-table__cell">
-<strong class="govuk-tag govuk-tag--grey">
-Not started
-</strong>
-
-</td>
-</tr>
-
-</tbody>
-</table>
-
-<table class="govuk-table">
-<thead class="govuk-table__head">
-<tr class="govuk-table__row">
-<th class="govuk-table__header" scope="col"> 3. Options </th>
-<th class="govuk-table__header" scope="col">  </th>
-</tr>
-</thead>
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">
-<a href="options">About FBA </a>
-</td>
-<td class="govuk-table__cell">
-<strong class="govuk-tag govuk-tag--grey">
-Not started
-</strong>
-
-</td>
-</tr>
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">
-<a href="">About CMS</a>
-</td>
-<td class="govuk-table__cell">
-<strong class="govuk-tag govuk-tag--grey">
-Not started
-</strong>
-
-</td>
-
-</tbody>
-</table>
-
-<table class="govuk-table">
-<thead class="govuk-table__head">
-<tr class="govuk-table__row">
-<th class="govuk-table__header" scope="col"> 4. Applicant's choice </th>
-<th class="govuk-table__header" scope="col">  </th>
-</tr>
-</thead>
-<tbody class="govuk-table__body">
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">
-<a href="">FBA - resouces</a>
-</td>
-<td class="govuk-table__cell">
-<strong class="govuk-tag govuk-tag--grey">
-Not started
-</strong>
-
-</td>
-</tr>
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">
-<a href="">Applicant's details</a>
-</td>
-<td class="govuk-table__cell">
-<strong class="govuk-tag govuk-tag--grey">
-Not started
-</strong>
-
-</td>
-
-</tbody>
-</table>
+            <input class="govuk-input govuk-input--width-10" id="free-text" type="text" name="free-text" type="text" aria-describedby="name"
+                spellcheck="false">
+        </div>
+        <p class="govuk-body">
+          <a href="children" class="govuk-button ">Continue</a>
+        </p>
+    </form>
 
 
 

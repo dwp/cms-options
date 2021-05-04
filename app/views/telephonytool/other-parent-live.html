@@ -1,0 +1,74 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Where does the other parent live?</h1>
+
+
+
+
+    <div class="">
+        <form method="post" novalidate>
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="live-hint">
+
+                  <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="england" name="choice" type="radio" value="england">
+                      <label class="govuk-label govuk-radios__label" for="england">
+                  England, Scotland, Wales or Northern Ireland
+                      </label> </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="somewhere" name="choice" type="radio" value="somewhere">
+                      <label class="govuk-label govuk-radios__label" for="somewhere">
+                      Somewhere else
+                      </label> </div>
+
+                  </div>
+
+                </fieldset>
+              </div>
+            <br>
+
+
+        </form>
+    </div>
+
+
+
+
+
+        <a href="paying-or-receiving" class="govuk-button ">Continue</a>
+
+
+        <div class="govuk-grid-row">
+
+<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
+<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
+
+</div>
+
+
+
+{% endblock %}

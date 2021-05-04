@@ -1,0 +1,111 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="religion-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+      Get more information
+                  </h1>
+                </legend>
+
+              <br>
+
+
+
+
+
+
+                                                                       <div class="govuk-form-group">
+                                                                           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                                                                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                                                               <h1 class="govuk-fieldset__heading">
+
+                                                                               </h1>
+                                                                             </legend>
+
+                                                                             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                                                                               <div class="govuk-radios__item">
+                                                                                 <input class="govuk-radios__input" id="arrangement" name="arrangement" type="radio" value="week" data-aria-controls="conditional-arrangement">
+                                                                                 <label class="govuk-label govuk-radios__label" for="arrangement">
+                                              How much I will get if I use the Child Maintenance Service
+                                                                                 </label>
+                                                                               </div>
+                                                                               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-arrangement">
+                                                                                 <p class="govuk-body">To get a calculation, you will need to know:</p>
+                                                                                 <ul class="govuk-list govuk-list--bullet">
+                                                                                   <li>the other parent's income, including State Pension</li>
+                                                                                   <li>details of the other parent's benefits</li>
+                                                                                   <li>the number of nights your child stay with the other parent</li>
+                                                                                 </ul>
+
+
+                                                                                 <p class="govuk-body">What do you want to do?</p>
+                                                                                 <ul class="govuk-list govuk-list--bullet">
+                                                                                   <li>get a calculation on the phone </li>
+                                                                                   <li>use the online calculator in my own time</li>
+                                                                                 </ul>
+
+                                                                            </div>
+
+                                                                               <div class="govuk-radios__item">
+                                                                                 <input class="govuk-radios__input" id="arrangement-2" name="arrangement" type="radio" value="fortnight" data-aria-controls="conditional-arrangement-2">
+                                                                                 <label class="govuk-label govuk-radios__label" for="arrangement-2">
+                                                                                  More information about my options
+                                                                                 </label>
+                                                                               </div>
+                                                                                  <div class="govuk-radios__divider">or</div>
+                                                                               <div class="govuk-radios__item">
+                                                                                 <input class="govuk-radios__input" id="arrangement-3" name="arrangement" type="radio" value="fortnight" data-aria-controls="conditional-arrangement-2">
+                                                                                 <label class="govuk-label govuk-radios__label" for="arrangement-3">
+                                                                                    I need more time about it before I decide
+                                                                                 </label>
+                                                                               </div>
+
+
+
+
+                                                                                             </div>
+                                                                             </div>
+
+                                                                           </fieldset>
+                                                                         </div>
+
+        <button type="submit" class="govuk-button">
+      Continue
+        </button>
+
+
+        <div class="govuk-grid-row">
+
+<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
+<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
+
+</div>
+
+</div>
+</div>
+
+{% endblock %}
