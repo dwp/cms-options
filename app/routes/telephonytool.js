@@ -38,12 +38,30 @@ router.post('/telephonytool/check-eligibility', function(req, res) {
 });
 
 
-// court-decision
+// court
 router.post('/telephonytool/court', function(req, res) {
   if (req.body['court-choice'] === 'yes') {
     res.redirect('court-decision');
   } else {
     res.redirect('domestic-abuse');
+  }
+});
+
+// court decision
+router.post('/telephonytool/court-decision', function(req, res) {
+  if (req.body['court-decision'] === 'yes') {
+    res.redirect('court-when');
+  } else {
+    res.redirect('domestic-abuse');
+  }
+});
+
+// court decision
+router.post('/telephonytool/domestic-abuse', function(req, res) {
+  if (req.body['da'] === 'yes') {
+    res.redirect('help');
+  } else {
+    res.redirect('options');
   }
 });
 
