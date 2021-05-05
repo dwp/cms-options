@@ -66,6 +66,17 @@ router.post('/telephonytool/domestic-abuse', function(req, res) {
 });
 
 
+//choice
+router.post('/telephonytool/choice', function(req, res) {
+  if (req.body['arrangement'] === 'own') {
+    res.redirect('own-arrangement');
+  } else if (req.body['arrangement'] === 'cms'){
+    res.redirect('cms');
+  } else {
+    res.redirect('more-information');
+  }
+});
+
 
 
 // Routes end

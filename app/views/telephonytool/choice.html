@@ -34,20 +34,20 @@
               <br>
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="religion" name="religion" type="radio" value="own~own-arrangement" data-aria-controls="conditional-religion">
-                    <label class="govuk-label govuk-radios__label" for="religion">
+                    <input class="govuk-radios__input" id="own" name="arrangement" type="radio" value="own">
+                    <label class="govuk-label govuk-radios__label" for="own">
                     Make your own arrangement
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="religion-2" name="religion" type="radio" value="cms~child-maintenance" data-aria-controls="conditional-religion-2">
-                      <label class="govuk-label govuk-radios__label" for="religion-2">
+                    <input class="govuk-radios__input" id="cms" name="arrangement" type="radio" value="cms">
+                    <label class="govuk-label govuk-radios__label" for="cms">
                         Use the Child Maintenance Service
                       </label>
                     </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="religion-2" name="religion" type="radio" value="more~more-information" data-aria-controls="conditional-religion-2">
-                    <label class="govuk-label govuk-radios__label" for="religion-2">
+                    <input class="govuk-radios__input" id="info" name="arrangement" type="radio" value="info">
+                    <label class="govuk-label govuk-radios__label" for="info">
                       Get more information
                     </label>
                   </div>
@@ -58,18 +58,19 @@
 
               </fieldset>
               </div>
-              <a href="own-arrangement" class="govuk-button ">Continue</a>
+
+                  <!--end-->
+                  <button type="submit" class="govuk-button">
+                      Continue
+                  </button>
+                </form>
+                      <div class="govuk-grid-row">
+
+              <p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
+              <p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
+
+              </div>
 
 
 
-              <div class="govuk-grid-row">
-
-      <p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
-      <p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
-
-      </div>
-
-      </div>
-      </div>
-
-      {% endblock %}
+              {% endblock %}
