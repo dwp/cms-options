@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const radioButtonRedirect = require('radio-button-redirect')
-router.use(radioButtonRedirect)
+
 
 
 router.use((req, res, next) => {
@@ -149,42 +148,6 @@ router.post('/prototype3/iteration1/start-your-application', function(req, res) 
 
 
 
-//telephony
-
-
-router.post('/telephonytool/check-eligibility', function(req, res) {
-    res.redirect('options');
-});
-
-router.post('/telephonytool/options', function(req, res) {
-    res.redirect('choice');
-});
-
-
-// court-order / Have you got a court decision about child maintenance payments?
-router.post('/telephonytool/organisations', function(req, res) {
-  if (req.body['organisation-choice'] === 'yes') {
-    res.redirect('court');
-  } else {
-    res.redirect('other');
-  }
-});
-
-router.post('telephonytool/other-parent-live', function(req, res) {
-  if (req.body['organisation-choice'] === 'yes') {
-    res.redirect('court');
-  } else {
-    res.redirect('other');
-  }
-});
-
-router.post('telephonytool/court', function(req, res) {
-  if (req.body['court-choice'] === 'yes') {
-    res.redirect('court-decision');
-  } else {
-    res.redirect('domestic-abuse');
-  }
-});
 
 
 
