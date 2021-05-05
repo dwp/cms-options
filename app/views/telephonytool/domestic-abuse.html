@@ -1,6 +1,5 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Feedback banner start-->
-    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -11,6 +10,7 @@
     </span>
   </p>
 </div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
 <!--Feedback banner stop-->
 
@@ -30,41 +30,36 @@
     <div class="">
         <form method="post" novalidate>
 
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="pension-hint">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                    <h3 class="govuk-heading-m">
-        Have you or your children experienced any of these behaviours?
-                    </h3>
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="da-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
+                          <h1 class="govuk-fieldset__heading">
+                            Have you or your children experienced any of these behaviours?
+                          </h1>
+                      </legend>
+                      <ul class="govuk-list govuk-list--bullet">
+                      <li>psychological or emotional abuse</li>
+                      <li>physical or sexual abuse</li>
+                      <li>financial or economic abuse</li>
+                      <li>coercive control (an act or pattern of acts of assault, threats, humiliation, intimidation, degradaton, isolation and control)</li>
+                      <li> harrassment and stalking </li>
+                      <li> online or digital abuse </li>
+                    </ul>
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="da-1" name="da" type="radio" value="yes~bahaviours">
+                          <label class="govuk-label govuk-radios__label" for="da-1">
+                              Yes
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="da-2" name="da" type="radio" value="no~options">
+                          <label class="govuk-label govuk-radios__label" for="da">
+                              No
+                          </label>
+                      </div>
 
-                  </legend>
-                  <ul class="govuk-list govuk-list--bullet">
-                  <li>psychological or emotional abuse</li>
-                  <li>physical or sexual abuse</li>
-                  <li>financial or economic abuse</li>
-                  <li>coercive control (an act or pattern of acts of assault, threats, humiliation, intimidation, degradaton, isolation and control)</li>
-                  <li> harrassment and stalking </li>
-                  <li> online or digital abuse </li>
-                </ul>
-                  <div class="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="pension-1" name="pension" type="radio" value="yes~3-fixed-income">
-                      <label class="govuk-label govuk-radios__label" for="pension-1">
-                        Yes
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="pension-2" name="pension" type="radio" value="no~3-flexible-income">
-                      <label class="govuk-label govuk-radios__label" for="pension-2">
-                    No
-                      </label>
-                    </div>
-                  
-
+             </fieldset>
                   </div>
-
-                </fieldset>
-              </div>
             <br>
 
 
@@ -75,8 +70,10 @@
 
 
 
-        <a href="other-parent-live" class="govuk-button ">Continue</a>
-
+    <!--end-->
+    <button type="submit" class="govuk-button">
+        Continue
+    </button>
 
         <div class="govuk-grid-row">
 

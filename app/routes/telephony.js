@@ -1,5 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const radioButtonRedirect = require('radio-button-redirect')
+router.use(radioButtonRedirect)
 
 
 router.use((req, res, next) => {
@@ -18,13 +20,7 @@ router.use((req, res, next) => {
 
 
 
-router.post('/telephonytool/organisations', function(req, res) {
-  if (req.body['choice'] === 'yes') {
-    res.redirect('court');
-  } else {
-    res.redirect('other');
-  }
-});
+
 
 // Routes end
 
