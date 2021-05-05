@@ -26,6 +26,28 @@ router.post('/telephonytool/children', function(req, res) {
 });
 
 
+//check eligibility
+router.post('/telephonytool/check-eligibility', function(req, res) {
+  if (req.body['where-do-you-live'] === 'uk') {
+    res.redirect('other-parent-live');
+  } else if (req.body['where-do-you-live'] === 'northern-ireland'){
+    res.redirect('choices');
+  } else {
+    res.redirect('organisations');
+  }
+});
+
+
+// court-decision
+router.post('/telephonytool/court', function(req, res) {
+  if (req.body['court-choice'] === 'yes') {
+    res.redirect('court-decision');
+  } else {
+    res.redirect('domestic-abuse');
+  }
+});
+
+
 
 
 // Routes end
