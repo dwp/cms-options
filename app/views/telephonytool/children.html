@@ -11,73 +11,48 @@
     </span>
   </p>
 </div>
-{{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
 <!--Feedback banner stop-->
 
-
 <div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Are the children you're applying for under 16 years old?
+                </h1>
+              </legend>
 
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="yes" name="children-under-16" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="no" name="children-under-16" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="no">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
 
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-        <div class="govuk-grid-row">
-
-            <div class="govuk-grid-column-two-thirds">
-
-    <form method="post" novalidate>
-        <div class="govuk-form-group">
-
-
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="religion-hint">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                            <h1 class="govuk-fieldset__heading">
-                        Are the children you're applying for under 16 years old?
-                            </h1>
-                          </legend>
-
-                        <br>
-                        <div class="govuk-radios--inline" data-module="radios">
-                          <div class="govuk-radios__item">
-
-                              <input class="govuk-radios__input" id="live-uk-1" name="live-uk" type="radio" value="yes~under-20">
-                              <label class="govuk-label govuk-radios__label" for="live-uk-1">
-                                  Yes
-                              </label>
-                          </div>
-                          <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="live-uk-2" name="live-uk" type="radio" value="no~other">
-                              <label class="govuk-label govuk-radios__label" for="live-uk-2">
-                                  No
-                              </label>
-                          </div>
-
-
-                        </div>
-
-
-
-
-
-                        </fieldset>
-                        </div>
-        </div>
-
-    </form>
-
-
-    <button type="submit" class="govuk-button">
-        Continue
-    </button>
-    </form>
-
-
-
-<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
-<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
-
-
-
-
-
+    </div>
+  </main>
+</div>
 {% endblock %}
