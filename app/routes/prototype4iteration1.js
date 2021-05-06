@@ -35,6 +35,30 @@ router.post('/prototype4/iteration1/where-does-the-other-parent-live', function(
 });
 
 
+// will-you-be-paying-or-receiving
+
+router.post('/prototype4/iteration1/will-you-be-paying-or-receiving', function(req, res) {
+  if (req.body['will-you-be-paying-or-receiving'] === 'paying') {
+    res.redirect('have-you-had-a-court-decision');
+  } else if (req.body['will-you-be-paying-or-receiving'] === 'receiving') {
+    res.redirect('have-you-had-a-court-decision');
+  } else {
+    res.redirect('will-you-be-paying-or-receiving');
+  }
+});
+
+
+// have-you-had-a-court-decision
+
+router.post('/prototype4/iteration1/have-you-had-a-court-decision', function(req, res) {
+  if (req.body['have-you-had-a-court-decision'] === 'yes') {
+    res.redirect('you-need-to-call');
+  } else {
+    res.redirect('make-your-own-arrangement');
+  }
+});
+
+
 // Routes end
 
 module.exports = router;
