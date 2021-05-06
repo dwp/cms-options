@@ -8,6 +8,7 @@ const prototype1iteration1 = require('./routes/prototype1iteration1');;
 const prototype1iteration2 = require('./routes/prototype1iteration2');;
 const prototype2iteration1 = require('./routes/prototype2iteration1');;
 const prototype3iteration1 = require('./routes/prototype3iteration1');;
+const prototype4iteration1 = require('./routes/prototype4iteration1');;
 const telephonytool = require('./routes/telephonytool');;
 
 //copy the router use and update the sprint version
@@ -15,6 +16,7 @@ router.use(prototype1iteration1);
 router.use(prototype1iteration2);
 router.use(prototype2iteration1);
 router.use(prototype3iteration1);
+router.use(prototype4iteration1);
 router.use(telephonytool);
 
 module.exports = router
