@@ -13,7 +13,7 @@ router.use((req, res, next) => {
 // Routes start
 
 // where-do-you-live
-router.post('/prototype3/iteration1/where-do-you-live', function(req, res) {
+router.post('/prototype4/iteration1/where-do-you-live', function(req, res) {
   if (req.body['where-do-you-live'] === 'lives-in-gb') {
     res.redirect('where-does-the-other-parent-live');
   } else if (req.body['where-do-you-live'] === 'lives-in-northern-ireland'){
@@ -26,7 +26,7 @@ router.post('/prototype3/iteration1/where-do-you-live', function(req, res) {
 
 // where-does-the-other-parent-live
 
-router.post('/prototype3/iteration1/where-does-the-other-parent-live', function(req, res) {
+router.post('/prototype4/iteration1/where-does-the-other-parent-live', function(req, res) {
   if (req.body['where-does-the-other-parent-live'] === 'op-lives-in-uk') {
     res.redirect('will-you-be-paying-or-receiving');
   } else {
