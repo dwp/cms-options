@@ -63,6 +63,8 @@ router.post('/prototype4/iteration1/have-you-had-a-court-decision', function(req
 router.post('/prototype4/iteration1/what-do-you-want-to-do', function(req, res) {
   if (req.body['what-do-you-want-to-do'] === 'make-own-arrangement') {
     res.redirect('help-making-your-own-arrangement');
+  } else if (req.body['what-do-you-want-to-do'] === 'use-cms-pp'){
+    res.redirect('apply-by-phone');
   } else if (req.body['what-do-you-want-to-do'] === 'use-cms'){
     res.redirect('how-do-you-want-to-apply');
   } else {
@@ -91,7 +93,6 @@ router.post('/prototype4/iteration1/your-application-reference-number', function
     res.redirect('write-down-your-reference');
   }
 });
-
 
 
 
@@ -126,6 +127,7 @@ router.post('/prototype4/iteration1/confirm-mobile-number', function(req, res) {
     res.redirect('email-or-text-message');
   }
 });
+
 
 // start-your-application
 
