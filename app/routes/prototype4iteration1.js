@@ -59,6 +59,87 @@ router.post('/prototype4/iteration1/have-you-had-a-court-decision', function(req
 });
 
 
+// what-do-you-want-to-do
+router.post('/prototype4/iteration1/what-do-you-want-to-do', function(req, res) {
+  if (req.body['what-do-you-want-to-do'] === 'make-own-arrangement') {
+    res.redirect('help-making-your-own-arrangement');
+  } else if (req.body['what-do-you-want-to-do'] === 'use-cms-pp'){
+    res.redirect('apply-by-phone');
+  } else if (req.body['what-do-you-want-to-do'] === 'use-cms'){
+    res.redirect('how-do-you-want-to-apply');
+  } else {
+    res.redirect('get-more-information');
+  }
+});
+
+
+// how-do-you-want-to-apply
+
+router.post('/prototype4/iteration1/how-do-you-want-to-apply', function(req, res) {
+  if (req.body['how-do-you-want-to-apply'] === 'online') {
+    res.redirect('your-application-reference-number');
+  } else {
+    res.redirect('apply-by-phone');
+  }
+});
+
+
+// your-application-reference-number
+
+router.post('/prototype4/iteration1/your-application-reference-number', function(req, res) {
+  if (req.body['send-reference'] === 'yes') {
+    res.redirect('email-or-text-message');
+  } else {
+    res.redirect('write-down-your-reference');
+  }
+});
+
+
+
+// email-or-text-message
+
+router.post('/prototype4/iteration1/email-or-text-message', function(req, res) {
+  if (req.body['email-or-text-message'] === 'email') {
+    res.redirect('confirm-email');
+  } else {
+    res.redirect('confirm-mobile-number');
+  }
+});
+
+
+// confirm-email
+
+router.post('/prototype4/iteration1/confirm-email', function(req, res) {
+  if (req.body['confirm-email'] === 'yes') {
+    res.redirect('email-sent');
+  } else {
+    res.redirect('email-or-text-message');
+  }
+});
+
+
+// confirm-mobile-number
+
+router.post('/prototype4/iteration1/confirm-mobile-number', function(req, res) {
+  if (req.body['confirm-mobile-number'] === 'yes') {
+    res.redirect('text-message-sent');
+  } else {
+    res.redirect('email-or-text-message');
+  }
+});
+
+
+// start-your-application
+
+router.post('/prototype4/iteration1/start-your-application', function(req, res) {
+  if (req.body['start-your-application'] === 'yes') {
+    res.redirect('start-apply-journey');
+  } else {
+    res.redirect('apply-later');
+  }
+});
+
+
 // Routes end
 
 module.exports = router;
