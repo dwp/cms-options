@@ -58,7 +58,7 @@ router.post('/telephonytool/court-decision', function(req, res) {
 
 // court decision
 router.post('/telephonytool/domestic-abuse', function(req, res) {
-  if (req.body['da'] === 'yes') {
+  if (req.body['da'] === 'yes') {``
     res.redirect('help');
   } else {
     res.redirect('options');
@@ -71,12 +71,38 @@ router.post('/telephonytool/choice', function(req, res) {
   if (req.body['arrangement'] === 'own') {
     res.redirect('own-arrangement');
   } else if (req.body['arrangement'] === 'cms'){
-    res.redirect('cms');
+    res.redirect('child-maintenance-service');
   } else {
     res.redirect('more-information');
   }
 });
 
+//how would you like to apply
+router.post('/telephonytool/child-maintenance-service', function(req, res) {
+  if (req.body['apply'] === 'phone') {``
+    res.redirect('phone');
+  } else {
+    res.redirect('online-eligibility');
+  }
+});
+
+//Used CMS before
+router.post('/telephonytool/online-eligibility', function(req, res) {
+  if (req.body['cms'] === 'yes') {``
+    res.redirect('cms-same-parent');
+  } else {
+    res.redirect('URN');
+  }
+});
+
+//Previous cms
+router.post('/telephonytool/cms-same-parent', function(req, res) {
+  if (req.body['cms'] === 'yes') {``
+    res.redirect('reference-number');
+  } else {
+    res.redirect('URN');
+  }
+});
 
 
 // Routes end
