@@ -19,7 +19,18 @@ router.post('/prototype4/iteration1/where-do-you-live', function(req, res) {
   } else if (req.body['where-do-you-live'] === 'lives-in-northern-ireland'){
     res.redirect('contact-child-maintenance-choices');
   } else {
+    res.redirect('outside-uk');
+  }
+});
+
+
+// outside-uk
+
+router.post('/prototype4/iteration1/outside-uk', function(req, res) {
+  if (req.body['work-for-uk-organisation'] === 'no-uk-organisation') {
     res.redirect('you-need-to-call');
+  } else {
+    res.redirect('where-does-the-other-parent-live');
   }
 });
 
@@ -29,8 +40,21 @@ router.post('/prototype4/iteration1/where-do-you-live', function(req, res) {
 router.post('/prototype4/iteration1/where-does-the-other-parent-live', function(req, res) {
   if (req.body['where-does-the-other-parent-live'] === 'op-lives-in-uk') {
     res.redirect('will-you-be-paying-or-receiving');
+  } else if (req.body['where-does-the-other-parent-live'] === 'op-lives-outside-uk') {
+    res.redirect('other-parent-outside-uk');
   } else {
     res.redirect('you-need-to-call');
+  }
+});
+
+
+// other-parent-outside-uk
+
+router.post('/prototype4/iteration1/other-parent-outside-uk', function(req, res) {
+  if (req.body['op-work-for-uk-organisation'] === 'no-uk-organisation') {
+    res.redirect('you-need-to-call');
+  } else {
+    res.redirect('will-you-be-paying-or-receiving');
   }
 });
 
