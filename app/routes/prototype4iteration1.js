@@ -28,7 +28,7 @@ router.post('/prototype4/iteration1/where-do-you-live', function(req, res) {
 
 router.post('/prototype4/iteration1/outside-uk', function(req, res) {
   if (req.body['work-for-uk-organisation'] === 'no-uk-organisation') {
-    res.redirect('you-need-to-call');
+    res.redirect('cannot-use-child-maintenance-service');
   } else {
     res.redirect('where-does-the-other-parent-live');
   }
@@ -40,10 +40,10 @@ router.post('/prototype4/iteration1/outside-uk', function(req, res) {
 router.post('/prototype4/iteration1/where-does-the-other-parent-live', function(req, res) {
   if (req.body['where-does-the-other-parent-live'] === 'op-lives-in-uk') {
     res.redirect('will-you-be-paying-or-receiving');
-  } else if (req.body['where-does-the-other-parent-live'] === 'op-lives-outside-uk') {
-    res.redirect('other-parent-outside-uk');
+  } else if (req.body['where-does-the-other-parent-live'] === 'op-lives-unknown') {
+    res.redirect('cannot-use-child-maintenance-service');
   } else {
-    res.redirect('you-need-to-call');
+    res.redirect('other-parent-outside-uk');
   }
 });
 
@@ -52,7 +52,7 @@ router.post('/prototype4/iteration1/where-does-the-other-parent-live', function(
 
 router.post('/prototype4/iteration1/other-parent-outside-uk', function(req, res) {
   if (req.body['op-work-for-uk-organisation'] === 'no-uk-organisation') {
-    res.redirect('you-need-to-call');
+    res.redirect('cannot-use-child-maintenance-service');
   } else {
     res.redirect('will-you-be-paying-or-receiving');
   }
@@ -76,7 +76,7 @@ router.post('/prototype4/iteration1/will-you-be-paying-or-receiving', function(r
 
 router.post('/prototype4/iteration1/have-you-had-a-court-decision', function(req, res) {
   if (req.body['have-you-had-a-court-decision'] === 'yes') {
-    res.redirect('you-need-to-call');
+    res.redirect('cannot-use-child-maintenance-service');
   } else {
     res.redirect('make-your-own-arrangement');
   }
