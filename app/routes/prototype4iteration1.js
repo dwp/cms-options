@@ -133,7 +133,7 @@ router.post('/prototype4/iteration1/confirm-mobile-number', function(req, res) {
 
 router.post('/prototype4/iteration1/start-your-application', function(req, res) {
   if (req.body['start-your-application'] === 'yes') {
-    res.redirect('start-apply-journey');
+    res.redirect('what-is-your-application-reference');
   } else {
     res.redirect('apply-later');
   }
