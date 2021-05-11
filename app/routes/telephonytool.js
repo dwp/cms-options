@@ -91,7 +91,7 @@ router.post('/telephonytool/online-eligibility', function(req, res) {
   if (req.body['cms'] === 'yes') {``
     res.redirect('cms-same-parent');
   } else {
-    res.redirect('URN');
+    res.redirect('urn-online');
   }
 });
 
@@ -100,7 +100,7 @@ router.post('/telephonytool/cms-same-parent', function(req, res) {
   if (req.body['cms'] === 'yes') {``
     res.redirect('reference-number');
   } else {
-    res.redirect('URN');
+    res.redirect('urn-online');
   }
 });
 
