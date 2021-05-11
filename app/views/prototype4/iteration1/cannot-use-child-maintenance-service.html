@@ -24,21 +24,22 @@
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
 
-
-                <!--LIVES OUTSIDE THE UK-->
-                {% if data['work-for-uk-organisation'] === 'no-uk-organisation' %}
-                  {% include './includes/eligibility-outside-uk.html' %}
+                <!--COURT ORDER EXISTS-->
+                {%if data['have-you-had-a-court-decision'] === 'yes' %}
+                  {% include './includes/eligibility-court-order.html' %}
                 <!--OTHER PARENT RESIDENCY UNKNOWN-->
                 {% elseif data['where-does-the-other-parent-live'] === 'op-lives-unknown' %}
                   {% include './includes/eligibility-op-residency-unknown.html' %}
                 <!--OTHER PARENT OUTSIDE THE UK-->
-                {% elseif data['op-work-for-uk-organisation'] === 'no-uk-organisation' %}
+                {% elseif data['where-does-the-other-parent-live'] === 'op-lives-outside-uk' %}
                   {% include './includes/eligibility-op-outside-uk.html' %}
-                <!--COURT ORDER EXISTS-->
-                {% elseif data['have-you-had-a-court-decision'] === 'yes' %}
-                  {% include './includes/eligibility-court-order.html' %}
+                <!--LIVES OUTSIDE THE UK-->
+                {% elseif data['where-do-you-live'] === 'lives-somewhere-else' %}
+                <!--GENERIC - THIS SHOULD NEVER BE SEEN, BUT IS THERE TO GRACEFULLY HANDLE ERRORS-->
+                  {% include './includes/eligibility-outside-uk.html' %}
+                {% else %}
+                  {% include './includes/eligibility-generic.html' %}
                 {% endif %}
-
 
             </form>
           </div>

@@ -24,60 +24,12 @@
 
             <h1 class="govuk-heading-l">Your options: Use the Child Maintenance Service</h1>
 
-
             {% if data['will-you-be-paying-or-receiving'] === 'paying' %}
-            <p class="govuk-body">The Child Maintenance Service may be able to arrange child maintenance for you. This is less flexible than making your own arrangement because the calculation is a fixed amount based on your earnings.</p>
-            <p class="govuk-body">Using the Child Maintenance Service might be a good option for if you do not feel safe dealing with the other parent, or you do not think they will stick to an agreement.</p>
-            <p class="govuk-body">The Child Maintenance Service will:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>
-                work out how much child maintenance you will pay
-              </li>
-              <li>
-                arrange for the you to pay the other parent
-              </li>
-              <li>
-                take action if you do not make payments
-              </li>
-              <li>
-                help find the other parent if you’ve lost contact
-              </li>
-              <li>
-                recalculate the payment amount if a changes in your circumstances is reported
-              </li>
-              <li>
-                help if someone denies they’re the parent of a child
-              </li>
-            </ul>
-
-            {% endif %}
-
-
-            {% if data['will-you-be-paying-or-receiving'] === 'receiving' %}
-            <p class="govuk-body">The Child Maintenance Service may be able to arrange child maintenance for you. This is less flexible than making your own arrangement because the calculation is a fixed amount based on the paying parent’s earnings.</p>
-            <p class="govuk-body">Using the Child Maintenance Service might be a good option for if you do not feel safe dealing with the other parent, or you do not think they will stick to an agreement.</p>
-            <p class="govuk-body">The Child Maintenance Service will:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>
-                work out how much child maintenance you will be paid
-              </li>
-              <li>
-                arrange for the the other parent to pay you
-              </li>
-              <li>
-                take action if payments are not made
-              </li>
-              <li>
-                help find the other parent if you’ve lost contact
-              </li>
-              <li>
-                recalculate the payment amount if changes in parents’ circumstances are reported
-              </li>
-              <li>
-                help if someone denies they’re the parent of a child
-              </li>
-            </ul>
-
+              {% include './includes/use-cms-paying.html' %}
+            {% elseif data['will-you-be-paying-or-receiving'] === 'receiving' %}
+              {% include './includes/use-cms-receiving.html' %}
+            {% else %}
+              {% include './includes/use-cms-generic.html' %}
             {% endif %}
           </div>
 
