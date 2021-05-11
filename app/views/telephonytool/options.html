@@ -25,21 +25,9 @@
             <div class="govuk-grid-column-two-thirds">
               <h1 class="govuk-heading-l">Your child maintenance options</h1>
 
-<p> If the caller: </p>
-              <ul class="govuk-list govuk-list--bullet">
 
-                  <li>
-                    has experienced domestic abuse
-                  </li>
-                  <li>
-                    is concerned about contacting the other parent
-                  </li>
-                  <li>
-                would prefer one option
-                  </li>
-                </ul>
 
-<p> You still need to go through both options to make sure they have all the information before they make a decision. </p>
+<p> I am required to talk you through both of your options, regardless of your personal circumstances. This is to make sure you have all the information you need to make the best decision for you and your children. </p>
 
 <!-- accordian - options -->
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -94,6 +82,7 @@ Making your own arrangement:
 <p><b>
       Do you have any questions about making your own arrangement?</b>
     </p>
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
   </div>
 
@@ -113,22 +102,19 @@ Making your own arrangement:
     <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
       <ul class="govuk-list govuk-list--bullet">
           <li>
-          the Child Maintenance Service is for parents who cannot agree to a private arrangement
+        using the Child Maintenance Service is less flexible than making your own arrangement because the amount is based on the paying parent’s earnings
           </li>
-          <li>
-          it is less flexible than making your own arrangement because the amount is based on the paying parent's earnings
-          </li>
-          <li> it might be a good option if you do not feel safe with the other parent or if you have not been able to stick to your own arrangement in the past
+          <li>it might be a good option if you do not feel safe dealing with the other parent or if you have not been able to stick to your own arrangement in the past  </li>
         </ul>
 
-        <p> <b> Application fee </b> </p>
+        <p> <b> You will need to complete an application online or on the phone. </b> </p>
           <ul class="govuk-list govuk-list--bullet">
-            <li> there is a £20 fee to make an application </li>
+            <li>there is a £20 fee to make an application – you will not need to pay the fee if you are under 19 or if you have experienced any domestic abuse</li>
             <li> the fee is non-refundable </li>
             <li> it does not guarantee an arrangement </li>
             </ul>
 
-            <p> You need to complete an application online or on the phone. Then the Child Maintenance Service will: </p>
+            <p> Then the Child Maintenance Service will: </p>
             <ul class="govuk-list govuk-list--bullet">
               <li> work out child maintenance payment amount </li>
               <li> arrange for payments to be made between the parents</li>
@@ -138,7 +124,7 @@ Making your own arrangement:
               <li> help if someone denies they're the parent of a child </li>
               </ul>
 
-  <h3 class="govuk-heading-m"> How you receive child maintenance payments</h3>
+  <h3 class="govuk-heading-m"> There are 2 ways you can pay Child Maintenance payments</h3>
 
   <p><b> Direct Pay </b></p>
   <ul class="govuk-list govuk-list--bullet">
@@ -154,6 +140,8 @@ Making your own arrangement:
       <li> you can only start with Collect & Pay if the other parent agrees to it or if they do not respond to us</li>
       </ul>
       <p> <b> Do you have any questions about using the Child Maintenance Service? </b></p>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+
     </div>
   </div>
 </div>
@@ -164,15 +152,7 @@ Making your own arrangement:
 
 
 
-        <div class="govuk-grid-row">
-
-<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
-<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
-
 </div>
-
-
-
-
-
+</main>
+</div>
 {% endblock %}

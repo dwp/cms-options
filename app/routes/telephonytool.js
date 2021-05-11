@@ -97,8 +97,45 @@ router.post('/telephonytool/online-eligibility', function(req, res) {
 
 //Previous cms
 router.post('/telephonytool/cms-same-parent', function(req, res) {
-  if (req.body['cms'] === 'yes') {``
-    res.redirect('reference-number');
+  if (req.body['previous-cms'] === 'yes') {``
+    res.redirect('previous-reference');
+  } else {
+    res.redirect('urn-online');
+  }
+});
+
+//organisations
+router.post('/telephonytool/organisations', function(req, res) {
+  if (req.body['organisation-choice'] === 'yes') {``
+    res.redirect('other-parent-live');
+  } else {
+    res.redirect('end');
+  }
+});
+
+//other parent live
+router.post('/telephonytool/other-parent-live', function(req, res) {
+  if (req.body['choice'] === 'england') {``
+    res.redirect('paying-or-receiving');
+  } else {
+    res.redirect('other-parent-organisations');
+  }
+});
+
+
+//other parent organisations
+router.post('/telephonytool/other-parent-organisations', function(req, res) {
+  if (req.body['organisation-choice'] === 'yes') {``
+    res.redirect('paying-or-receiving');
+  } else {
+    res.redirect('end');
+  }
+});
+
+//previous reference number
+router.post('/telephonytool/previous-reference', function(req, res) {
+  if (req.body['ref-no'] === 'yes') {``
+    res.redirect('urn-online');
   } else {
     res.redirect('urn-online');
   }
