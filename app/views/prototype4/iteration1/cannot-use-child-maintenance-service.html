@@ -23,17 +23,23 @@
           <!--start of radio-->
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  You need to contact Child Maintenance Choices
-                </h1>
-              </legend>
-              <p class="govuk-body">Child Maintenance Choices is a service for people living in Northern Ireland that gives advice about making a child maintenance arrangement. They also put separated parents in contact with the Child Maintenance Service.</p>
 
-              <p class="govuk-body"><a href="https://www.nidirect.gov.uk/contacts/contacts-az/child-maintenance-choices">Contact Child Maintenance Choices through the nidirect website</a>.</p>
-
-
-              <!--end-->
+                <!--COURT ORDER EXISTS-->
+                {%if data['have-you-had-a-court-decision'] === 'yes' %}
+                  {% include './includes/eligibility-court-order.html' %}
+                <!--OTHER PARENT RESIDENCY UNKNOWN-->
+                {% elseif data['where-does-the-other-parent-live'] === 'op-lives-unknown' %}
+                  {% include './includes/eligibility-op-residency-unknown.html' %}
+                <!--OTHER PARENT OUTSIDE THE UK-->
+                {% elseif data['where-does-the-other-parent-live'] === 'op-lives-outside-uk' %}
+                  {% include './includes/eligibility-op-outside-uk.html' %}
+                <!--LIVES OUTSIDE THE UK-->
+                {% elseif data['where-do-you-live'] === 'lives-somewhere-else' %}
+                <!--GENERIC - THIS SHOULD NEVER BE SEEN, BUT IS THERE TO GRACEFULLY HANDLE ERRORS-->
+                  {% include './includes/eligibility-outside-uk.html' %}
+                {% else %}
+                  {% include './includes/eligibility-generic.html' %}
+                {% endif %}
 
             </form>
           </div>

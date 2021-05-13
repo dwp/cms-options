@@ -1,0 +1,79 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Calculator</h1>
+              <p> To get a calculation, you will need to know: </p>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>the other parent's income, including State Pension</li>
+                <li>details of the other parent's benefits</li>
+                <li>the number of nights your child stays with the other parent</li>
+              </ul>
+
+
+    <div class="">
+        <form method="post" novalidate>
+
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="da-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-fieldset__legend--xl ">
+                        What do you want to do?
+                      </legend>
+
+                    <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="phone" name="want-to-do" type="radio" value="phone">
+                            <label class="govuk-label govuk-radios__label" for="phone">
+                                Get a calculation on the phone
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="own" name="arrangement" type="radio" value="own">
+                            <label class="govuk-label govuk-radios__label" for="own">
+                                Use the online calculator in my own time
+                            </label>
+                        </div>
+                    </div>
+
+             </fieldset>
+                  </div>
+            <br>
+
+
+
+    </div>
+
+
+
+
+
+    <!--end-->
+  <a href="/telephonytool/endscreens/use-calculator-online" class="govuk-button">Continue</a>
+  </form>
+</div>
+
+</div>
+</main>
+</div>
+{% endblock %}

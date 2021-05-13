@@ -142,6 +142,17 @@ router.post('/telephonytool/previous-reference', function(req, res) {
 });
 
 
+//more information
+router.post('/telephonytool/more-information', function(req, res) {
+  if (req.body['more-info'] === 'cms') {
+    res.redirect('calculation');
+  } else if (req.body['more-info'] === 'more'){
+    res.redirect('more-information-options');
+  } else {
+    res.redirect('/telephonytool/endscreens/end-time-to-think');
+  }
+});
+
 // Routes end
 
 module.exports = router;

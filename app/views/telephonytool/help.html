@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Domestic abuse</h1>
+
+<p> We need to ask you a question about domestic abuse so we can show you where to get help if you need it. Also, you may not have to pay the £20 application fee if you have experienced domestic abuse. </p>
+
+
+    <div class="">
+        <form method="post" novalidate>
+
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="da-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
+                          <h1 class="govuk-fieldset__heading">
+                            Have you or your children experienced any of these behaviours?
+                          </h1>
+                      </legend>
+                      <ul class="govuk-list govuk-list--bullet">
+                      <li>psychological or emotional abuse</li>
+                      <li>physical or sexual abuse</li>
+                      <li>financial or economic abuse</li>
+                      <li>coercive control (an act or pattern of acts of assault, threats, humiliation, intimidation, degradaton, isolation and control)</li>
+                      <li> harrassment and stalking </li>
+                      <li> online or digital abuse </li>
+                    </ul>
+                    <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="yes" name="da" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="yes">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="no" name="da" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="no">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+             </fieldset>
+                  </div>
+            <br>
+
+
+
+    </div>
+
+
+
+
+    <button type="submit" class="govuk-button">
+      Continue
+    </button>
+  </form>
+</div>
+
+</div>
+</main>
+</div>
+{% endblock %}
