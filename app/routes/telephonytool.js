@@ -88,12 +88,36 @@ router.post('/telephonytool/child-maintenance-service', function(req, res) {
 
 //Used CMS before
 router.post('/telephonytool/online-eligibility', function(req, res) {
-  if (req.body['cms'] === 'yes') {``
+  if (req.body['arrangement'] === 'yes') {``
+    res.redirect('cms-before');
+  } else {
+    res.redirect('end');
+  }
+});
+
+router.post('/telephonytool/online-eligibility', function(req, res) {
+  if (req.body['arrangement-1'] === 'yes') {``
+    res.redirect('cms-before');
+  } else {
+    res.redirect('end');
+  }
+});
+router.post('/telephonytool/online-eligibility', function(req, res) {
+  if (req.body['arrangement-2'] === 'yes') {``
+    res.redirect('cms-before');
+  } else {
+    res.redirect('end');
+  }
+});
+
+router.post('/telephonytool/cms-before', function(req, res) {
+  if (req.body['cms-before'] === 'yes') {``
     res.redirect('cms-same-parent');
   } else {
     res.redirect('urn-online');
   }
 });
+
 
 //Previous cms
 router.post('/telephonytool/cms-same-parent', function(req, res) {
@@ -147,7 +171,7 @@ router.post('/telephonytool/more-information', function(req, res) {
   if (req.body['more-info'] === 'cms') {
     res.redirect('calculation');
   } else if (req.body['more-info'] === 'more'){
-    res.redirect('more-information-options');
+    res.redirect('own-arrangement');
   } else {
     res.redirect('/telephonytool/endscreens/end-time-to-think');
   }
