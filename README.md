@@ -37,7 +37,7 @@ Design prototypes for Child Maintenance Service 'Options' service, AKA: Get help
 
       b) an updated 'Latest version' link
 
-    6. An new or amended version index file as described under # Hierarchy
+    6. Add new or amended version index file as described under # Hierarchy
 
 
 # Merging
