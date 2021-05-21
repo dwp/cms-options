@@ -15,7 +15,7 @@ Design prototypes for Child Maintenance Service 'Options' service, AKA: Get help
 # Routing
   Separate routes files are maintained for each iteration for the prototype.
 
-    1. Add new routes files to app/routes/prototype(number)/iteration(number)
+    1. Add new routes files to app/routes using the consistent naming principles, eg - prototype(number)iteration(number).js
 
     2. Update the master routes file at app/routes.js with the const name, filepath and router use (see the file, it's pretty self-explanatory)
 
@@ -41,4 +41,4 @@ Design prototypes for Child Maintenance Service 'Options' service, AKA: Get help
 
 
 # Merging
-  I recommended (although it's not enforced) that work is undertaken in feature branches with regular commits rather than direct commits to Master.
+  I recommend (although it's not enforced) that work is undertaken in feature branches with regular commits rather than direct commits to Master.
