@@ -19,28 +19,32 @@
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
+
+
                 <form method="post" novalidate>
                     <!--start of radio-->
                     <div class="">
                         <form method="post" novalidate>
 
+                          <h1 class="govuk-heading-xl">Would you like me to transfer you to apply now?</h1>
+                          <p> If you do not have time to apply now, I can give you the telephone number so you can call at a better time. </p>
+<br/>
                               <div class="govuk-form-group">
                                   <fieldset class="govuk-fieldset" aria-describedby="da-hint">
-                                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
-When was the court decision put in place
+                                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-fieldset__legend--xl ">
                                       </legend>
 
                                     <div class="govuk-radios govuk-radios--inline">
                                         <div class="govuk-radios__item">
-                                            <input class="govuk-radios__input" id="yes" name="court-decision" type="radio" value="yes">
+                                            <input class="govuk-radios__input" id="yes" name="transfer" type="radio" value="yes">
                                             <label class="govuk-label govuk-radios__label" for="yes">
-                                              Within the last 12 months
+                                            Yes
                                             </label>
                                         </div>
                                         <div class="govuk-radios__item">
-                                            <input class="govuk-radios__input" id="no" name="court-decision" type="radio" value="no">
+                                            <input class="govuk-radios__input" id="no" name="transfer" type="radio" value="no">
                                             <label class="govuk-label govuk-radios__label" for="no">
-                                            Over 12 months ago
+                                            No
                                             </label>
                                         </div>
 
@@ -56,9 +60,11 @@ When was the court decision put in place
 
                     <!--end-->
 
-                    <button type="submit" class="govuk-button">
-                      Continue
-                    </button>                    <p>
+                      <button type="submit" class="govuk-button">
+                        Continue
+                      </button>
+              
+    <p class="govuk-body">
                       <a class="govuk-link" href="index">End call</a>
                       </p>
                 </form>

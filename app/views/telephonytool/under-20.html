@@ -1,5 +1,13 @@
-{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Feedback banner start-->
+{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }} {% endblock %} {% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+  var $element = $('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+  stepByStepNavigation.start($element)</script>
+{% endblock %}
+{% block beforeContent %}
 
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -12,73 +20,51 @@
   </p>
 </div>
 {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Are your children under 20 years old and in full time education?
+                </h1>
+              </legend>
 
-<!--Feedback banner stop-->
-
-
-<div class="govuk-width-container">
-
-
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-        <div class="govuk-grid-row">
-
-            <div class="govuk-grid-column-two-thirds">
-
-    <form method="post" novalidate>
-        <div class="govuk-form-group">
-
-
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="religion-hint">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                            <h1 class="govuk-fieldset__heading">
-                        Are your children under 20 years old and in full time education?
-                            </h1>
-                          </legend>
-
-                        <br>
-                        <div class="govuk-radios--inline" data-module="radios">
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="under20-yes" name="under20-yes" type="radio" value="yes~check-eligibility"
-                                    aria-controls="conditional-other-parent-dob-1" aria-expanded="true">
-                                <label class="govuk-label govuk-radios__label" for="under20-yes">
-                                    Yes
-                                </label>
-                            </div>
-
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="children-no" name="children-yes" type="radio" value="no~check-eligibility">
-                                <label class="govuk-label govuk-radios__label" for="children-no">
-                                    No
-                                </label>
-                            </div>
-
-
-                        </div>
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="yes" name="children-under-20" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="no" name="children-under-20" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="no">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button> <br/>
+          <p>
+            <a class="govuk-link" href="#">End call</a>
+            </p>
+        </form>
+      </div>
 
 
 
 
-
-                        </fieldset>
-                        </div>
-        </div>
-
-    </form>
+</div>
 
 
-        <p class="govuk-body">
-          <a href="check-eligibility" class="govuk-button ">Continue</a>
-        </p>
-    </form>
-
-
-
-<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
-<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
-
-
-
-
-
+</div>
+</div>
 {% endblock %}

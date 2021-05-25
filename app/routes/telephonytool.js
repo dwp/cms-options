@@ -26,6 +26,34 @@ router.post('/telephonytool/children', function(req, res) {
 });
 
 
+router.post('/telephonytool/under-20', function(req, res) {
+  if (req.body['children-under-20'] === 'yes') {
+    res.redirect('check-eligibility');
+  } else {
+    res.redirect('/telephonytool/endscreens/under-20-end');
+  }
+});
+
+router.post('/telephonytool/court-when', function(req, res) {
+  if (req.body['court-decision'] === 'yes') {
+    res.redirect('domestic-abuse');
+  } else {
+    res.redirect('end-court-last-12');
+  }
+});
+
+router.post('/telephonytool/transfer-to-apply', function(req, res) {
+  if (req.body['transfer'] === 'yes') {
+    res.redirect('phone-email');
+  } else {
+    res.redirect('end-phone');
+  }
+});
+
+
+
+
+
 //check eligibility
 router.post('/telephonytool/check-eligibility', function(req, res) {
   if (req.body['where-do-you-live'] === 'uk') {
@@ -89,7 +117,7 @@ router.post('/telephonytool/child-maintenance-service', function(req, res) {
 //Used CMS before
 router.post('/telephonytool/online-eligibility', function(req, res) {
   if (req.body['arrangement'] === 'yes') {``
-    res.redirect('cms-before');
+    res.redirect('urn-online');
   } else {
     res.redirect('end');
   }
@@ -97,7 +125,7 @@ router.post('/telephonytool/online-eligibility', function(req, res) {
 
 router.post('/telephonytool/online-eligibility', function(req, res) {
   if (req.body['arrangement-1'] === 'yes') {``
-    res.redirect('cms-before');
+    res.redirect('urn-online');
   } else {
     res.redirect('end');
   }
@@ -171,7 +199,7 @@ router.post('/telephonytool/more-information', function(req, res) {
   if (req.body['more-info'] === 'cms') {
     res.redirect('calculation');
   } else if (req.body['more-info'] === 'more'){
-    res.redirect('own-arrangement');
+    res.redirect('own-arrangement-2');
   } else {
     res.redirect('/telephonytool/endscreens/end-time-to-think');
   }

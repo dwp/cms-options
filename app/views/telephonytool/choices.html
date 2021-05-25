@@ -1,0 +1,72 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">You need to contact Child Maintenance</h1>
+
+
+    <div class="">
+        <p> Child Maintenance Choice is a service for people living in Northern Ireland that gives advice about making a child maintenance arrangment</p>
+
+<h2 class="govuk-heading-m">Child Maintenance Choices</h2>
+<p> Phone: 0800 028 7439 Monday to Friday from 9.30am to 3.30pm</p>
+<p> Text number: for a call back, text 'Choices'to 67300 </p>
+<p> Email: <a href="">cms_choices@nidirect.go.uk </a></p>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+          <h2 class="govuk-heading-m">
+      Would you like me to send contact information for Northern Ireland Choices by email?
+          </h2>
+        </legend>
+
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="yes" name="email-choices" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="yes">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="no" name="email-choices" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="no">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <!--end-->
+    <p class="govuk-body">
+      <a href="index" class="govuk-button ">End call</a>
+    </p>
+
+  </form>
+</div>
+
+</div>
+</main>
+</div>
+{% endblock %}

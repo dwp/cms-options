@@ -1,6 +1,14 @@
-{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Feedback banner start-->
-
+{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }} {% endblock %} {% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+  var $element = $('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+  stepByStepNavigation.start($element)
+</script>
+{% endblock %} {% block beforeContent %}
+<!--Feedback banner stop-->
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -53,6 +61,9 @@ This is sometimes called a ‘court order’, ‘maintenance order’ or ‘minu
                     <button type="submit" class="govuk-button">
                         Continue
                     </button>
+                    <p>
+                      <a class="govuk-link" href="index">End call</a>
+                      </p>
                 </form>
             </div>
 

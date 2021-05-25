@@ -1,0 +1,70 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="">
+                        <form method="post" novalidate>
+
+                          <h1 class="govuk-heading-m">Child Maintenance Service</h1>
+                            <p> Telephone: 0800 171 2345 </p>
+                            <p> Textphone: 18001 171 2345 </p>
+                            <br/>
+
+                            <p> <a href-""> Video relay service </a> for British Sign Language (BSL) usrs - <a href=""> check you can use the Video Relay Service </a></p>
+                            <p> Monday to Friday, 9.30am to 3.30pm (excluding holidays)</p>
+                            <p> <a href-"">Find out about call charged</a> </p>
+
+                            <br>
+
+                            <h2 class="govuk-heading-m">Would you like me to send these contact details by email</h2>
+                            <p> You'll need to write down this number. </p>
+
+                    </div>
+
+                    <!--end-->
+                    <p class="govuk-body">
+                      <a href="phone-email-2" class="govuk-button ">End call</a>
+                <br/>                      </p>
+                </form>
+            </div>
+
+
+        </div>
+    </main>
+</div>
+
+
+
+
+
+        <div class="govuk-grid-row">
+
+<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
+<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
+
+</div>
+
+
+
+{% endblock %}
