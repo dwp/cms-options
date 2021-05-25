@@ -35,7 +35,7 @@ router.post('/telephonytool/under-20', function(req, res) {
 });
 
 router.post('/telephonytool/court-when', function(req, res) {
-  if (req.body['court-decision'] === 'yes') {
+  if (req.body['court-decision'] === 'no') {
     res.redirect('domestic-abuse');
   } else {
     res.redirect('end-court-last-12');
