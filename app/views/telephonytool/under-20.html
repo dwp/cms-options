@@ -1,14 +1,5 @@
-{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
-<!-- Blank header with no service name for the start page -->
-{{ govukHeader() }} {% endblock %} {% block pageScripts %}
-<script src="/public/javascripts/step-by-step-nav.js"></script>
-<script type="text/javascript">
-  var $element = $('#step-by-step-navigation')
-  var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
-  stepByStepNavigation.start($element)</script>
-{% endblock %}
-{% block beforeContent %}
-
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -19,7 +10,8 @@
     </span>
   </p>
 </div>
-{{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <div>
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -32,7 +24,9 @@
                   Are your children under 20 years old and in full time education?
                 </h1>
               </legend>
-
+              <p>
+              <a href="https://www.gov.uk/child-benefit-16-19"> Make sure the child is in approved education or training </a>
+              </p>
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="yes" name="children-under-20" type="radio" value="yes">

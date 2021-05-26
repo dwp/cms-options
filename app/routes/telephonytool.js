@@ -15,6 +15,13 @@ router.use((req, res, next) => {
 
 
 //telephony
+router.post('/telephonytool/index', function(req, res) {
+  if (req.body['test-numbers'] === '4') {
+    res.redirect('test');
+  } else {
+    res.redirect('under-20');
+  }
+});
 
 // children
 router.post('/telephonytool/children', function(req, res) {
@@ -119,7 +126,7 @@ router.post('/telephonytool/online-eligibility', function(req, res) {
   if (req.body['arrangement'] === 'yes') {``
     res.redirect('urn-online');
   } else {
-    res.redirect('end');
+    res.redirect('not-eligible');
   }
 });
 
