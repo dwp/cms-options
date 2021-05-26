@@ -1,0 +1,129 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+
+            <h1 class="govuk-heading-l">Child cost calculator</h1>
+
+
+<!--Table starts here, the headers-->
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Baby</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">Item</th>
+      <th scope="col" width="300" class="govuk-table__header app-custom-class">Jo's contribution</th>
+      <th scope="col" width="300" class="govuk-table__header app-custom-class">Craig's contribution</th>
+      <th scope="col" width="300" class="govuk-table__header app-custom-class">Frequency of cost</th>
+    </tr>
+  </thead>
+
+<!--Table inputs starts here-->
+
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Nappies</th>
+      <td class="govuk-table__cell">
+        <div class="govuk-input__wrapper">
+        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+        <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+      </div>
+    </td>
+      <td class="govuk-table__cell">
+        <div class="govuk-input__wrapper">
+          <div class="govuk-input__prefix" aria-hidden="true">£</div>
+          <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+        </div>
+      </td>
+      <td class="govuk-table__cell">
+        <div class="govuk-form-group">
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="weekly">weekly</option>
+            <option value="monthly"selected>monthly</option>
+            <option value="yearly">yearly</option>
+            <option value="one off">one off</option>
+          </select>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Milk</th>
+      <td class="govuk-table__cell">
+        <div class="govuk-input__wrapper">
+        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+        <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+      </div>
+    </td>
+      <td class="govuk-table__cell">
+        <div class="govuk-input__wrapper">
+        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+        <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+      </div>
+    </td>
+      <td class="govuk-table__cell">
+        <div class="govuk-form-group">
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="weekly">weekly</option>
+            <option value="monthly"selected>monthly</option>
+            <option value="yearly">yearly</option>
+            <option value="one off">one off</option>
+          </select>
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Clothes</th>
+      <td class="govuk-table__cell">
+      <div class="govuk-input__wrapper">
+        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+        <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+      </div>
+    </td>
+      <td class="govuk-table__cell"><div class="govuk-input__wrapper">
+        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+        <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+      </div>
+    </td>
+      <td class="govuk-table__cell">
+        <div class="govuk-form-group">
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="weekly">weekly</option>
+            <option value="monthly"selected>monthly</option>
+            <option value="yearly">yearly</option>
+            <option value="one off">one off</option>
+          </select>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+                    <!--end-->
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                      <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                              <h1 class="govuk-fieldset__heading">
+                                What stage is your child?
+                              </h1>
+                            </legend>
+                            <div class="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                  Baby
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                  Younger child
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                  Older child or teens
+                                </label>
+                              </div>
+                          </div>
+
+                        </fieldset>
+                      </div>
+                        </div>
+                        </fieldset>
+                    </div>
+                    <!--end-->
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+        </div>
+    </main>
+</div>
+{% endblock %}
