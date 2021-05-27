@@ -13,7 +13,6 @@ router.use((req, res, next) => {
 
 
 
-
 //telephony
 router.post('/telephonytool/index', function(req, res) {
   if (req.body['test-numbers'] === '4') {
@@ -182,14 +181,8 @@ router.post('/telephonytool/other-parent-live', function(req, res) {
 });
 
 
-//other parent organisations
-router.post('/telephonytool/other-parent-organisations', function(req, res) {
-  if (req.body['organisation-choice'] === 'yes') {``
-    res.redirect('paying-or-receiving');
-  } else {
-    res.redirect('end');
-  }
-});
+
+
 
 //previous reference number
 router.post('/telephonytool/previous-reference', function(req, res) {
@@ -199,6 +192,16 @@ router.post('/telephonytool/previous-reference', function(req, res) {
     res.redirect('urn-online');
   }
 });
+
+router.post('/telephonytool/help', function(req, res) {
+  if (req.body['domestic-abuse-info'] === 'yes') {``
+    res.redirect('options');
+  } else {
+    res.redirect('options');
+  }
+});
+
+
 
 
 //more information

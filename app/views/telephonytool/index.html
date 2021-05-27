@@ -34,12 +34,13 @@
     </ul>
 
     <form method="post" novalidate>
-        <h2 class="govuk-heading-m">What is your name?<h2>
-        <div class="govuk-form-group">
-
-            <input class="govuk-input govuk-input--width-10" id="test-numbers" type="text" name="test-numbers" type="text" aria-describedby="name"
-                spellcheck="false">
-        </div>
+      <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-width-two-thirds" for="child-1-first-name">
+              <h2 class="govuk-heading-m">  First name</h2>
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="child-1-first-name" name="first-name" type="text" autocomplete="name"
+              spellcheck="false">
+      </div>
 
         <h2 class="govuk-heading-m">What is your email address? (Optional)<h2>
           <span id="urnNumberInformation" class="govuk-hint">
@@ -54,7 +55,7 @@
           <a href="children" class="govuk-button ">Start now</a>
         </p>
 
-  
+
 
     </form>
 
