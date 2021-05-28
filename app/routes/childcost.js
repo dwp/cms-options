@@ -24,7 +24,9 @@ router.post('/childcost/howmanychildren', function(req, res) {
 });
 
 // parent names
-
+router.post('/childcost/parentnames', function(req, res) {
+    res.redirect('howmanychildren');
+});
 
 // Routes end
 
