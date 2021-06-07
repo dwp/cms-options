@@ -51,7 +51,7 @@ router.post('/telephonytool/under-20', function(req, res) {
 
 router.post('/telephonytool/court-when', function(req, res) {
   if (req.body['court-decision'] === 'no') {
-    res.redirect('domestic-abuse');
+    res.redirect('options');
   } else {
     res.redirect('end-court-last-12');
   }
@@ -86,7 +86,7 @@ router.post('/telephonytool/court', function(req, res) {
   if (req.body['court-choice'] === 'yes') {
     res.redirect('court-decision');
   } else {
-    res.redirect('domestic-abuse');
+    res.redirect('options');
   }
 });
 
@@ -95,7 +95,7 @@ router.post('/telephonytool/court-decision', function(req, res) {
   if (req.body['court-decision'] === 'yes') {
     res.redirect('court-when');
   } else {
-    res.redirect('domestic-abuse');
+    res.redirect('options');
   }
 });
 
@@ -104,7 +104,7 @@ router.post('/telephonytool/domestic-abuse', function(req, res) {
   if (req.body['da'] === 'yes') {``
     res.redirect('help');
   } else {
-    res.redirect('options');
+    res.redirect('children');
   }
 });
 
@@ -204,9 +204,9 @@ router.post('/telephonytool/previous-reference', function(req, res) {
 
 router.post('/telephonytool/help', function(req, res) {
   if (req.body['domestic-abuse-info'] === 'yes') {``
-    res.redirect('options');
+    res.redirect('children');
   } else {
-    res.redirect('options');
+    res.redirect('children');
   }
 });
 
