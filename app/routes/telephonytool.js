@@ -22,6 +22,15 @@ router.post('/telephonytool/index', function(req, res) {
   }
 });
 
+//paying or receiving
+router.post('/telephonytool/paying-or-receiving', function(req, res) {
+  if (req.body['choice'] === 'paying') {
+    res.redirect('court');
+  } else {
+    res.redirect('court');
+  }
+});
+
 // children
 router.post('/telephonytool/children', function(req, res) {
   if (req.body['children-under-16'] === 'yes') {
