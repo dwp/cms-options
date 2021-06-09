@@ -112,7 +112,9 @@ router.post('/prototype4/iteration2/how-do-you-want-to-apply', function(req, res
 
 router.post('/prototype4/iteration2/your-application-reference-number', function(req, res) {
   if (req.body['send-reference'] === 'yes') {
-    res.redirect('email-or-text-message');
+    res.redirect('confirm-mobile-number');
+  } else if (req.body['send-reference'] === 'yes2'){
+    res.redirect('confirm-email');
   } else {
     res.redirect('write-down-your-reference');
   }

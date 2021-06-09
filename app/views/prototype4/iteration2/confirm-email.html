@@ -25,14 +25,15 @@
                         <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l ">
                                 <h1 class="govuk-fieldset__heading">
-                                  You have said your email is:<br><span>
+                                  You have said your email is:<br>  </h1>
+                                  <span class="govuk-caption-xl">
                                     {% if data['contact-by-email'] %}
                                       {{data['contact-by-email']}}
                                     {% else %}
                                       anthony@email.com
                                     {% endif %}
                                  </span>
-                                </h1>
+
                             </legend>
                             <h2 class="govuk-heading-s">Is this the correct email address?</h2>
 

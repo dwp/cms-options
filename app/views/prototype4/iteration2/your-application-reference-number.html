@@ -31,24 +31,44 @@
 
                             <p class="govuk-body">You need this reference number to make your application. You can write it down or we can send it to you by email or text.</p>
 
-                      <h2 class="govuk-heading-s">Do you want your application reference number sent to you by email or text?</h2>
+                      <h2 class="govuk-heading-s">Do you want us to send your application reference number to you?</h2>
 
 
+                      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="yes2" name="send-reference" type="radio" value="yes2" data-aria-controls="conditional-contact">
+                          <label class="govuk-label govuk-radios__label" for="yes2">
+                          Yes, by email
+                          </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label" for="contact-by-email">
+                              Email address
+                            </label>
+                            <input class="govuk-input govuk-!-width-two-thirds" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"></div>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="yes" name="send-reference" type="radio" value="yes" data-aria-controls="conditional-contact-2">
+                          <label class="govuk-label govuk-radios__label" for="yes">
+                          Yes, by text
+                          </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label" for="contact-by-text">
+                              Mobile phone number
+                            </label>
+                            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel"></div>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="no" name="send-reference" type="radio" value="no">
+                          <label class="govuk-label govuk-radios__label" for="no">
+                        No
+                          </label>
+                        </div>
 
-                            <div class="govuk-radios govuk-radios--inline">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="yes" name="send-reference" type="radio" value="yes">
-                                    <label class="govuk-label govuk-radios__label" for="yes">
-                                        Yes
-                                    </label>
-                                </div>
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="no" name="send-reference" type="radio" value="no">
-                                    <label class="govuk-label govuk-radios__label" for="no">
-                                        No
-                                    </label>
-                                </div>
-                            </div>
+                      </div>
                         </fieldset>
                     </div>
                     <!--end-->
