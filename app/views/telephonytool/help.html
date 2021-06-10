@@ -22,9 +22,8 @@
         <div class="govuk-grid-row">
 
             <div class="govuk-grid-column-two-thirds">
-              <h1 class="govuk-heading-l">Do you want to find out where you can get help with the behaviours you've experienced?</h1>
 
-<p>  </p>
+
 
 
     <div class="">
@@ -36,34 +35,46 @@
 
                       </legend>
 
-                    <div class="govuk-radios govuk-radios--inline">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="yes" name="domestic-abuse-info" type="radio" value="yes">
-                            <label class="govuk-label govuk-radios__label" for="yes">
-                                I want to be send an email with a link to the support website
-                            </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="make-a-note" name="domestic-abuse-info" type="radio" value="make-a-note">
-                            <label class="govuk-label govuk-radios__label" for="make-a-note">
-                                I will make a note of the support website
-                            </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="phone-numbers-domestic-abuse" name="domestic-abuse-info" type="radio" value="phone-numbers-domestic-abuse">
-                            <label class="govuk-label govuk-radios__label" for="phone-numbers-domestic-abuse">
-                              I want the phone number of an organisation that can help
-                            </label>
-                        </div>
-                        <div class="govuk-radios__divider">or</div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="do-not-want-info" name="domestic-abuse-info" type="radio" value="do-not-want-info">
-                            <label class="govuk-label govuk-radios__label" for="do-not-want-info">
-                              I do not want to find out where I can get help
-                            </label>
-                        </div>
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                              Do you want to find out where you can get help with behaviours you've experienced?
+                            </h1>
+                          </legend>
+                          <div id="contact-hint" class="govuk-hint">
+                          </div>
+                          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="text" name="email-or-text-message" type="radio" value="text" data-aria-controls="conditional-contact-2">
+                              <label class="govuk-label govuk-radios__label" for="text">
+                              I want to be sent an email with a link to the support website
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="email" name="email-or-text-message" type="radio" value="email" data-aria-controls="conditional-contact">
+                              <label class="govuk-label govuk-radios__label" for="email">
+                              I will make a note of the support website
+                              </label>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                              <div class="govuk-form-group">
+                                <p><a href="www.gov.uk/guidance/domestic-abuse-how-to-get-help">www.gov.uk/guidance/domestic-abuse-how-to-get-help</a></p>
+                            </div>
+                            </div>
 
-                    </div>
+
+
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="text" name="email-or-text-message" type="radio" value="text" >
+                              <label class="govuk-label govuk-radios__label" for="text">
+                                I do not want to find out where I can get help
+                              </label>
+                            </div>
+                          </div>
+
+                        </fieldset>
+                      </div>
 
              </fieldset>
                   </div>
@@ -81,7 +92,7 @@
 
               <p>
                 <a class="govuk-link" href="index">End call</a>
-                </p> 
+                </p>
   </form>
 </div>
 
