@@ -10,6 +10,7 @@ const prototype2iteration1 = require('./routes/prototype2iteration1');;
 const prototype3iteration1 = require('./routes/prototype3iteration1');;
 const prototype4iteration1 = require('./routes/prototype4iteration1');;
 const prototype4iteration2 = require('./routes/prototype4iteration2');;
+const prototype5iteration1 = require('./routes/prototype5iteration1');;
 const telephonytool = require('./routes/telephonytool');;
 const childcost = require('./routes/childcost');;
 
@@ -21,6 +22,7 @@ router.use(prototype2iteration1);
 router.use(prototype3iteration1);
 router.use(prototype4iteration1);
 router.use(prototype4iteration2);
+router.use(prototype5iteration1);
 router.use(telephonytool);
 router.use(childcost);
 

@@ -1,0 +1,92 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l ">
+                                <h1 class="govuk-fieldset__heading">
+                                    Your application reference number is:<br> 981234567
+                                </h1>
+                            </legend>
+
+                            <p class="govuk-body">You need this reference number to make your application. You can write it down or we can send it to you by email or text.</p>
+
+                      <h2 class="govuk-heading-s">Do you want us to send your application reference number to you?</h2>
+
+
+                      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="yes2" name="send-reference" type="radio" value="yes2" data-aria-controls="conditional-contact">
+                          <label class="govuk-label govuk-radios__label" for="yes2">
+                          Yes, by email
+                          </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label" for="contact-by-email">
+                              Email address
+                            </label>
+                            <input class="govuk-input govuk-!-width-two-thirds" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"></div>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="yes" name="send-reference" type="radio" value="yes" data-aria-controls="conditional-contact-2">
+                          <label class="govuk-label govuk-radios__label" for="yes">
+                          Yes, by text
+                          </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label" for="contact-by-text">
+                              Mobile phone number
+                            </label>
+                            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel"></div>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="no" name="send-reference" type="radio" value="no">
+                          <label class="govuk-label govuk-radios__label" for="no">
+                        No
+                          </label>
+                        </div>
+
+                      </div>
+                        </fieldset>
+                    </div>
+                    <!--end-->
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-button--sticky">
+                    <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                        data-module="govuk-button">
+                        Hide this page
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+{% endblock %}
