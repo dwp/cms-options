@@ -88,8 +88,8 @@ router.post('/prototype5/iteration1/what-do-you-want-to-do', function(req, res) 
   if (req.body['what-do-you-want-to-do'] === 'make-own-arrangement') {
     res.redirect('help-making-your-own-arrangement');
   } else if (req.body['what-do-you-want-to-do'] === 'use-cms-pp'){
-    res.redirect('apply-by-phone');
-  } else if (req.body['what-do-you-want-to-do'] === 'use-cms' 'use-cms-pp'){
+    res.redirect('your-application-reference-number');
+  } else if (req.body['what-do-you-want-to-do'] === 'use-cms'){
     res.redirect('how-do-you-want-to-apply');
   } else {
     res.redirect('get-more-information');
@@ -112,7 +112,9 @@ router.post('/prototype5/iteration1/how-do-you-want-to-apply', function(req, res
 
 router.post('/prototype5/iteration1/your-application-reference-number', function(req, res) {
   if (req.body['send-reference'] === 'yes') {
-    res.redirect('email-or-text-message');
+    res.redirect('confirm-mobile-number');
+  } else if (req.body['send-reference'] === 'yes2'){
+    res.redirect('confirm-email');
   } else {
     res.redirect('write-down-your-reference');
   }
@@ -163,6 +165,15 @@ router.post('/prototype5/iteration1/start-your-application', function(req, res) 
   }
 });
 
+// email-sent
+
+router.post('/prototype5/iteration1/email-sent', function(req, res) {
+  if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
+    res.redirect('apply-by-phone');
+  } else {
+    res.redirect('start-your-application');
+  }
+});
 
 // Routes end
 
