@@ -155,15 +155,7 @@ router.post('/prototype5/iteration1/confirm-mobile-number', function(req, res) {
 });
 
 
-// start-your-application
 
-router.post('/prototype5/iteration1/start-your-application', function(req, res) {
-  if (req.body['start-your-application'] === 'yes') {
-    res.redirect('what-is-your-application-reference');
-  } else {
-    res.redirect('apply-later');
-  }
-});
 
 // email-sent
 
@@ -174,6 +166,37 @@ router.post('/prototype5/iteration1/email-sent', function(req, res) {
     res.redirect('start-your-application');
   }
 });
+
+
+// text-message-sent
+
+router.post('/prototype5/iteration1/text-message-sent', function(req, res) {
+  if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
+    res.redirect('apply-by-phone');
+  } else {
+    res.redirect('start-your-application');
+  }
+});
+
+// write-down-your-reference
+
+router.post('/prototype5/iteration1/write-down-your-reference', function(req, res) {
+  if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
+    res.redirect('apply-by-phone');
+  } else {
+    res.redirect('start-your-application');
+  }
+});
+
+// start-your-application
+
+//router.post('/prototype5/iteration1/start-your-application', function(req, res) {
+  //if (req.body['start-your-application'] === 'yes') {
+    //res.redirect('what-is-your-application-reference');
+  //} else {
+    //res.redirect('apply-later');
+  //}
+//});
 
 // Routes end
 
