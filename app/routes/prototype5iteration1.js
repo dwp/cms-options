@@ -190,13 +190,13 @@ router.post('/prototype5/iteration1/write-down-your-reference', function(req, re
 
 // start-your-application
 
-//router.post('/prototype5/iteration1/start-your-application', function(req, res) {
-  //if (req.body['start-your-application'] === 'yes') {
-    //res.redirect('what-is-your-application-reference');
-  //} else {
-    //res.redirect('apply-later');
-  //}
-//});
+router.post('/prototype5/iteration1/start-your-application', function(req, res) {
+  if (req.body['start-your-application'] === 'yes') {
+    res.redirect('what-is-your-application-reference');
+  } else {
+    res.redirect('apply-later');
+  }
+});
 
 // Routes end
 
