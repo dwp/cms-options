@@ -103,7 +103,7 @@ router.post('/prototype5/iteration1/how-do-you-want-to-apply', function(req, res
   if (req.body['how-do-you-want-to-apply'] === 'online') {
     res.redirect('your-application-reference-number');
   } else {
-    res.redirect('apply-by-phone');
+    res.redirect('your-application-reference-number');
   }
 });
 
@@ -157,15 +157,15 @@ router.post('/prototype5/iteration1/confirm-mobile-number', function(req, res) {
 
 
 
-// email-sent
-
-router.post('/prototype5/iteration1/email-sent', function(req, res) {
-  if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
-    res.redirect('apply-by-phone');
-  } else {
-    res.redirect('start-your-application');
-  }
-});
+// // email-sent
+//
+// router.post('/prototype5/iteration1/email-sent', function(req, res) {
+//   if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
+//     res.redirect('apply-by-phone');
+//   } else {
+//     res.redirect('start-your-application');
+//   }
+// });
 
 
 // text-message-sent
