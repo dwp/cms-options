@@ -1,0 +1,62 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">You will receive an email from <a href=""> childmaintenanceoptions@gov.uk </a>
+ </h1>
+
+<p> The email will include: </p>
+
+    <div class="">
+      <ul class="govuk-list govuk-list--bullet">
+      <li>a summary of what we have spoken about today</li>
+      <li>a link to use the Child Maintenance Calculator</li>
+      <li> information about making your own arrangement </li>
+
+        {% if data['domestic-abuse-info'] === 'yes' %}
+      <li> link to support website for domestic abuse </li>
+
+        {% endif %}
+
+
+      </ul>
+<p> If you change your mind or if making your own arrangement does not work, you can contact us again.</p>
+      <p><b>Do you have any more questions before I end the call?</b></p>
+
+    </div>
+
+
+
+
+
+    <!--end-->
+    <button type="submit" class="govuk-button">
+      End call
+    </button>
+  </form>
+</div>
+
+</div>
+</main>
+</div>
+{% endblock %}

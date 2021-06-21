@@ -1,0 +1,102 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+
+
+
+
+    <div class="">
+        <form method="post" novalidate>
+
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="da-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl govuk-fieldset__legend--xl ">
+
+                      </legend>
+
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                            <h1 class="govuk-fieldset__heading">
+                              Do you want to find out where you can get help with behaviours you've experienced?
+                            </h1>
+                          </legend>
+                          <div id="contact-hint" class="govuk-hint">
+                          </div>
+                          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="text" name="email-or-text-message" type="radio" value="text" data-aria-controls="conditional-contact-2">
+                              <label class="govuk-label govuk-radios__label" for="text">
+                              I want to be sent an email with a link to the support website
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="email" name="email-or-text-message" type="radio" value="email" data-aria-controls="conditional-contact">
+                              <label class="govuk-label govuk-radios__label" for="email">
+                              I will make a note of the support website
+                              </label>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                              <div class="govuk-form-group">
+                                <p><a href="www.gov.uk/guidance/domestic-abuse-how-to-get-help">www.gov.uk/guidance/domestic-abuse-how-to-get-help</a></p>
+                            </div>
+                            </div>
+
+
+
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="text" name="email-or-text-message" type="radio" value="text" >
+                              <label class="govuk-label govuk-radios__label" for="text">
+                                I do not want to find out where I can get help
+                              </label>
+                            </div>
+                          </div>
+
+                        </fieldset>
+                      </div>
+
+             </fieldset>
+                  </div>
+            <br>
+
+
+
+    </div>
+
+
+    <button type="submit" class="govuk-button">
+      Continue
+    </button>
+
+
+              <p>
+                <a class="govuk-link" href="index">End call</a>
+                </p>
+  </form>
+</div>
+
+</div>
+</main>
+</div>
+{% endblock %}

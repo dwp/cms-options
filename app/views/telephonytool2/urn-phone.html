@@ -1,0 +1,77 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Unique Reference number</h1>
+  <p> When you call the Child Maintenance Service to make your application, you will be asked to provide a unique reference number..</p>
+
+<!-- National insurance -->
+    <div class="">
+        <form method="post" novalidate>
+
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="da-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-fieldset__legend--xl ">
+How would you like to receive your unique reference number?
+                      </legend>
+
+
+                    <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="email" name="receive-urn" type="radio" value="email">
+                            <label class="govuk-label govuk-radios__label" for="email">
+                              By email
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="no" name="previous-cms" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="no">
+                              Write it down
+                            </label>
+                        </div>
+
+                    </div>
+
+             </fieldset>
+
+                  </div>
+            <br>
+            <p> You do not need to apply straight away - you can apply when it's convenient. Your URN will not expire, but if you loose it, you'd need to go through this progress again.</p>
+
+    </div>
+
+
+
+
+
+    <!--end-->
+    <button type="submit" class="govuk-button">
+      Continue
+    </button>
+  </form>
+</div>
+
+</div>
+</main>
+</div>
+{% endblock %}

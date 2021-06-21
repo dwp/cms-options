@@ -1,0 +1,97 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                    <div class="">
+                        <form method="post" novalidate>
+
+                          <h1 class="govuk-heading-l">Child Maintenance Service</h1>
+                            <p> Telephone: 0800 171 2345 </p>
+                            <p> Textphone: 18001 171 2345 </p>
+                            <br/>
+
+                            <p> <a href-""> Video relay service </a> for British Sign Language (BSL) usrs - <a href=""> check you can use the Video Relay Service </a></p>
+                            <p> Monday to Friday, 9.30am to 3.30pm (excluding holidays)</p>
+                            <p> <a href-"">Find out about call charged</a> </p>
+
+                            <br>
+
+                            <div class="govuk-form-group">
+                              <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-fieldset__legend--m">
+                                  <h2 class="govuk-heading-m">
+                              Would you like me to sent these contact details by email?
+                                  </h2>
+                                </legend>
+
+                                <div class="govuk-radios ">
+                                  <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="yes" name="email-choices" type="radio" value="yes">
+                                    <label class="govuk-label govuk-radios__label" for="yes">
+                                      Yes
+                                    </label>
+
+                                  </div>
+                                  <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="no" name="email-choices" type="radio" value="no">
+                                    <label class="govuk-label govuk-radios__label" for="no">
+                                      No
+                                    </label>
+                                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          You will need to write down your application reference number so you can apply
+        </div>
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+
+
+                    </div>
+
+                    <!--end-->
+                    <p class="govuk-body">
+                      <a href="phone-email-2" class="govuk-button ">End call</a>
+                <br/>                      </p>
+                </form>
+            </div>
+
+
+        </div>
+    </main>
+</div>
+
+
+
+
+
+        <div class="govuk-grid-row">
+
+<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
+<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
+
+</div>
+
+
+
+{% endblock %}

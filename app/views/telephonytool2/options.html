@@ -1,0 +1,203 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Your child maintenance options</h1>
+
+
+
+<p> I am required to talk you through both of your options, regardless of your personal circumstances. This is to make sure you have all the information you need to make the best decision for you and your children. </p>
+
+<!-- accordian - options -->
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+Your first option is to make your own arrangement
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <ul class="govuk-list govuk-list--bullet">
+
+          <li>
+            this is a private arrangement between you and the other parent
+          </li>
+          <li>
+          no one else will be involved
+          </li>
+          <li>
+        it can be whatever you and the other parent agree to
+          </li>
+        </ul>
+
+        <p>You and the other parent can:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>
+          {% if data['choice'] === 'receiving' %}
+            come to an agreement about how much you will be paid
+              {% elseif data['choice'] === 'paying' %}
+            come to an agreement about how much you will pay
+                                {% endif %}
+        </li>
+        <li>
+          change the amount if you need to
+        </li>
+        <li>
+          {% if data['choice'] === 'receiving' %}
+          decide how often you will be paid
+              {% elseif data['choice'] === 'paying' %}
+            decide how often you will make payments
+                                {% endif %}
+        </li>
+        <li>
+          {% if data['choice'] === 'receiving' %}
+        agree for the other parent to pay for specific things, like school uniforms or trips
+              {% elseif data['choice'] === 'paying' %}
+            agree for you to pay for specific things, like school uniform or trips
+                                {% endif %}
+        </li>
+      </ul>
+
+
+      <p>Making your own arrangement might be a good option if:</p>
+  <ul class="govuk-list govuk-list--bullet">
+      <li>
+        you feel safe dealing with the other parent
+      </li>
+      <li>
+        you think the other parent will stick to an agreement
+      </li>
+    </ul>
+<p><b>
+      Do you have any questions about making your own arrangement?</b>
+    </p>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- CMS Option -->
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+      Your second option is to use the Child Maintenance Service
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <ul class="govuk-list govuk-list--bullet">
+          <li>
+            {% if data['choice'] === 'receiving' %}
+    using the Child Maintenance Service is less flexible than making your own arrangement because the amount is based on the paying parent’s earnings
+                {% elseif data['choice'] === 'paying' %}
+              using the Child Maintenance Service is less flexible than making your own arrangement because the amount is based on your earnings
+                                  {% endif %}
+          </li>
+          <li>it might be a good option if you do not feel safe dealing with the other parent or if you have not been able to stick to your own arrangement in the past  </li>
+        </ul>
+
+        <p> <b> You will need to complete an application online or on the phone </b> </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>there is a £20 fee to make an application – you will not need to pay the fee if you are under 19 or if you have experienced any domestic abuse</li>
+            <li> the fee is non-refundable </li>
+            <li> it does not guarantee an arrangement </li>
+            </ul>
+
+            <p> Then the Child Maintenance Service will: </p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>        {% if data['choice'] === 'receiving' %}
+          work out how much child maintenance you will be paid
+                          {% elseif data['choice'] === 'paying' %}
+                        work out how much child maintenance you will pay
+                                            {% endif %} </li>
+              <li>   {% if data['choice'] === 'receiving' %}
+        arrange for the other parent to pay you
+                          {% elseif data['choice'] === 'paying' %}
+                        arrange for you to pay the other parent
+                                            {% endif %} </li>
+              <li> take action if payments are not made</li>
+              <li> help find the other parent if you've lost contact </li>
+              <li> recalculate the payment amount if changes in parents' circumstances are reported </li>
+              <li> help if someone denies they're the parent of a child </li>
+              </ul>
+
+  <h3 class="govuk-heading-m"> There are 2 ways you can pay Child Maintenance payments</h3>
+
+  <p><b> Direct Pay </b></p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>  {% if data['choice'] === 'receiving' %}
+the other parent will pay maintenance directly to your bank account
+                {% elseif data['choice'] === 'paying' %}
+        you pay maintenance directly into the other parent’s bank account
+                                  {% endif %} </li>
+    <li> {% if data['choice'] === 'receiving' %}
+you do not need to have any contact with the other parent
+                {% elseif data['choice'] === 'paying' %}
+      you do not need to have any contact with the other parent
+                                  {% endif %} </li>
+    <li> there is a £20 application fee to use the Child Maintenance Service, but there are no additional fees if you use Direct Pay</li>
+    </ul>
+
+    <p><b> Collect and Pay </b></p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li> {% if data['choice'] === 'receiving' %}
+the Child Maintenance Service will collect maintenance from the other parent and pass it on to you
+                  {% elseif data['choice'] === 'paying' %}
+        the Child Maintenance Service will collect maintenance from you and pass it to the other parent
+                                    {% endif %} </li>
+      <li> {% if data['choice'] === 'receiving' %}
+there is a £20 application fee to use the Child Maintenance Service and additional monthly fees for you and the other parent if you use Collect and Pay
+                  {% elseif data['choice'] === 'paying' %}
+there is a £20 application fee to use the Child Maintenance Service and additional monthly fees for you and the other parent if you use Collect and Pay
+                                    {% endif %} </li>
+      <li> {% if data['choice'] === 'receiving' %}
+you can only start with Collect and Pay if the other parent agrees to it or if they do not respond to us
+                  {% elseif data['choice'] === 'paying' %}
+you can only start with Collect and Pay if the other parent agrees to it
+                                    {% endif %}</li>
+      </ul>
+      <p> <b> Do you have any questions about using the Child Maintenance Service? </b></p>
+
+    </div>
+  </div>
+</div>
+
+
+<a href="choice" class="govuk-button ">Continue</a>
+<p>
+  <a class="govuk-link" href="index">End call</a>
+  </p>
+
+
+
+
+</div>
+</main>
+</div>
+{% endblock %}

@@ -1,0 +1,139 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="religion-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+              Making your own arrangement
+                  </h1>
+                </legend>
+
+              <br>
+
+              <div class="govuk-form-group">
+                  <span id="contact-time-hint" class="govuk-hint">
+                  Select what you would like to know more about.
+                  </span>
+
+
+
+
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="lift" name="like-to-know" type="checkbox" value="lift">
+                      <label class="govuk-label govuk-checkboxes__label" for="lift">
+                    Child maintenance calculation
+                          </label>
+                       </div>
+                       <div class="govuk-checkboxes__item">
+                         <input class="govuk-checkboxes__input" id="make-your-own-arrangement" name="like-to-know" type="checkbox" value="make-your-own-arrangement">
+                         <label class="govuk-label govuk-checkboxes__label" for="ramp">
+                            Making your own arrangement
+                        </label>
+
+                      </div>
+
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="using-child-maintenance-service" name="like-to-know" type="checkbox" value="using-child-maintenance-service">
+                        <label class="govuk-label govuk-checkboxes__label" for="using-child-maintenance-service">
+                           Using the Child Maintenance Service
+                       </label>
+
+                     </div>
+
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="cost-of-raising-child" name="like-to-know" type="checkbox" value="cost-of-raising-child">
+                       <label class="govuk-label govuk-checkboxes__label" for="cost-of-raising-child">
+                        The cost of raising a child
+                      </label>
+
+                    </div>
+
+
+                                           </div>
+                                           </div>
+
+
+                     <div class="govuk-form-group">
+                        <span id="contact-time-hint" class="govuk-hint">
+                        Select what third party organisations you would like to know more about.
+                        </span>
+                      </div>
+                      <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="lift" name="lift" type="checkbox" value="lift">
+                          <label class="govuk-label govuk-checkboxes__label" for="lift">
+                  Citizen's advice
+                              </label>
+                           </div>
+                           <div class="govuk-checkboxes__item">
+                             <input class="govuk-checkboxes__input" id="ramp" name="ramp" type="checkbox" value="ramp">
+                             <label class="govuk-label govuk-checkboxes__label" for="ramp">
+                                Gingerbread
+                            </label>
+
+                          </div>
+
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="ramp" name="ramp" type="checkbox" value="ramp">
+                            <label class="govuk-label govuk-checkboxes__label" for="ramp">
+                            Money Advice Service
+                           </label>
+
+                         </div>
+
+
+
+
+                                               </div>
+
+
+
+
+              </fieldset>
+              </div>
+
+
+              <!-- <button type="submit" class="govuk-button">
+                Continue
+              </button> -->
+
+  <a href="/telephonytool/endscreens/end-own-child-maintenance" class="govuk-button">Continue</a>
+  <p>
+    <a class="govuk-link" href="index">End call</a>
+    </p>
+
+        <div class="govuk-grid-row">
+
+<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
+<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
+
+</div>
+
+</div>
+</div>
+
+{% endblock %}

@@ -12,6 +12,7 @@ const prototype4iteration1 = require('./routes/prototype4iteration1');;
 const prototype4iteration2 = require('./routes/prototype4iteration2');;
 const prototype5iteration1 = require('./routes/prototype5iteration1');;
 const telephonytool = require('./routes/telephonytool');;
+const telephonytool2 = require('./routes/telephonytool2');;
 const childcost = require('./routes/childcost');;
 
 
@@ -24,6 +25,7 @@ router.use(prototype4iteration1);
 router.use(prototype4iteration2);
 router.use(prototype5iteration1);
 router.use(telephonytool);
+router.use(telephonytool2);
 router.use(childcost);
 
 module.exports = router

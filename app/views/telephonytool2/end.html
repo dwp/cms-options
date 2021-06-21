@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">You need to contact Child Maintenance</h1>
+
+
+    <div class="">
+        <p> The Child Maintenance Service cannot help you make an arrangement because you live outside of the UK and do not work for a British organisation.</p>
+
+    </div>
+
+
+    <!--end-->
+    <p class="govuk-body">
+      <a href="index"> Follow BAU Process </a> <br/>
+      <br/>
+      <a href="index" class="govuk-button ">End Call</a>
+
+    </p>
+
+
+  </form>
+</div>
+
+</div>
+</main>
+</div>
+{% endblock %}

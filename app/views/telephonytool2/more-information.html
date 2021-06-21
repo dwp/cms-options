@@ -1,0 +1,91 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="religion-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+      Get more information
+                  </h1>
+                </legend>
+
+              <br>
+
+
+
+
+
+
+              <div class="">
+                  <form method="post" novalidate>
+
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="da-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-fieldset__legend--xl ">
+                                  What do you need more information about?
+                                </legend>
+
+                              <div class="govuk-radios">
+                                  <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="cms" name="more-info" type="radio" value="cms">
+                                      <label class="govuk-label govuk-radios__label" for="cms">
+                                          How much I will get if I use the Child Maintenance Service
+                                      </label>
+                                  </div>
+                                  <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="more" name="more-info" type="radio" value="more">
+                                      <label class="govuk-label govuk-radios__label" for="more">
+                                          More information about my options
+                                      </label>
+                                  </div>
+                                  <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="time" name="more-info" type="radio" value="time">
+                                      <label class="govuk-label govuk-radios__label" for="time">
+                                          I need more time to think about it before I decide
+                                      </label>
+                                  </div>
+                              </div>
+
+                       </fieldset>
+                            </div>
+                      <br>
+
+
+
+              </div>
+
+
+
+                  <!--end-->
+                  <button type="submit" class="govuk-button">
+                    Continue
+                  </button>
+                </form>
+              </div>
+
+              </div>
+              </main>
+              </div>
+              {% endblock %}

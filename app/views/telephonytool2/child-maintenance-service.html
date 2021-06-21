@@ -1,0 +1,123 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Use the Child Maintenance Service</h1>
+
+
+
+
+    <div class="">
+        <form method="post" novalidate>
+
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="da-hint">
+<p>If you are worried about contacting the other parent:
+                    </p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                      you can speak to your bank or builidng society about setting up an account that will not give away your location
+                      </li>
+                    <li> you do not need to have any contact with the other parent - the Child Maintenance Service can contact them for you
+                      </li>
+                    </ul>
+
+
+                  <p>
+              We will need to share the following details with the other parent:
+                    </p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        your name
+                      </li>
+                    <li>
+                      your child's name and birthday
+                      </li>
+                      <li> the number of days your child stays with the parent who will be making payments - the other parent will need to confirm this
+                      </li>
+                      <li>
+                        we will not share anything else with the other parent unless you ask us
+                        </li>
+                  </ul>
+
+             </fieldset>
+                  </div>
+            <br>
+
+
+                <div class="">
+                    <form method="post" novalidate>
+
+                          <div class="govuk-form-group">
+                              <fieldset class="govuk-fieldset" aria-describedby="da-hint">
+                                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-fieldset__legend--xl ">
+                                    How would you like to apply?
+                                  </legend>
+                                  <p> It is usually faster to apply online </p>
+
+                                <div class="govuk-radios govuk-radios--inline">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="phone" name="apply" type="radio" value="phone">
+                                        <label class="govuk-label govuk-radios__label" for="phone">
+                                          Phone
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="online" name="apply" type="radio" value="online">
+                                        <label class="govuk-label govuk-radios__label" for="online">
+                                            Online
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                         </fieldset>
+                              </div>
+                        <br>
+
+
+
+                </div>
+
+
+
+    </div>
+
+
+
+
+
+    <!--end-->
+    <button type="submit" class="govuk-button">
+      Continue
+    </button>
+    <p>
+      <a class="govuk-link" href="index">End call</a>
+      </p>
+  </form>
+</div>
+
+</div>
+</main>
+</div>
+{% endblock %}
