@@ -1,5 +1,15 @@
-{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Feedback banner start-->
+{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }} {% endblock %} {% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+  var $element = $('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+  stepByStepNavigation.start($element)
+</script>
+{% endblock %} {% block beforeContent %}
+
+{% endblock %} {% block content %}
 
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -11,7 +21,7 @@
     </span>
   </p>
 </div>
-    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+{{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
 <!--Feedback banner stop-->
 
@@ -125,15 +135,7 @@
   <p>
     <a class="govuk-link" href="index">End call</a>
     </p>
+    <!-- NOTES SECTIONS -->
 
-        <div class="govuk-grid-row">
-
-<p>This service is also available in <a href="">Welsh (Cymraeg)</a>.</p>
-<p><a href="">Contact Child Maintenance Choices if you live in Northern Ireland</a>.</p>
-
-</div>
-
-</div>
-</div>
-
-{% endblock %}
+</div></div>
+    {% endblock %}

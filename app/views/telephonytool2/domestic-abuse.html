@@ -25,7 +25,7 @@
 
 <!--Feedback banner stop-->
 
-
+<div>
 <div class="govuk-width-container">
 
 
@@ -101,7 +101,7 @@
 
     <div class="app-step-nav-related app-step-nav-related--singular">
       <h2 class="app-step-nav-related__heading">
-        <span class="app-step-nav-related__pretitle">Your call with {{data['first-name'] }} </span>
+        <span class="app-step-nav-related__pretitle">Your call with {{data['contact-by-text'] }} </span>
 
       </h2>
     </div>
@@ -127,20 +127,9 @@
           </div>
 
           <div class="app-step-nav__panel js-panel" id="step-panel-check-youre-allowed-to-drive-1">
-            <p class="app-step-nav__paragraph">Most people can start learning to drive when they’re 17.</p>
+            <p class="app-step-nav__paragraph">ffffff</p>
 
-            <ol class="app-step-nav__list " data-length="3">
-              <li class="app-step-nav__list-item js-list-item app-step-nav__list-item--active">
-                <a data-position="1.1" class="app-step-nav__link js-link" href="#content">
-                  <span class="app-step-nav__link-active-context govuk-visually-hidden">You are currently viewing: </span>Check what age you can drive </a>
-              </li>
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="1.2" class="app-step-nav__link js-link" href="#">Requirements for driving legally </a>
-              </li>
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="1.3" class="app-step-nav__link js-link" href="#">Driving eyesight rules </a>
-              </li>
-            </ol>
+
 
           </div>
 
@@ -163,13 +152,15 @@
             </h3>
           </div>
 
-          <div class="app-step-nav__panel js-panel" id="step-panel-get-a-provisional-licence-2">
-            <ol class="app-step-nav__list " data-length="1">
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="2.1" class="app-step-nav__link js-link" href="#">Apply for your first provisional driving licence <span class="app-step-nav__context">£34 to £43</span></span>
-                </a>
-              </li>
-            </ol>
+          <div class="app-step-nav__panel js-panel" id="step-panel-check-youre-allowed-to-drive-1">
+            <ul class="govuk-list govuk-list--bullet app-step-nav__paragraph">
+              <li>apples</li>
+              {% if data['dat'] === 'yes' %}
+              <p>daaaa </p>
+              {% endif %}
+            </ul>
+
+
 
           </div>
 

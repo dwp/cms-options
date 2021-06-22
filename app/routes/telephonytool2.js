@@ -10,7 +10,14 @@ router.use((req, res, next) => {
   next()
 })
 
-
+//telephony
+router.post('/telephonytool2/index', function(req, res) {
+  if (req.body['test-numbers'] === '4') {
+    res.redirect('test');
+  } else {
+    res.redirect('domestic-abuse');
+  }
+});
 
 
 //telephony
