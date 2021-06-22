@@ -31,7 +31,7 @@ router.post('/telephonytool2/index', function(req, res) {
 
 //paying or receiving
 router.post('/telephonytool2/paying-or-receiving', function(req, res) {
-  if (req.body['choice'] === 'paying') {
+  if (req.body['paying-or-receiving'] === 'paying') {
     res.redirect('court');
   } else {
     res.redirect('court');

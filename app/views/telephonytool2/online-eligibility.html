@@ -137,6 +137,7 @@
     </button>
   </form>
 </div>
+
 <!-- NOTES SECTIONS -->
   <div class="govuk-grid-column-one-third">
 
@@ -167,26 +168,36 @@
             </h3>
           </div>
 
-          <div class="app-step-nav__panel js-panel" id="step-panel-check-youre-allowed-to-drive-1">
-            <p class="app-step-nav__paragraph">Most people can start learning to drive when they’re 17.</p>
+          <div class="app-step-nav__panel js-panel"  id="step-panel-check-youre-allowed-to-drive-1">
+            <ul class="govuk-list govuk-list--bullet app-step-nav__paragraph">
 
-            <ol class="app-step-nav__list " data-length="3">
-              <li class="app-step-nav__list-item js-list-item app-step-nav__list-item--active">
-                <a data-position="1.1" class="app-step-nav__link js-link" href="#content">
-                  <span class="app-step-nav__link-active-context govuk-visually-hidden">You are currently viewing: </span>Check what age you can drive </a>
-              </li>
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="1.2" class="app-step-nav__link js-link" href="#">Requirements for driving legally </a>
-              </li>
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="1.3" class="app-step-nav__link js-link" href="#">Driving eyesight rules </a>
-              </li>
-            </ol>
+              {% if data['children-under-16'] === 'yes' %}
+              <li>Children under 16  </li>
+              {% endif %}
 
+              {% if data['where-do-you-live'] === 'uk' %}
+              <li> Lives in England, Scotland or Wales  </li>
+                {% elseif data['where-do-you-live'] === 'northern-ireland' %}
+                  <li> Lives in Northern Ireland  </li>
+              {% endif %}
+
+              {% if data['choice'] === 'england' %}
+              <li>Other parent lives in England, Scotland or Wales  </li>
+                {% elseif data['choice'] === 'somewhere' %}
+                  <li> Other parent lives somewhere else  </li>
+              {% endif %}
+
+
+              {% if data['paying-or-receiving'] === 'paying' %}
+              <li>Paying child maintenance payments   </li>
+              {% elseif data['paying-or-receiving'] === 'receiving' %}
+                <li> Receiving child maintenance payments  </li>
+                {% endif %}
+            </ul>
           </div>
 
         </li>
-        <li class="app-step-nav__step js-step" id="get-a-provisional-licence" >
+        <li class="app-step-nav__step js-step step-nav__step--active" id="get-a-provisional-licence" >
           <div class="app-step-nav__header js-toggle-panel" data-position="2">
             <h3 class="app-step-nav__title">
               <span class="app-step-nav__circle app-step-nav__circle--number">
@@ -205,13 +216,12 @@
           </div>
 
           <div class="app-step-nav__panel js-panel" id="step-panel-get-a-provisional-licence-2">
-            <ol class="app-step-nav__list " data-length="1">
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="2.1" class="app-step-nav__link js-link" href="#">Apply for your first provisional driving licence <span class="app-step-nav__context">£34 to £43</span></span>
-                </a>
-              </li>
-            </ol>
+            <ul class="govuk-list govuk-list--bullet app-step-nav__paragraph">
 
+              {% if data['email-or-text-message'] === 'text' %}
+              <li>Domesitic Abuse information  </li>
+              {% endif %}
+            </ul>
           </div>
 
         </li>
@@ -234,22 +244,17 @@
           </div>
 
           <div class="app-step-nav__panel js-panel" id="step-panel-driving-lessons-and-practice-3">
-            <p class="app-step-nav__paragraph">You need a provisional driving licence to take lessons or practice.</p>
+            <ul class="govuk-list govuk-list--bullet app-step-nav__paragraph">
 
-            <ol class="app-step-nav__list " data-length="4">
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="3.1" class="app-step-nav__link js-link" href="#">The Highway Code </a>
-              </li>
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="3.2" class="app-step-nav__link js-link" href="#">Taking driving lessons </a>
-              </li>
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="3.3" class="app-step-nav__link js-link" href="#">Find driving schools, lessons and instructors </a>
-              </li>
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="3.4" class="app-step-nav__link js-link" href="#">Practise vehicle safety questions </a>
-              </li>
-            </ol>
+              {% if data['arrangement'] === 'cms' %}
+              <li>Child Maintenance Service  </li>
+              {% endif %}
+
+
+                                        {% if data['apply'] === 'online' %}
+                                        <li>Apply online </li>
+                                        {% endif %}
+            </ul>
 
           </div>
 
@@ -274,24 +279,7 @@
           </div>
 
           <div class="app-step-nav__panel js-panel" id="step-panel-driving-lessons-and-practice-3">
-            <p class="app-step-nav__paragraph">You need a provisional driving licence to take lessons or practice.</p>
 
-            <ol class="app-step-nav__list " data-length="4">
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="3.1" class="app-step-nav__link js-link" href="#">The Highway Code </a>
-              </li>
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="3.2" class="app-step-nav__link js-link" href="#">Taking driving lessons </a>
-              </li>
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="3.3" class="app-step-nav__link js-link" href="#">Find driving schools, lessons and instructors </a>
-              </li>
-              <li class="app-step-nav__list-item js-list-item ">
-                <a data-position="3.4" class="app-step-nav__link js-link" href="#">Practise vehicle safety questions </a>
-              </li>
-
-
-      </ol>
     </div>
 
 

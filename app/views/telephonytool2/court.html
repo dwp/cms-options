@@ -120,10 +120,10 @@ This is sometimes called a ‘court order’, ‘maintenance order’ or ‘minu
                           {% endif %}
 
 
-                          {% if data['choice'] === 'paying' %}
-                          <li>Other parent lives in England, Scotland or Wales  </li>
-                          {% elseif data['choice'] === 'receiving' %}
-                            <li> Other parent lives somewhere else  </li>
+                          {% if data['paying-or-receiving'] === 'paying' %}
+                          <li>Paying child maintenance payments   </li>
+                          {% elseif data['paying-or-receiving'] === 'receiving' %}
+                            <li> Receiving child maintenance payments  </li>
                             {% endif %}
                         </ul>
                       </div>
