@@ -13,7 +13,7 @@ router.use((req, res, next) => {
 // Routes start
 
 // where-do-you-live
-router.post('/non-uk/iteration1/where-do-you-live', function(req, res) {
+router.post('/nonuk/iteration1/where-do-you-live', function(req, res) {
   if (req.body['where-do-you-live'] === 'lives-in-gb') {
     res.redirect('where-does-the-other-parent-live');
   } else if (req.body['where-do-you-live'] === 'lives-in-northern-ireland'){
@@ -26,7 +26,7 @@ router.post('/non-uk/iteration1/where-do-you-live', function(req, res) {
 
 // outside-uk
 
-router.post('/non-uk/iteration1/outside-uk', function(req, res) {
+router.post('/nonuk/iteration1/outside-uk', function(req, res) {
   if (req.body['work-for-uk-organisation'] === 'no-uk-organisation') {
     res.redirect('cannot-use-child-maintenance-service');
   } else {
@@ -37,7 +37,7 @@ router.post('/non-uk/iteration1/outside-uk', function(req, res) {
 
 // where-does-the-other-parent-live
 
-router.post('/non-uk/iteration1/where-does-the-other-parent-live', function(req, res) {
+router.post('/nonuk/iteration1/where-does-the-other-parent-live', function(req, res) {
   if (req.body['where-does-the-other-parent-live'] === 'op-lives-in-uk') {
     res.redirect('will-you-be-paying-or-receiving');
   } else if (req.body['where-does-the-other-parent-live'] === 'op-lives-unknown') {
@@ -50,7 +50,7 @@ router.post('/non-uk/iteration1/where-does-the-other-parent-live', function(req,
 
 // other-parent-outside-uk
 
-router.post('/non-uk/iteration1/other-parent-outside-uk', function(req, res) {
+router.post('/nonuk/iteration1/other-parent-outside-uk', function(req, res) {
   if (req.body['op-work-for-uk-organisation'] === 'no-uk-organisation') {
     res.redirect('cannot-use-child-maintenance-service');
   } else {
@@ -61,7 +61,7 @@ router.post('/non-uk/iteration1/other-parent-outside-uk', function(req, res) {
 
 // will-you-be-paying-or-receiving
 
-router.post('/non-uk/iteration1/will-you-be-paying-or-receiving', function(req, res) {
+router.post('/nonuk/iteration1/will-you-be-paying-or-receiving', function(req, res) {
   if (req.body['will-you-be-paying-or-receiving'] === 'paying') {
     res.redirect('have-you-had-a-court-decision');
   } else if (req.body['will-you-be-paying-or-receiving'] === 'receiving') {
@@ -74,7 +74,7 @@ router.post('/non-uk/iteration1/will-you-be-paying-or-receiving', function(req, 
 
 // have-you-had-a-court-decision
 
-router.post('/non-uk/iteration1/have-you-had-a-court-decision', function(req, res) {
+router.post('/nonuk/iteration1/have-you-had-a-court-decision', function(req, res) {
   if (req.body['have-you-had-a-court-decision'] === 'yes') {
     res.redirect('cannot-use-child-maintenance-service');
   } else {
@@ -84,11 +84,11 @@ router.post('/non-uk/iteration1/have-you-had-a-court-decision', function(req, re
 
 
 // what-do-you-want-to-do
-router.post('/non-uk/iteration1/what-do-you-want-to-do', function(req, res) {
+router.post('/nonuk/iteration1/what-do-you-want-to-do', function(req, res) {
   if (req.body['what-do-you-want-to-do'] === 'make-own-arrangement') {
     res.redirect('help-making-your-own-arrangement');
   } else if (req.body['what-do-you-want-to-do'] === 'use-cms-pp'){
-    res.redirect('your-application-reference-number');
+    res.redirect('apply-by-phone');
   } else if (req.body['what-do-you-want-to-do'] === 'use-cms'){
     res.redirect('how-do-you-want-to-apply');
   } else {
@@ -96,10 +96,19 @@ router.post('/non-uk/iteration1/what-do-you-want-to-do', function(req, res) {
   }
 });
 
+// get-more-information
+router.post('/nonuk/iteration1/get-more-information', function(req, res) {
+  if (req.body['more-info-choice'] === 'more-info-make-own-arrangement') {
+    res.redirect('help-making-your-own-arrangement');
+  } else {
+    res.redirect('apply-by-phone');
+  }
+});
+
 
 // how-do-you-want-to-apply
 
-router.post('/non-uk/iteration1/how-do-you-want-to-apply', function(req, res) {
+router.post('/nonuk/iteration1/how-do-you-want-to-apply', function(req, res) {
   if (req.body['how-do-you-want-to-apply'] === 'online') {
     res.redirect('your-application-reference-number');
   } else {
@@ -110,7 +119,7 @@ router.post('/non-uk/iteration1/how-do-you-want-to-apply', function(req, res) {
 
 // your-application-reference-number
 
-router.post('/non-uk/iteration1/your-application-reference-number', function(req, res) {
+router.post('/nonuk/iteration1/your-application-reference-number', function(req, res) {
   if (req.body['send-reference'] === 'yes') {
     res.redirect('confirm-mobile-number');
   } else if (req.body['send-reference'] === 'yes2'){
@@ -124,7 +133,7 @@ router.post('/non-uk/iteration1/your-application-reference-number', function(req
 
 // email-or-text-message
 
-router.post('/non-uk/iteration1/email-or-text-message', function(req, res) {
+router.post('/nonuk/iteration1/email-or-text-message', function(req, res) {
   if (req.body['email-or-text-message'] === 'email') {
     res.redirect('confirm-email');
   } else {
@@ -135,7 +144,7 @@ router.post('/non-uk/iteration1/email-or-text-message', function(req, res) {
 
 // confirm-email
 
-router.post('/non-uk/iteration1/confirm-email', function(req, res) {
+router.post('/nonuk/iteration1/confirm-email', function(req, res) {
   if (req.body['confirm-email'] === 'yes') {
     res.redirect('email-sent');
   } else {
@@ -146,7 +155,7 @@ router.post('/non-uk/iteration1/confirm-email', function(req, res) {
 
 // confirm-mobile-number
 
-router.post('/non-uk/iteration1/confirm-mobile-number', function(req, res) {
+router.post('/nonuk/iteration1/confirm-mobile-number', function(req, res) {
   if (req.body['confirm-mobile-number'] === 'yes') {
     res.redirect('text-message-sent');
   } else {
@@ -159,7 +168,7 @@ router.post('/non-uk/iteration1/confirm-mobile-number', function(req, res) {
 
 // // email-sent
 //
-// router.post('/non-uk/iteration1/email-sent', function(req, res) {
+// router.post('/nonuk/iteration1/email-sent', function(req, res) {
 //   if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
 //     res.redirect('apply-by-phone');
 //   } else {
@@ -170,7 +179,7 @@ router.post('/non-uk/iteration1/confirm-mobile-number', function(req, res) {
 
 // text-message-sent
 
-router.post('/non-uk/iteration1/text-message-sent', function(req, res) {
+router.post('/nonuk/iteration1/text-message-sent', function(req, res) {
   if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
     res.redirect('apply-by-phone');
   } else {
@@ -180,7 +189,7 @@ router.post('/non-uk/iteration1/text-message-sent', function(req, res) {
 
 // // write-down-your-reference
 //
-// router.post('/non-uk/iteration1/write-down-your-reference', function(req, res) {
+// router.post('/nonuk/iteration1/write-down-your-reference', function(req, res) {
 //   if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
 //     res.redirect('apply-by-phone');
 //   } else {
@@ -190,7 +199,7 @@ router.post('/non-uk/iteration1/text-message-sent', function(req, res) {
 
 // start-your-application
 
-router.post('/non-uk/iteration1/start-your-application', function(req, res) {
+router.post('/nonuk/iteration1/start-your-application', function(req, res) {
   if (req.body['start-your-application'] === 'yes') {
     res.redirect('what-is-your-application-reference');
   } else {
