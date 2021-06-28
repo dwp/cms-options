@@ -1,5 +1,15 @@
-{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-<!--Feedback banner start-->
+{% extends "layout.html" %} {% block pageTitle %} Start page example {% endblock %} {% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }} {% endblock %} {% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+  var $element = $('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+  stepByStepNavigation.start($element)
+</script>
+{% endblock %} {% block beforeContent %}
+
+{% endblock %} {% block content %}
 
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -11,7 +21,7 @@
     </span>
   </p>
 </div>
-    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+{{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
 
 <!--Feedback banner stop-->
 
@@ -21,26 +31,15 @@
 
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
-
-
-          <div class="govuk-form-group">
+            <div class="govuk-grid-column-two-thirds">
               <fieldset class="govuk-fieldset" aria-describedby="religion-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-      Get more information
+                    Get more information
                   </h1>
-                </legend>
-
-              <br>
-
-
-
-
-
-
+                </legend>  <br>
               <div class="">
                   <form method="post" novalidate>
-
                         <div class="govuk-form-group">
                             <fieldset class="govuk-fieldset" aria-describedby="da-hint">
                                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-fieldset__legend--xl ">
@@ -66,26 +65,164 @@
                                           I need more time to think about it before I decide
                                       </label>
                                   </div>
-                              </div>
-
-                       </fieldset>
-                            </div>
-                      <br>
-
-
-
-              </div>
-
-
-
-                  <!--end-->
+                              </div>      </fieldset>
+                            </div><br>
+                    </div>
                   <button type="submit" class="govuk-button">
                     Continue
                   </button>
-                </form>
-              </div>
+                  <p>
+                    <a class="govuk-link" href="index">End call</a>
+                  </p>
 
               </div>
-              </main>
+
+
+              <!-- NOTES SECTIONS -->
+                <div class="govuk-grid-column-one-third">
+
+                  <div class="app-step-nav-related app-step-nav-related--singular">
+                    <h2 class="app-step-nav-related__heading">
+                      <span class="app-step-nav-related__pretitle">Your call with {{data['firstname'] }} </span>
+
+                    </h2>
+                  </div>
+
+                  <div id="step-by-step-navigation" data-module="gemstepnav" class="app-step-nav js-hidden " data-id="e01e924b-9c7c-4c71-8241-66a575c2f61f" data-show-text="show" data-hide-text="hide" data-show-all-text="Show all" data-hide-all-text="Hide all">
+                    <ol class="app-step-nav__steps">
+                      <li class="app-step-nav__step js-step app-step-nav__step--active" aria-current="step" data-show id="check-youre-allowed-to-drive" >
+                        <div class="app-step-nav__header js-toggle-panel" data-position="1">
+                          <h3 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                              <span class="app-step-nav__circle-inner">
+                                <span class="app-step-nav__circle-background">
+                                  <span class="app-step-nav__circle-step-label govuk-visually-hidden">Step</span> 1
+                                  <span class="app-step-nav__circle-step-colon govuk-visually-hidden" aria-hidden="true">:</span>
+                                </span>
+                              </span>
+                            </span>
+
+                            <span class="js-step-title">
+                            About {{data['firstname'] }}
+                            </span>
+                          </h3>
+                        </div>
+
+                        <div class="app-step-nav__panel js-panel"  id="step-panel-check-youre-allowed-to-drive-1">
+                          <ul class="govuk-list govuk-list--bullet app-step-nav__paragraph">
+
+                            {% if data['children-under-16'] === 'yes' %}
+                            <li>Children under 16  </li>
+                            {% endif %}
+
+                            {% if data['where-do-you-live'] === 'uk' %}
+                            <li> Lives in England, Scotland or Wales  </li>
+                              {% elseif data['where-do-you-live'] === 'northern-ireland' %}
+                                <li> Lives in Northern Ireland  </li>
+                            {% endif %}
+
+                            {% if data['choice'] === 'england' %}
+                            <li>Other parent lives in England, Scotland or Wales  </li>
+                              {% elseif data['choice'] === 'somewhere' %}
+                                <li> Other parent lives somewhere else  </li>
+                            {% endif %}
+
+
+                            {% if data['paying-or-receiving'] === 'paying' %}
+                            <li>Paying child maintenance payments   </li>
+                            {% elseif data['paying-or-receiving'] === 'receiving' %}
+                              <li> Receiving child maintenance payments  </li>
+                              {% endif %}
+                          </ul>
+                        </div>
+
+                      </li>
+                      <li class="app-step-nav__step js-step step-nav__step--active" id="get-a-provisional-licence" >
+                        <div class="app-step-nav__header js-toggle-panel" data-position="2">
+                          <h3 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                              <span class="app-step-nav__circle-inner">
+                                <span class="app-step-nav__circle-background">
+                                  <span class="app-step-nav__circle-step-label govuk-visually-hidden">Step</span> 2
+                                  <span class="app-step-nav__circle-step-colon govuk-visually-hidden" aria-hidden="true">:</span>
+                                </span>
+                              </span>
+                            </span>
+
+                            <span class="js-step-title">
+                              Email {{data['free-text'] }}
+                            </span>
+                          </h3>
+                        </div>
+
+                        <div class="app-step-nav__panel js-panel" id="step-panel-get-a-provisional-licence-2">
+                          <ul class="govuk-list govuk-list--bullet app-step-nav__paragraph">
+
+                            {% if data['email-or-text-message'] === 'text' %}
+                            <li>Domesitic Abuse information  </li>
+                            {% endif %}
+                          </ul>
+                        </div>
+
+                      </li>
+                      <li class="app-step-nav__step js-step" id="driving-lessons-and-practice" >
+                        <div class="app-step-nav__header js-toggle-panel" data-position="3">
+                          <h3 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                              <span class="app-step-nav__circle-inner">
+                                <span class="app-step-nav__circle-background">
+                                  <span class="app-step-nav__circle-step-label govuk-visually-hidden">Step</span> 3
+                                  <span class="app-step-nav__circle-step-colon govuk-visually-hidden" aria-hidden="true">:</span>
+                                </span>
+                              </span>
+                            </span>
+
+                            <span class="js-step-title">
+                              Options
+                            </span>
+                          </h3>
+                        </div>
+
+                        <div class="app-step-nav__panel js-panel" id="step-panel-driving-lessons-and-practice-3">
+                          <ul class="govuk-list govuk-list--bullet app-step-nav__paragraph">
+
+                            {% if data['arrangement'] === 'cms' %}
+                            <li>Child Maintenance Service  </li>
+                            {% endif %}
+                          </ul>
+
+                        </div>
+
+
+                      </li>
+                      <li class="app-step-nav__step js-step" id="driving-lessons-and-practice" >
+                        <div class="app-step-nav__header js-toggle-panel" data-position="3">
+                          <h3 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                              <span class="app-step-nav__circle-inner">
+                                <span class="app-step-nav__circle-background">
+                                  <span class="app-step-nav__circle-step-label govuk-visually-hidden">Step</span> 4
+                                  <span class="app-step-nav__circle-step-colon govuk-visually-hidden" aria-hidden="true">:</span>
+                                </span>
+                              </span>
+                            </span>
+
+                            <span class="js-step-title">
+                              Choice
+                            </span>
+                          </h3>
+                        </div>
+
+                        <div class="app-step-nav__panel js-panel" id="step-panel-driving-lessons-and-practice-3">
+
+                  </div>
+
+
+                </div>
+
               </div>
+
+
+
+              </div></div>
               {% endblock %}
