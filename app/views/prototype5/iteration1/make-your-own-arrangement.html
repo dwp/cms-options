@@ -25,17 +25,20 @@
             <p class="govuk-body">You can make your own maintenance arrangements between parents. No one else has to be involved. You and the other parent can organise everything yourselves.</p>
             <p> For example, you and the other parent can:</p>
             <ul class="govuk-list govuk-list--bullet">
+              <li>a regular amount that will be paid, and when</li>
+              <li>to change the amount if either parent's circumstances change</li>
+              <li>to share the costs of specific things, like school uniforms or trips</li>
 
-              <!--Paying parent-->
+              <!--
               {% if data['will-you-be-paying-or-receiving'] === 'paying' %}
                 {% include './includes/own-arrangement-paying.html' %}
-              <!--Receiving parent-->
+              <!--Receiving parent
               {% elseif data['will-you-be-paying-or-receiving'] === 'receiving' %}
                 {% include './includes/own-arrangement-receiving.html' %}
-              <!--Generic - this should never be seen but exists to gracefully handle potential errors-->
+              <!--Generic - this should never be seen but exists to gracefully handle potential errors
               {% else %}
                 {% include './includes/own-arrangement-generic.html' %}
-              {% endif %}
+              {% endif %}-->
 
             </ul>
 

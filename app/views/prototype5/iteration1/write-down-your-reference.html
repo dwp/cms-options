@@ -20,17 +20,25 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
 
-                    <!--start of radio-->
+              <form class="form" action="
+              {% if data['how-do-you-want-to-apply'] == 'phone' %}apply-by-phone{% endif %}
+              {% if data['how-do-you-want-to-apply'] == 'online' %}start-your-application{% endif %}
+              {% if data['will-you-be-paying-or-receiving'] =='paying' and not data['how-do-you-want-to-apply']%}apply-by-phone{% endif %}">
+
+                    <!--start of content-->
                     <form class="form" action="
                     {% if data['will-you-be-paying-or-receiving'] == 'paying' %}apply-by-phone{% else %}start-your-application{% endif %}" method="post">
 
-                            <h1 class="govuk-heading-l">
-                                    Write down your application reference number:<br> 981234567
-                                </h1>
-
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l ">
+                                <h1 class="govuk-fieldset__heading">
+                                    Write down your application reference number:<br></h1>
+                                    <span class="govuk-caption-xl">981234567</span>
+                            </legend>
 
                             <p class="govuk-body">You need this reference number to make your application.</p>
-
+                    </div>
 
 
                     <!--end-->

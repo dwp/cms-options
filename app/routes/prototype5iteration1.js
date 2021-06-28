@@ -178,15 +178,15 @@ router.post('/prototype5/iteration1/text-message-sent', function(req, res) {
   }
 });
 
-// write-down-your-reference
-
-router.post('/prototype5/iteration1/write-down-your-reference', function(req, res) {
-  if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
-    res.redirect('apply-by-phone');
-  } else {
-    res.redirect('start-your-application');
-  }
-});
+// // write-down-your-reference
+//
+// router.post('/prototype5/iteration1/write-down-your-reference', function(req, res) {
+//   if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
+//     res.redirect('apply-by-phone');
+//   } else {
+//     res.redirect('start-your-application');
+//   }
+// });
 
 // start-your-application
 
