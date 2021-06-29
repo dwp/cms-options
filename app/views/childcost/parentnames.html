@@ -14,6 +14,9 @@
 
 <!--Feedback banner stop-->
 
+
+
+
 <div class="govuk-width-container">
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
     <main class="govuk-main-wrapper " id="main-content" role="main">
@@ -21,32 +24,44 @@
             <div class="govuk-grid-column-two-thirds">
                 <form method="post" novalidate>
                     <!--start of radio-->
-                      <div class="govuk-form-group">
-                          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                              <h1 class="govuk-fieldset__heading">
-                                What are the first names of both parents or guardians?
-                              </h1>
-                            </legend>
-                            <div class="govuk-form-group">
-                            <label class="govuk-label" for="parent1">
-                              First parent or guardian name
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                          <h1 class="govuk-fieldset__heading">
+                            Would you like to add the names of both parents or guardians?
+                          </h1>
+                        </legend>
+                        <div id="changed-name-hint" class="govuk-hint">
+                          This will not be stored. It will be used only for illustration purposes.
+                        </div>
+                        <div class="govuk-radios govuk-radios--inline">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="parentnameyes" name="parentname" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="parentnameyes">
+                              Yes
                             </label>
-                            <input class="govuk-input govuk-!-width-one-half" id="parent1" input name="parent1" type="text"></div><br>
-                            <label class="govuk-label" for="parent2">
-                              Second parent or guardian name
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="parentnameno" name="parentname" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="parentnameno">
+                              No
                             </label>
-                            <input class="govuk-input govuk-!-width-one-half" id="parent2" input name="parent2" type="text"></div>
-            </div>
-      </div>
-</div>
+                          </div>
+                        </div>
+
+                      </fieldset>
+                    </div>
+
                     <!--end-->
-<<<<<<< HEAD
-                      <a class="govuk-link" href="index">Continue</a>
-                    <!-- <button class="govuk-button" data-module="govuk-button" a href="howmanychildren">Continue</button> -->
-=======
-                    <a href="/childcost/howmanychildren" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8" data-module="govuk-button">
-                      Continue
-                      </a>
->>>>>>> 8f51649ed10acf75bcdde637fafc90305695556d
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+
+                  </form>
+                </div>
+          </div>
+</div>
+
+
+
 {% endblock %}
