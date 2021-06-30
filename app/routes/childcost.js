@@ -13,6 +13,13 @@ router.use((req, res, next) => {
 
 
 //childcost
+router.post('/childcost/parentnames', function(req, res) {
+  if (req.body['how-many-children'] === '1') {
+    res.redirect('howmanychildren');
+  } else {
+    res.redirect('howmanychildren');
+  }
+});
 
 // how many children logic
 router.post('/childcost/howmanychildren', function(req, res) {
@@ -22,6 +29,8 @@ router.post('/childcost/howmanychildren', function(req, res) {
     res.redirect('childtypemultiple');
   }
 });
+
+
 
 
 
