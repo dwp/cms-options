@@ -14,6 +14,7 @@ const prototype5iteration1 = require('./routes/prototype5iteration1');;
 const telephonytool = require('./routes/telephonytool');;
 const telephonytool2 = require('./routes/telephonytool2');;
 const childcost = require('./routes/childcost');;
+const nonuk = require('./routes/nonuk');;
 
 
 //copy the router use and update the sprint version
@@ -27,5 +28,6 @@ router.use(prototype5iteration1);
 router.use(telephonytool);
 router.use(telephonytool2);
 router.use(childcost);
+router.use(nonuk);
 
 module.exports = router
