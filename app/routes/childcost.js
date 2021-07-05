@@ -10,7 +10,23 @@ router.use((req, res, next) => {
   next()
 })
 
+//your-name
+router.post('/childcost/your-name', function(req, res) {
+  if (req.body['your-name'] === '1') {
+    res.redirect('parentnames');
+  } else {
+    res.redirect('parentnames');
+  }
+});
 
+//children-names
+router.post('/childcost/children-names', function(req, res) {
+  if (req.body['child1'] === '1') {
+    res.redirect('day-to-day');
+  } else {
+    res.redirect('day-to-day');
+  }
+});
 
 //childcost
 router.post('/childcost/parentnames', function(req, res) {
@@ -18,6 +34,24 @@ router.post('/childcost/parentnames', function(req, res) {
     res.redirect('howmanychildren');
   } else {
     res.redirect('howmanychildren');
+  }
+});
+
+//other expenses
+router.post('/childcost/larger-items', function(req, res) {
+  if (req.body['how-many-children'] === '1') {
+    res.redirect('other-expenses');
+  } else {
+    res.redirect('other-expenses');
+  }
+});
+
+//other expenses
+router.post('/childcost/other-expenses', function(req, res) {
+  if (req.body['how-many-children'] === '1') {
+    res.redirect('nappies');
+  } else {
+    res.redirect('nappies');
   }
 });
 
@@ -43,9 +77,9 @@ router.post('/childcost/parentnames', function(req, res) {
 // how many children
 router.post('/childcost/howmanychildren', function(req, res) {
   if (req.body['how-many-children'] === '1') {
-    res.redirect('childtype1');
+    res.redirect('children-names');
   } else {
-    res.redirect('childtypemultiple');
+    res.redirect('children-names');
   }
 });
 

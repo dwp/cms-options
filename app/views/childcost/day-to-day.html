@@ -1,0 +1,104 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                      <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                              <h1 class="govuk-fieldset__heading">
+                                What day-to-day items do you want to include in your calculation for the cost of {{data['child1'] }}
+                              </h1>
+                            </legend>
+                            <div id="waste-hint" class="govuk-hint">
+                              Select all that apply.
+                            </div>
+                            <div class="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="food" name="daytoday" type="checkbox" value="food">
+                                <label class="govuk-label govuk-checkboxes__label" for="food">
+                                  Food
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="nappies" name="daytoday" type="checkbox" value="nappies">
+                                <label class="govuk-label govuk-checkboxes__label" for="nappies">
+                                  Nappies
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="childcare" name="daytoday" type="checkbox" value="childcare">
+                                <label class="govuk-label govuk-checkboxes__label" for="childcare">
+                                Childcare (including playgroups)
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="medicines" name="daytoday" type="checkbox" value="medicines">
+                                <label class="govuk-label govuk-checkboxes__label" for="medicines">
+                                Toilertries and medicines
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="toys" name="daytoday" type="checkbox" value="toys">
+                                <label class="govuk-label govuk-checkboxes__label" for="toys">
+                                Toys, books and other play items
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="travel" name="daytoday" type="checkbox" value="travel">
+                                <label class="govuk-label govuk-checkboxes__label" for="travel">
+                                Travel
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="activites" name="daytoday" type="checkbox" value="activities">
+                                <label class="govuk-label govuk-checkboxes__label" for="activities">
+                                Activities (including sports or social clubs)
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="entertainment" name="daytoday" type="checkbox" value="entertainment">
+                                <label class="govuk-label govuk-checkboxes__label" for="entertainment">
+                                Entertainment
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="other" name="daytoday" type="checkbox" value="other">
+                                <label class="govuk-label govuk-checkboxes__label" for="other">
+                                Other items
+                                </label>
+                              </div>
+                          </div>
+
+                        </fieldset>
+                      </div>
+                        </div>
+                    </div>
+
+
+                    <!--end-->
+                    <a href="/childcost/larger-items" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8" data-module="govuk-button">
+                      Continue
+                      </a>
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of radio-->
+                      <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                              <h1 class="govuk-fieldset__heading">
+                                What larger items do you want to include in your calculation for the cost of raising {{data['child1'] }}
+                              </h1>
+                            </legend>
+                            <div id="waste-hint" class="govuk-hint">
+                              Select all that apply.
+                            </div>
+                            <div class="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="cot" name="large" type="checkbox" value="cot">
+                                <label class="govuk-label govuk-checkboxes__label" for="cot">
+                                Cot or crib
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="bedding" name="large" type="checkbox" value="bedding">
+                                <label class="govuk-label govuk-checkboxes__label" for="bedding">
+                                  Bedding
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="pram" name="large" type="checkbox" value="pram">
+                                <label class="govuk-label govuk-checkboxes__label" for="pram">
+                                Pram, pushchair or buggy
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="carseat" name="large" type="checkbox" value="carseat">
+                                <label class="govuk-label govuk-checkboxes__label" for="carseat">
+                              Car seat
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="highchair" name="large" type="checkbox" value="highchair">
+                                <label class="govuk-label govuk-checkboxes__label" for="highchair">
+                                Highchair
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="babymonitor" name="large" type="checkbox" value="babymonitor">
+                                <label class="govuk-label govuk-checkboxes__label" for="babymonitor">
+                                Baby monitor
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="equipment" name="large" type="checkbox" value="equipment">
+                                <label class="govuk-label govuk-checkboxes__label" for="equipment">
+                                Changing equipment
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="feeding" name="large" type="checkbox" value="feeding">
+                                <label class="govuk-label govuk-checkboxes__label" for="feeding">
+                                Feeding equipment
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="bathing" name="large" type="checkbox" value="bathing">
+                                <label class="govuk-label govuk-checkboxes__label" for="bathing">
+                                Bathing equipment
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="school" name="large" type="checkbox" value="school">
+                                <label class="govuk-label govuk-checkboxes__label" for="school">
+                                School trips
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="computer" name="large" type="checkbox" value="computer">
+                                <label class="govuk-label govuk-checkboxes__label" for="computer">
+                                Computer
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="bike" name="large" type="checkbox" value="bike">
+                                <label class="govuk-label govuk-checkboxes__label" for="bike">
+                                Bike
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="phone" name="large" type="checkbox" value="phone">
+                                <label class="govuk-label govuk-checkboxes__label" for="phone">
+                                  Mobile phone
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="other" name="large" type="checkbox" value="other">
+                                <label class="govuk-label govuk-checkboxes__label" for="other">
+                                Other expenses
+                                </label>
+                              </div>
+                          </div>
+
+                        </fieldset>
+                      </div>
+                        </div>
+                    </div>
+
+
+                    <!--end-->
+                    <button type="submit" class="govuk-button">
+                      Continue
+                    </button>
+
+        </div>
+    </main>
+</div>
+{% endblock %}
