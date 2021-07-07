@@ -40,9 +40,9 @@ router.post('/childcost/parentnames', function(req, res) {
 //other expenses
 router.post('/childcost/larger-items', function(req, res) {
   if (req.body['how-many-children'] === '1') {
-    res.redirect('other-expenses');
+    res.redirect('cot');
   } else {
-    res.redirect('other-expenses');
+    res.redirect('cot');
   }
 });
 
@@ -52,6 +52,33 @@ router.post('/childcost/other-expenses', function(req, res) {
     res.redirect('nappies');
   } else {
     res.redirect('nappies');
+  }
+});
+
+//nappies
+router.post('/childcost/nappies', function(req, res) {
+  if (req.body['how-many-children'] === '1') {
+    res.redirect('nappies-cya');
+  } else {
+    res.redirect('nappies-cya');
+  }
+});
+
+//cot
+router.post('/childcost/cot', function(req, res) {
+  if (req.body['how-many-children'] === '1') {
+    res.redirect('highchair');
+  } else {
+    res.redirect('highchair');
+  }
+});
+
+//highchair
+router.post('/childcost/highchair', function(req, res) {
+  if (req.body['how-many-children'] === '1') {
+    res.redirect('larger-cya');
+  } else {
+    res.redirect('larger-cya');
   }
 });
 
