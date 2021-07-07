@@ -1,0 +1,99 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+          <div class="govuk-width-container">
+
+
+            <main class="govuk-main-wrapper " id="main-content" role="main">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                  <h1 class="govuk-heading-l">Check your answers about day-day raising {{data['child1'] }}</h1>
+
+                  <!-- <h2 class="govuk-heading-m">Personal details</h2> -->
+
+                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                      Your contribution
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                        £{{data['cost'] }}
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                          Change<span class="govuk-visually-hidden"> name</span>
+                        </a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        {{data['parent1'] }}'s contribution
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                      £{{data['cost2'] }}
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                          Change<span class="govuk-visually-hidden"> date of birth</span>
+                        </a>
+                      </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        Frequency
+                      </dt>
+                      <dd class="govuk-summary-list__value">
+                    Weekly
+                        {% if data['nappiesfreq'] === 'weekly' %}
+                          come to an agreement about how much you will be paid
+                            {% elseif data['nappiesfreq'] === 'monthly' %}
+                          come to an agreement about how much you will pay
+                                              {% endif %}
+
+                      </dd>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="#">
+                          Change<span class="govuk-visually-hidden"> address</span>
+                        </a>
+                      </dd>
+                    </div>
+
+                  </dl>
+
+
+
+
+
+                </div>
+              </div>
+            </main>
+          </div>
+                    </div>
+
+
+                    <!--end-->
+                    <a href="/childcost/larger-items" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8" data-module="govuk-button">
+                      Continue
+                      </a>
+        </div>
+    </main>
+</div>
+{% endblock %}
