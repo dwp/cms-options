@@ -192,7 +192,7 @@ router.post('/prototype5/iteration1/text-message-sent', function(req, res) {
 
 router.post('/prototype5/iteration1/start-your-application', function(req, res) {
   if (req.body['start-your-application'] === 'yes') {
-    res.redirect('what-is-your-application-reference');
+    res.redirect(href="https://cmg-apply.herokuapp.com/apply/current/eligibility/intro");
   } else {
     res.redirect('apply-later');
   }
