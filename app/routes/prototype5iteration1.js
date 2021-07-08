@@ -12,6 +12,78 @@ router.use((req, res, next) => {
 
 // Routes start
 
+// answer-some-questions
+
+router.post('/prototype5/iteration1/answer-some-questions', function(req, res) {
+  if (req.body['answer-questions'] === 'yes') {
+    res.redirect('answer-some-questions-q1');
+  } else {
+    res.redirect('where-do-you-live');
+  }
+});
+
+// answer-some-questions-q1
+
+router.post('/prototype5/iteration1/answer-some-questions-q1', function(req, res) {
+  if (req.body['how-did-you-find'] === 'calculator') {
+    res.redirect('answer-some-questions-q2');
+  } else if (req.body['how-did-you-find'] === 'work-coach'){
+    res.redirect('answer-some-questions-q2');
+  } else if (req.body['how-did-you-find'] === 'somewhere-else'){
+    res.redirect('answer-some-questions-q2');
+  } else if (req.body['how-did-you-find'] === 'prefer-not-to-say'){
+    res.redirect('answer-some-questions-q2');
+  } else {
+    res.redirect('answer-some-questions-q2');
+  }
+});
+
+// answer-some-questions-q2
+
+router.post('/prototype5/iteration1/answer-some-questions-q2', function(req, res) {
+  if (req.body['reason-for-using'] === 'general-info') {
+    res.redirect('where-do-you-live');
+  } else if (req.body['reason-for-using'] === 'apply-to-use-cms'){
+    res.redirect('where-do-you-live');
+  } else if (req.body['reason-for-using'] === 'make-own-arrangement'){
+    res.redirect('where-do-you-live');
+  } else if (req.body['reason-for-using'] === 'find-out-how-much'){
+    res.redirect('where-do-you-live');
+  } else if (req.body['reason-for-using'] === 'something-else'){
+    res.redirect('where-do-you-live');
+  } else if (req.body['reason-for-using'] === 'prefer-not-to-say'){
+    res.redirect('where-do-you-live');
+  } else {
+    res.redirect('where-do-you-live');
+  }
+});
+
+// answer-some-questions-q3
+
+router.post('/prototype5/iteration1/answer-some-questions-q3', function(req, res) {
+  if (req.body['why-by-phone'] === 'accessibility') {
+    res.redirect('your-application-reference-number');
+  } else if (req.body['why-by-phone'] === 'english-not-first-language'){
+    res.redirect('your-application-reference-number');
+  } else if (req.body['why-by-phone'] === 'domestic-abuse'){
+    res.redirect('your-application-reference-number');
+  } else if (req.body['why-by-phone'] === 'questions-before-apply'){
+    res.redirect('your-application-reference-number');
+  } else if (req.body['why-by-phone'] === 'struggle-to-use-online'){
+    res.redirect('your-application-reference-number');
+  } else if (req.body['why-by-phone'] === 'calling-easier'){
+    res.redirect('your-application-reference-number');
+  } else if (req.body['why-by-phone'] === 'dont-want-personal-details-online'){
+    res.redirect('your-application-reference-number');
+  } else if (req.body['why-by-phone'] === 'something-else'){
+    res.redirect('your-application-reference-number');
+  } else if (req.body['why-by-phone'] === 'prefer-not-to-say'){
+    res.redirect('your-application-reference-number');
+  } else {
+    res.redirect('your-application-reference-number');
+  }
+});
+
 // where-do-you-live
 router.post('/prototype5/iteration1/where-do-you-live', function(req, res) {
   if (req.body['where-do-you-live'] === 'lives-in-gb') {
@@ -103,7 +175,7 @@ router.post('/prototype5/iteration1/how-do-you-want-to-apply', function(req, res
   if (req.body['how-do-you-want-to-apply'] === 'online') {
     res.redirect('your-application-reference-number');
   } else {
-    res.redirect('your-application-reference-number');
+    res.redirect('answer-some-questions-q3');
   }
 });
 
