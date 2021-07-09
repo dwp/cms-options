@@ -37,6 +37,15 @@ router.post('/childcost/parentnames', function(req, res) {
   }
 });
 
+//additional-costs
+router.post('/childcost/additional-expenses', function(req, res) {
+  if (req.body['additional'] === 'yes') {
+    res.redirect('additional-1');
+  } else {
+    res.redirect('overall-cya');
+  }
+});
+
 //other expenses
 router.post('/childcost/larger-items', function(req, res) {
   if (req.body['how-many-children'] === '1') {
