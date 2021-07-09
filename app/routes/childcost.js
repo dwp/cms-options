@@ -42,10 +42,18 @@ router.post('/childcost/additional-expenses', function(req, res) {
   if (req.body['additional'] === 'yes') {
     res.redirect('additional-1');
   } else {
-    res.redirect('overall-cya');
+    res.redirect('additional-1');
   }
 });
 
+//additional item 1
+router.post('/childcost/additional-1', function(req, res) {
+  if (req.body['items1'] === 'yes') {
+    res.redirect('additional-1-details');
+  } else {
+    res.redirect('additional-1-details');
+  }
+});
 //other expenses
 router.post('/childcost/larger-items', function(req, res) {
   if (req.body['how-many-children'] === '1') {
