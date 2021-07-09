@@ -23,7 +23,9 @@
 
                     <!--start of radio-->
                     <form class="form" action="
-                    {% if data['will-you-be-paying-or-receiving'] == 'paying' %}apply-by-phone{% else %}start-your-application{% endif %}">
+                    {% if data['how-do-you-want-to-apply'] == 'phone' %}apply-by-phone{% endif %}
+                    {% if data['how-do-you-want-to-apply'] == 'online' %}start-your-application{% endif %}
+                    {% if data['will-you-be-paying-or-receiving'] =='paying' and not data['how-do-you-want-to-apply']%}apply-by-phone{% endif %}">
 
                 <h1 class="govuk-heading-l">
                   A text message has been sent to:<br>
