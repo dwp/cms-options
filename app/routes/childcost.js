@@ -54,6 +54,53 @@ router.post('/childcost/additional-1', function(req, res) {
     res.redirect('additional-1-details');
   }
 });
+
+//additional item 1
+router.post('/childcost/additional-1-details', function(req, res) {
+  if (req.body['items1'] === 'yes') {
+    res.redirect('add-another-additional-item');
+  } else {
+    res.redirect('add-another-additional-item');
+  }
+});
+
+//additional item 2
+router.post('/childcost/additional-2-details', function(req, res) {
+  if (req.body['items1'] === 'yes') {
+    res.redirect('add-another-additional-item2');
+  } else {
+    res.redirect('add-another-additional-item2');
+  }
+});
+
+
+//other expenses
+router.post('/childcost/add-another-additional-item', function(req, res) {
+  if (req.body['additional-2'] === 'yes') {
+    res.redirect('additional-2');
+  } else {
+    res.redirect('additional-2');
+  }
+});
+
+//other expenses 2
+router.post('/childcost/add-another-additional-item2', function(req, res) {
+  if (req.body['additional-2'] === 'yes') {
+    res.redirect('additional-cya');
+  } else {
+    res.redirect('additional-cya');
+  }
+});
+
+//additional item 2
+router.post('/childcost/additional-2', function(req, res) {
+  if (req.body['items2'] === 'yes') {
+    res.redirect('additional-2-details');
+  } else {
+    res.redirect('additional-2-details');
+  }
+});
+
 //other expenses
 router.post('/childcost/larger-items', function(req, res) {
   if (req.body['how-many-children'] === '1') {
