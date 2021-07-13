@@ -21,32 +21,48 @@
             <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Do you need to add another additional expense to your calculation for the cost of raising {{data['child1'] }}?
+            Do you want to add any additional expenses for {{data['child1'] }}?
                 </h1>
               </legend>
-              <p>
-              </p>
-              <div class="govuk-radios govuk-radios--inline">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="yes" name="additonal1" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="yes">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="no" name="additional1" type="radio" value="no">
-                  <label class="govuk-label govuk-radios__label" for="no">
-                    No
-                  </label>
-                </div>
+              <h1 class="govuk-heading-m">
+                  You have already told us about: </h1>
+
+                <span class="govuk-caption-l">
+                  {{data['item1'] }}
+                </span>
+                <br/>
+            </h1>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="yes" name="additional-2" type="radio" value="yes" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="yes">
+                Yes
+                </label>
               </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    What additional expense would you like to add?
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="item2" name="item2" type="email" spellcheck="false" autocomplete="email"></div>
+
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="no" name="additional-2" type="radio" value="no" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="no">
+                  No
+                </label>
+              </div>
+
+
+            </div>
             </fieldset>
           </div>
           <!--end-->
           <button type="submit" class="govuk-button">
             Continue
           </button> <br/>
-      
+
         </form>
       </div>
 

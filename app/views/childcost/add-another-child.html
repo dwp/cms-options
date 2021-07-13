@@ -21,15 +21,15 @@
             <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-            Do you want to add any additional expenses for {{data['child1'] }}?
+        Do you need to add another child?
                 </h1>
               </legend>
               <h1 class="govuk-heading-m">
                   You have already told us about: </h1>
 
                 <span class="govuk-caption-l">
-                    {{data['item1'] }}<br/>
-                  {{data['item2'] }}
+                    {{data['child1'] }}<br/>
+
                 </span>
                 <br/>
             </h1>
@@ -43,9 +43,9 @@
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-email">
-                    What additional expense would you like to add?
+                  What is your child's name?
                   </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="item3" name="item3" type="email" spellcheck="false" autocomplete="email"></div>
+                  <input class="govuk-input govuk-!-width-one-third" id="child2" name="child2" type="email" spellcheck="false" autocomplete="email"></div>
 
               </div>
               <div class="govuk-radios__item">

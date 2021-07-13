@@ -31,18 +31,18 @@ router.post('/childcost/children-names', function(req, res) {
 //childcost
 router.post('/childcost/parentnames', function(req, res) {
   if (req.body['how-many-children'] === '1') {
-    res.redirect('howmanychildren');
+    res.redirect('children-names');
   } else {
-    res.redirect('howmanychildren');
+    res.redirect('children-names');
   }
 });
 
 //additional-costs
 router.post('/childcost/additional-expenses', function(req, res) {
-  if (req.body['additional'] === 'yes') {
-    res.redirect('additional-1');
+  if (req.body['additional-1'] === 'yes') {
+    res.redirect('additional-1-details');
   } else {
-    res.redirect('additional-1');
+    res.redirect('overall-cya');
   }
 });
 
@@ -77,9 +77,9 @@ router.post('/childcost/additional-2-details', function(req, res) {
 //other expenses
 router.post('/childcost/add-another-additional-item', function(req, res) {
   if (req.body['additional-2'] === 'yes') {
-    res.redirect('additional-2');
+    res.redirect('additional-2-details');
   } else {
-    res.redirect('additional-2');
+    res.redirect('additional-cya');
   }
 });
 
@@ -174,9 +174,52 @@ router.post('/childcost/howmanychildren', function(req, res) {
   }
 });
 
+// add another child
+router.post('/childcost/add-another-child', function(req, res) {
+  if (req.body['additional-3'] === 'yes') {
+    res.redirect('child2/day-to-day');
+  } else {
+    res.redirect('overall-cya');
+  }
+});
+
+//nappies 2
+router.post('/childcost/child2/nappies', function(req, res) {
+  if (req.body['how-many-children'] === '1') {
+    res.redirect('nappies-cya');
+  } else {
+    res.redirect('nappies-cya');
+  }
+});
 
 
+//other expenses 2
+router.post('/childcost/child2/larger-items', function(req, res) {
+  if (req.body['how-many-children'] === '1') {
+    res.redirect('cot');
+  } else {
+    res.redirect('cot');
+  }
+});
 
+//cot 2
+router.post('/childcost/child2/cot', function(req, res) {
+  if (req.body['how-many-children'] === '1') {
+    res.redirect('highchair');
+  } else {
+    res.redirect('highchair');
+  }
+});
+
+
+//highchair
+router.post('/childcost/child2/highchair', function(req, res) {
+  if (req.body['how-many-children'] === '1') {
+    res.redirect('larger-cya');
+  } else {
+    res.redirect('larger-cya');
+  }
+});
 
 // Routes end
 

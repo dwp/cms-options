@@ -25,18 +25,18 @@
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds-from-desktop">
 
-                  <h1 class="govuk-heading-l">Check your answers about the cost of additional items for {{data['child1'] }}</h1>
+                  <h1 class="govuk-heading-l">Check your answers about the cost of larger items for {{data['child1'] }}</h1>
 
                   <h2 class="govuk-heading-m">  Your contribution</h2>
 
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">
-                    {{data['item1'] }}
+                      Cot
                       </dt>
 
                       <dd class="govuk-summary-list__value">
-                        £{{data['item1cost'] }}
+                        £{{data['cotcost'] }}
                       </dd>
                       <dd class="govuk-summary-list__value">
                     One time payment
@@ -49,10 +49,10 @@
                     </div>
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">
-                      {{data['item2'] }}
+                      Highchair
                       </dt>
                       <dd class="govuk-summary-list__value">
-                      £{{data['item2cost'] }}
+                      £{{data['highchaircost'] }}
                       </dd>
                       <dd class="govuk-summary-list__value">
                     One time payment
@@ -91,11 +91,11 @@
                                     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                                       <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
-                                        {{data['item1'] }}
+                                        Cot
                                         </dt>
 
                                         <dd class="govuk-summary-list__value">
-                                          £{{data['item1cost2'] }}
+                                          £{{data['cotcost2'] }}
                                         </dd>
                                         <dd class="govuk-summary-list__value">
                                       One time payment
@@ -108,10 +108,10 @@
                                       </div>
                                       <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
-                                          {{data['item2'] }}
+                                          Highchair
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                        £{{data['item2cost2'] }}
+                                        £{{data['highchaircost2'] }}
                                         </dd>
                                         <dd class="govuk-summary-list__value">
                                       One time payment
@@ -154,7 +154,7 @@
 
 
                     <!--end-->
-                    <a href="/childcost/add-another-child" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8" data-module="govuk-button">
+                    <a href="/childcost/child2/additional-expenses" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8" data-module="govuk-button">
                       Continue
                       </a>
         </div>
