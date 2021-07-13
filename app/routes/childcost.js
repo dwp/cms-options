@@ -73,6 +73,24 @@ router.post('/childcost/additional-2-details', function(req, res) {
   }
 });
 
+//additional item 2 child 2
+router.post('/childcost/child2/additional-1-details', function(req, res) {
+  if (req.body['child2items1'] === 'yes') {
+    res.redirect('add-another-additional-item');
+  } else {
+    res.redirect('add-another-additional-item');
+  }
+});
+
+//additional item 2
+router.post('/childcost/child2/additional-2-details', function(req, res) {
+  if (req.body['child2items2'] === 'yes') {
+    res.redirect('add-another-additional-item2');
+  } else {
+    res.redirect('add-another-additional-item2');
+  }
+});
+
 
 //other expenses
 router.post('/childcost/add-another-additional-item', function(req, res) {
@@ -98,6 +116,15 @@ router.post('/childcost/additional-2', function(req, res) {
     res.redirect('additional-2-details');
   } else {
     res.redirect('additional-2-details');
+  }
+});
+
+//other expenses child2
+router.post('/childcost/child2/add-another-additional-item', function(req, res) {
+  if (req.body['additional-2'] === 'yes') {
+    res.redirect('additional-cya');
+  } else {
+    res.redirect('additional-cya');
   }
 });
 
@@ -221,6 +248,14 @@ router.post('/childcost/child2/highchair', function(req, res) {
   }
 });
 
+//additional-costs 2
+router.post('/childcost/child2/additional-expenses', function(req, res) {
+  if (req.body['additional-1'] === 'yes') {
+    res.redirect('additional-1-details');
+  } else {
+    res.redirect('overall-cya');
+  }
+});
 // Routes end
 
 module.exports = router;

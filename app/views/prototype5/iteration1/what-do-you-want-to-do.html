@@ -23,7 +23,7 @@
                         <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l ">
                                 <h1 class="govuk-fieldset__heading">
-                                    What do you want to do?
+                                    What type of child maintenance arrangement do you want to make?
                                 </h1>
                             </legend>
 
@@ -31,7 +31,7 @@
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="make-own-arrangement" name="what-do-you-want-to-do" type="radio" value="make-own-arrangement">
                                 <label class="govuk-label govuk-radios__label" for="make-own-arrangement">
-                                  I want to make my own child maintenance arrangement
+                            Make your own child maintenance arrangement
                                 </label> </div>
 
                               <!--This if/else will identify cases that cannot apply online and redirect to phone, skipping the channel choice-->
@@ -42,20 +42,20 @@
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="use-cms-pp" name="what-do-you-want-to-do" type="radio" value="use-cms-pp">
                                 <label class="govuk-label govuk-radios__label" for="use-cms-pp">
-                                  I want to use the Child Maintenance Service
+                                  Use the Child Maintenance Service
                                 </label> </div>
                               {% else %}
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="use-cms" name="what-do-you-want-to-do" type="radio" value="use-cms">
                                 <label class="govuk-label govuk-radios__label" for="use-cms">
-                                  I want to use the Child Maintenance Service
+                                Use the Child Maintenance Service
                                 </label> </div>
                               {% endif %}
 
                               <div class="govuk-radios__item">
                                 <input class="govuk-radios__input" id="get-more-information" name="what-do-you-want-to-do" type="radio" value="get-more-information">
                                 <label class="govuk-label govuk-radios__label" for="get-more-information">
-                                  I want more information to help me decide
+                                Get more information
                                 </label> </div>
                             </div>
                             </fieldset>
