@@ -1,0 +1,85 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+     beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Sorry, there is a problem with the service</h1>
+              <p class="govuk-body">Please allow a few minutes and try again.</p>
+              <p class="govuk-body">You can <a class="govuk-link" href="#">Contact the Child Maintenance Service</a> with any urgent queries.</p>
+
+              <a href="welcome" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">
+                  Try again
+              </a>
+              </div>
+                    <div class="govuk-grid-column-one-third">
+                        <div class="govuk-button--sticky">
+                            <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                                data-module="govuk-button">
+                                Hide this page
+                            </a>
+                        </div>
+                    </div>
+          </div>
+  </div>
+
+
+
+<style>
+    .survey-heading a {
+        background-color: #005ea5;
+        font-family: "nta", Arial, sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.11111;
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .survey-heading a:hover {
+
+        text-decoration: underline;
+    }
+
+    .survey-heading {
+        text-align: center;
+        margin: 0px;
+
+    }
+
+    c-related-navigation {
+        color: #0b0c0c;
+        border-top: 2px solid #005ea5;
+    }
+
+    .app-related-items {
+        border-top: 0px solid #005ea5;
+        padding-top: 0px;
+    }
+</style>
+
+{% endblock %}
