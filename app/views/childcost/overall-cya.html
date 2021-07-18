@@ -1,0 +1,287 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+          <div class="govuk-width-container">
+
+
+            <main class="govuk-main-wrapper " id="main-content" role="main">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                  <h1 class="govuk-heading-l">Cost of raising your child</h1>
+
+                  <h2 class="govuk-heading-m"> {{data['child1'] }}</h2>
+
+
+                  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+      Weekly payments
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+      <b>Item</b>
+          </dt>
+
+          <dd class="govuk-summary-list__value">
+          <b>  Parent 1</b>
+          </dd>
+          <dd class="govuk-summary-list__value">
+          <b>Parent 2</b>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <b>  Total </b>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Food
+          </dt>
+
+          <dd class="govuk-summary-list__value">
+            £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__value">
+          £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+              £xx{{data['cotcost'] }}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Nappies
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__value">
+      £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          £xx{{data['cotcost'] }}
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Total payments
+          </dt>
+          <dd class="govuk-summary-list__value">
+      £xx.xx
+
+
+          </dd>
+          <dd class="govuk-summary-list__value">
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+
+      </dl>    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Monthly payments
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+      <b>Item</b>
+          </dt>
+
+          <dd class="govuk-summary-list__value">
+          <b>  Parent 1</b>
+          </dd>
+          <dd class="govuk-summary-list__value">
+          <b>Parent 2</b>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <b>  Total </b>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Food
+          </dt>
+
+          <dd class="govuk-summary-list__value">
+            £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__value">
+          £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+              £xx{{data['cotcost'] }}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Nappies
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__value">
+      £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          £xx{{data['cotcost'] }}
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Total payments
+          </dt>
+          <dd class="govuk-summary-list__value">
+      £xx.xx
+
+
+          </dd>
+          <dd class="govuk-summary-list__value">
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+
+      </dl>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+        One time payments
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+      <b>Item</b>
+          </dt>
+
+          <dd class="govuk-summary-list__value">
+          <b>  Parent 1</b>
+          </dd>
+          <dd class="govuk-summary-list__value">
+          <b>Parent 2</b>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <b>  Total </b>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Food
+          </dt>
+
+          <dd class="govuk-summary-list__value">
+            £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__value">
+          £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+              £xx{{data['cotcost'] }}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Nappies
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__value">
+      £xx{{data['cotcost'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          £xx{{data['cotcost'] }}
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Total payments
+          </dt>
+          <dd class="govuk-summary-list__value">
+      £xx
+
+
+          </dd>
+          <dd class="govuk-summary-list__value">
+            £xx
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            £xx
+
+          </dd>
+        </div>
+
+      </dl>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+              </div>
+            </main>
+          </div>
+                    </div>
+
+
+                    <!--end-->
+                    <a href="/childcost/additional-expenses" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8" data-module="govuk-button">
+                    Print
+                      </a>
+        </div>
+    </main>
+</div>
+{% endblock %}
