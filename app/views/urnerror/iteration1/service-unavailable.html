@@ -4,7 +4,7 @@
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
-     beta
+      beta
     </strong>
     <span class="govuk-phase-banner__text">
       This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
@@ -14,72 +14,45 @@
 
 <!--Feedback banner stop-->
 
-
 <div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 
+        <!--Content starts here-->
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+             Sorry, there is a problem with the service
+        </h1>
+        </legend>
+        <p>Try again later.</p>
+        <p>We have not saved your answers. When the service is available, you will have to start again.</p>
 
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-              <h1 class="govuk-heading-l">Sorry, there is a problem with the service</h1>
-              <p class="govuk-body">Please allow a few minutes and try again.</p>
-              <p class="govuk-body">You can <a class="govuk-link" href="#">Contact the Child Maintenance Service</a> with any urgent queries.</p>
-
-              <a href="welcome" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">
-                  Try again
-              </a>
-              </div>
-                    <div class="govuk-grid-column-one-third">
-                        <div class="govuk-button--sticky">
-                            <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
-                                data-module="govuk-button">
-                                Hide this page
-                            </a>
-                        </div>
-                    </div>
+            <div class="govuk-inset-text">
+                <p><strong>Child Maintenance Service</strong><br>
+                <br>
+                Webchat: <a href="">Chat to a child maintenance advisor</a><br>
+                Telephone: 0800 988 0988<br>
+                Textphone: 18001 0800 988 0988 <br>
+                <br>
+                <a href="https://dwpnino.signvideo.net/">Video relay service</a> for British Sign Language
+                (BSL) users - <a href="https://www.youtube.com/watch?v=Osx7FFxFpNY">check you can use the Video Relay Service</a><br>
+                <br>
+                Monday to Friday, 9:30am to 3:30pm (excluding bank holidays) <br>
+                <a href="https://www.gov.uk/call-charges">Find out about call charges</a>.</p>
+            </div>
+        </div>
+      </div>
+          <div class="govuk-grid-column-one-third">
+            <div class="govuk-button--sticky">
+              <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+              data-module="govuk-button">
+              Hide this page
+            </a>
+            </div>
           </div>
-  </div>
+    </main>
+</div>
 
-
-
-<style>
-    .survey-heading a {
-        background-color: #005ea5;
-        font-family: "nta", Arial, sans-serif;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 1.11111;
-        display: block;
-        margin-top: 0px;
-        margin-bottom: 30px;
-        padding-bottom: 30px;
-        padding-top: 30px;
-        padding-left: 30px;
-        padding-right: 30px;
-        color: #ffffff;
-        text-decoration: none;
-    }
-
-    .survey-heading a:hover {
-
-        text-decoration: underline;
-    }
-
-    .survey-heading {
-        text-align: center;
-        margin: 0px;
-
-    }
-
-    c-related-navigation {
-        color: #0b0c0c;
-        border-top: 2px solid #005ea5;
-    }
-
-    .app-related-items {
-        border-top: 0px solid #005ea5;
-        padding-top: 0px;
-    }
-</style>
-
-{% endblock %}
+  {% endblock %}
