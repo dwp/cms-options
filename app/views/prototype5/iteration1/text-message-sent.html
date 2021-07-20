@@ -41,12 +41,11 @@
                 <p class="govuk-body">The sender: will be 'DWP Child Maintenance'</p>
                 <p class="govuk-body">The text message will include:</p>
                 <ul class="govuk-list govuk-list--bullet">
-                  <li>
-                    your application reference number
-                  </li>
-                  <li>
-                    a link to complete your application online
-                  </li>
+                  {% if data['how-do-you-want-to-apply'] === 'online' %}
+                    {% include './includes/text-online.html' %}
+                  {% else %}
+                    {% include './includes/text-phone.html' %}
+                  {% endif %}
                 </ul>
 
                 <button type="submit" class="govuk-button">
