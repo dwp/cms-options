@@ -41,8 +41,8 @@
                 <p class="govuk-body">The sender: will be 'DWP Child Maintenance'</p>
                 <p class="govuk-body">The text message will include:</p>
                 <ul class="govuk-list govuk-list--bullet">
-                  {% if data['how-do-you-want-to-apply'] === 'online' %}
-                    {% include './includes/text-online.html' %}
+                  {% if data['how-do-you-want-to-apply'] === 'online' and data['send-reference'] === 'yes' %}
+                      {% include './includes/email-phone.html' %}
                   {% else %}
                     {% include './includes/text-phone.html' %}
                   {% endif %}

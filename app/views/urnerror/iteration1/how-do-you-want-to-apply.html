@@ -35,12 +35,12 @@
 
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="online" name="how-do-you-want-to-apply" type="radio" value="online">
+                  <input class="govuk-radios__input" id="online" name="how-do-you-want-to-apply" type="radio" value="online{%  if ( data['answer-some-questions'] === 'no'  %}2{endif}">
                   <label class="govuk-label govuk-radios__label" for="online">
                     Online
                   </label> </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="phone" name="how-do-you-want-to-apply" type="radio" value="phone">
+                    <input class="govuk-radios__input" id="phone" name="how-do-you-want-to-apply" type="radio" value="phone{%  if ( data['answer-some-questions'] === 'no'  %}2{endif}">
                     <label class="govuk-label govuk-radios__label" for="phone">
                       Phone
                     </label>

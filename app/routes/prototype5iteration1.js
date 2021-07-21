@@ -58,15 +58,7 @@ router.post('/prototype5/iteration1/answer-some-questions-q2', function(req, res
   }
 });
 
-// how-do-you-want-to-apply
 
-router.post('/prototype5/iteration1/how-do-you-want-to-apply', function(req, res) {
-  if (req.body['how-do-you-want-to-apply'] === 'online') {
-    res.redirect('your-application-reference-number');
-  } else {
-    res.redirect('answer-some-questions-q3');
-  }
-});
 
 // answer-some-questions-q3
 
