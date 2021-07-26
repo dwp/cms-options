@@ -42,7 +42,7 @@ router.post('/childcost/additional-expenses', function(req, res) {
   if (req.body['additional-1'] === 'yes') {
     res.redirect('additional-1-details');
   } else {
-    res.redirect('overall-cya');
+    res.redirect('add-another-child');
   }
 });
 
@@ -203,7 +203,7 @@ router.post('/childcost/howmanychildren', function(req, res) {
 
 // add another child
 router.post('/childcost/add-another-child', function(req, res) {
-  if (req.body['additional-3'] === 'yes') {
+  if (req.body['add-child'] === 'yes') {
     res.redirect('child2/day-to-day');
   } else {
     res.redirect('overall-cya');
@@ -253,7 +253,7 @@ router.post('/childcost/child2/additional-expenses', function(req, res) {
   if (req.body['additional-1'] === 'yes') {
     res.redirect('additional-1-details');
   } else {
-    res.redirect('overall-cya');
+    res.redirect('/childcost/overall-cy');
   }
 });
 // Routes end
