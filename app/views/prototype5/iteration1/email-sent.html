@@ -7,7 +7,7 @@
     beta
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.<br>
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.<br><br>
       <a href="email-content" target="_blank" rel="noopener noreferrer">Email content</a>
     </span>
   </p>
@@ -30,7 +30,7 @@
 
                       <h1 class="govuk-heading-l">
 
-                  An email has been sent to:<br>
+                  An email has been sent to <br>
                   <span>
                     {% if data['contact-by-email'] %}
                     {{data['contact-by-email']}}
@@ -43,15 +43,15 @@
                 <p class="govuk-body">The sender will be child-maintenance@dwp.gov.uk</p>
                 <p class="govuk-body">The email will include:</p>
                 <ul class="govuk-list govuk-list--bullet">
-                  <li>
-                    your application reference number
-                  </li>
-                  <li>
-                    a link to complete your application online
-                  </li>
-                  <li>
-                    information about what you need before you start
-                  </li>
+                  {% if data['how-do-you-want-to-apply'] === 'online' and data['send-reference'] === 'yes2' %}
+                      {% include './includes/email-online.html' %}{% endif %}
+                    {% if data['how-do-you-want-to-apply'] === 'phone' and data['send-reference'] === 'yes2' %}
+                        {% include './includes/email-online.html' %}{% endif %}  
+                    {% if not data['how-do-you-want-to-apply'] === 'online' and not data['send-reference'] === 'yes' %}
+                      {% include './includes/use-cms-generic.html' %}{% endif %}
+                    {% if not data['how-do-you-want-to-apply'] === 'online' and data['send-reference'] === 'yes2' %}
+                      {% include './includes/use-cms-generic.html' %}
+                    {% endif %}
                 </ul>
 
 

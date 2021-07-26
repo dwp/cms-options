@@ -15,7 +15,7 @@ router.use((req, res, next) => {
 // answer-some-questions
 
 router.post('/prototype5/iteration1/answer-some-questions', function(req, res) {
-  if (req.body['answer-questions'] === 'yes') {
+  if (req.body['answer-some-questions'] === 'yes') {
     res.redirect('answer-some-questions-q1');
   } else {
     res.redirect('where-do-you-live');
@@ -57,6 +57,8 @@ router.post('/prototype5/iteration1/answer-some-questions-q2', function(req, res
     res.redirect('where-do-you-live');
   }
 });
+
+
 
 // answer-some-questions-q3
 
@@ -168,16 +170,15 @@ router.post('/prototype5/iteration1/what-do-you-want-to-do', function(req, res) 
   }
 });
 
-
-// how-do-you-want-to-apply
-
-router.post('/prototype5/iteration1/how-do-you-want-to-apply', function(req, res) {
-  if (req.body['how-do-you-want-to-apply'] === 'online') {
-    res.redirect('your-application-reference-number');
+// get-more-information
+router.post('/prototype5/iteration1/get-more-information', function(req, res) {
+  if (req.body['more-info-choice'] === 'more-info-make-own-arrangement') {
+    res.redirect('help-making-your-own-arrangement');
   } else {
-    res.redirect('answer-some-questions-q3');
+    res.redirect('how-do-you-want-to-apply');
   }
 });
+
 
 
 // your-application-reference-number
