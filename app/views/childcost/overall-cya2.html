@@ -25,76 +25,98 @@
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds-from-desktop">
 
-                  <h1 class="govuk-heading-l">Cost of raising your children</h1>
+                  <h1 class="govuk-heading-l">Cost of raising your
+                  {% if data['add-child'] === 'yes' %}
+                    children
+                    {% elseif data['add-child'] === 'no' %}
+                    child
+                    {% else %}
+                    child
+                    {% endif %}
 
-                  <h2 class="govuk-heading-m"> {{data['child1'] }}</h2>
+
+                  </h1>
+
+                  <h2 class="govuk-heading-m"> Child 1</h2>
 
                   <table class="govuk-table">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Payments</th>
-      <th scope="col" class="govuk-table__header">Parent 1</th>
-      <th scope="col" class="govuk-table__header">Parent 2</th>
+      <th scope="col" class="govuk-table__header">Parent 1 name</th>
+      <th scope="col" class="govuk-table__header">Parent 2 name</th>
       <th scope="col" class="govuk-table__header">Total</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Weekly</th>
+      <th scope="row" class="govuk-table__header">Total weekly payments</th>
       <td class="govuk-table__cell">£109</td>
         <td class="govuk-table__cell">£109</td>
           <td class="govuk-table__cell">£109</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Monthly</th>
+      <th scope="row" class="govuk-table__header">Total monthly payments</th>
       <td class="govuk-table__cell">£109</td>
         <td class="govuk-table__cell">£109</td>
           <td class="govuk-table__cell">£109</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">One time payment</th>
+      <th scope="row" class="govuk-table__header">Total one time payments</th>
       <td class="govuk-table__cell">£200</td>
         <td class="govuk-table__cell">£109</td>
           <td class="govuk-table__cell">£109</td>
     </tr>
-  
+
   </tbody>
 </table>
 
 <!-- child 2 -->
-
-<h2 class="govuk-heading-m"> {{data['child2'] }}</h2>
+{% if data['add-child'] === 'yes' %}
+<h2 class="govuk-heading-m"> Child 2</h2>
 
 <table class="govuk-table">
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
 <th scope="col" class="govuk-table__header">Payments</th>
-<th scope="col" class="govuk-table__header">Parent 1</th>
-<th scope="col" class="govuk-table__header">Parent 2</th>
+ <th scope="col" class="govuk-table__header">Parent 1 name</th>
+  <th scope="col" class="govuk-table__header">Parent 2 name</th>
 <th scope="col" class="govuk-table__header">Total</th>
 </tr>
 </thead>
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
-<th scope="row" class="govuk-table__header">Weekly</th>
+<th scope="row" class="govuk-table__header">Total weekly payments</th>
 <td class="govuk-table__cell">£109</td>
 <td class="govuk-table__cell">£109</td>
 <td class="govuk-table__cell">£109</td>
 </tr>
 <tr class="govuk-table__row">
-<th scope="row" class="govuk-table__header">Monthly</th>
+<th scope="row" class="govuk-table__header">Total monthly payments</th>
 <td class="govuk-table__cell">£109</td>
 <td class="govuk-table__cell">£109</td>
 <td class="govuk-table__cell">£109</td>
 </tr>
 <tr class="govuk-table__row">
-<th scope="row" class="govuk-table__header">One time payment</th>
+<th scope="row" class="govuk-table__header">Total One time payments</th>
 <td class="govuk-table__cell">£200</td>
 <td class="govuk-table__cell">£109</td>
 <td class="govuk-table__cell">£109</td>
 </tr>
 </tbody>
 </table>
+
+
+
+<!--If user asked for email-->
+{% elseif data['add-child'] === 'no' %}
+<p class="govuk-body"></p>
+
+
+{% else %}
+jhkj
+{% endif %}
+
 
 </main>
 

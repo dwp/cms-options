@@ -253,7 +253,7 @@ router.post('/childcost/child2/additional-expenses', function(req, res) {
   if (req.body['additional-1'] === 'yes') {
     res.redirect('additional-1-details');
   } else {
-    res.redirect('/childcost/overall-cy');
+    res.redirect('/childcost/overall-cya');
   }
 });
 // Routes end
