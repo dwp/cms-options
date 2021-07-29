@@ -27,7 +27,7 @@
 
                   <h1 class="govuk-heading-l">Check your answers about the cost of larger items for {{data['child1'] }}</h1>
 
-                  <h2 class="govuk-heading-m">  Your contribution</h2>
+                  <h2 class="govuk-heading-m">  {{data['yourname'] }}'s contribution</h2>
 
                   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                     <div class="govuk-summary-list__row">
@@ -69,7 +69,7 @@
                       Total contribution from {{data['yourname'] }}
                       </dt>
                       <dd class="govuk-summary-list__value">
-                  £xx.xx
+                  {{ data[‘cotcost’] | float + data[‘highchaircost’] | float}}
 
 
                       </dd>
@@ -129,8 +129,7 @@
                                         Total contribution from {{data['parent1'] }}
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                    £xx.xx
-
+                                  { data[‘cotcost2’] | float + data[‘highchaircost2’] | float}}
 
                                         </dd>
                                         <dd class="govuk-summary-list__value">

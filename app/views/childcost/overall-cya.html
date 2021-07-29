@@ -24,11 +24,27 @@
             <main class="govuk-main-wrapper " id="main-content" role="main">
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds-from-desktop">
+                    <h1 class="govuk-heading-l">Check your answers</h1>
+                  <p class="govuk-body">You can use this information to help you and the other parent to agree to a maintenance amount for your children. </p>
 
-                  <h1 class="govuk-heading-l">Review your costs</h1>
 
-                  <h2 class="govuk-heading-m"> Total summaries for all children</h2>
-                  <p class="govuk-body">Based on what you've entered. Parent 1 spends 30% more on average than Parent 2.</p>
+
+                  <h2 class="govuk-heading-m"> Total costs for your
+                    {% if data['add-child'] === 'yes' %}
+                      children
+                      {% elseif data['add-child'] === 'no' %}
+                      child
+                      {% else %}
+                      child
+                      {% endif %}
+
+                    </h2>
+                  <p class="govuk-body">Based on what you have told us:</p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Parent 1 spends £2.50 more than Parent 2 in a week</li>
+                    <li>Parent 1 spends £20 more than Parent 2 in a month </li>
+                    <li>Parent 1 spends £xx more than Parent 2 for one-time purchases</li>
+                  </ul>
 
                   <table class="govuk-table">
   <thead class="govuk-table__head">
@@ -68,7 +84,7 @@
 
 <!-- child 1 -->
 
-  <h2 class="govuk-heading-m"> Cost breakdown for child 1</h2>
+  <h2 class="govuk-heading-m"> All costs for Child 1</h2>
 <!-- weekly  -->
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
@@ -214,12 +230,11 @@
   </div>
 </details>
 
-
-
+{% if data['add-child'] === 'yes' %}
 
 <!-- child 2 -->
 
-  <h2 class="govuk-heading-m"> Cost breakdown for child 2</h2>
+  <h2 class="govuk-heading-m"> All costs for Child 2</h2>
 <!-- weekly  -->
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
@@ -363,6 +378,12 @@
   </table>
   </div>
 </details>
+  {% elseif data['add-child'] === 'no' %}
+
+
+  {% endif %}
+
+
 
 <h2 class="govuk-heading-m"> Summary</h2>
 <p class="govuk-body">Some content about how a person could use this information now like speaking to the other parent, downloading it, and/or printing it off.</p>
