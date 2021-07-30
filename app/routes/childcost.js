@@ -13,6 +13,14 @@ router.use((req, res, next) => {
 //your-name
 router.post('/childcost/your-name', function(req, res) {
   if (req.body['your-name'] === '1') {
+    res.redirect('other-parent');
+  } else {
+    res.redirect('other-parent');
+  }
+});
+//your-name
+router.post('/childcost/other-parent', function(req, res) {
+  if (req.body['other-parent'] === 'yes') {
     res.redirect('parentnames');
   } else {
     res.redirect('parentnames');
