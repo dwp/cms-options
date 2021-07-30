@@ -84,64 +84,71 @@
                   </dl>
 
 
+<!-- parent 2 -->
+
+{% if data['other-parent'] === 'yes' %}
+<h2 class="govuk-heading-m">  {{data['parent1'] }}'s contribution</h2>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+    {{data['item1'] }}
+    </dt>
+
+    <dd class="govuk-summary-list__value">
+      £{{data['item1cost2'] }}
+    </dd>
+    <dd class="govuk-summary-list__value">
+  One time payment
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      {{data['item2'] }}
+    </dt>
+    <dd class="govuk-summary-list__value">
+    £{{data['item2cost2'] }}
+    </dd>
+    <dd class="govuk-summary-list__value">
+  One time payment
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> date of birth</span>
+      </a>
+    </dd>
+  </div>
 
 
-                                    <h2 class="govuk-heading-m">  {{data['parent1'] }}'s contribution</h2>
-
-                                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                        {{data['item1'] }}
-                                        </dt>
-
-                                        <dd class="govuk-summary-list__value">
-                                          £{{data['item1cost2'] }}
-                                        </dd>
-                                        <dd class="govuk-summary-list__value">
-                                      One time payment
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link" href="#">
-                                            Change<span class="govuk-visually-hidden"> name</span>
-                                          </a>
-                                        </dd>
-                                      </div>
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                          {{data['item2'] }}
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                        £{{data['item2cost2'] }}
-                                        </dd>
-                                        <dd class="govuk-summary-list__value">
-                                      One time payment
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-                                          <a class="govuk-link" href="#">
-                                            Change<span class="govuk-visually-hidden"> date of birth</span>
-                                          </a>
-                                        </dd>
-                                      </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+    Total contribution from {{data['parent1'] }}
+    </dt>
+    <dd class="govuk-summary-list__value">
+{{ data[‘item1cost2’] | float + data[‘item2cost2’] | float}}
 
 
-                                      <div class="govuk-summary-list__row">
-                                        <dt class="govuk-summary-list__key">
-                                        Total contribution from {{data['parent1'] }}
-                                        </dt>
-                                        <dd class="govuk-summary-list__value">
-                                  {{ data[‘item1cost2’] | float + data[‘item2cost2’] | float}}
+    </dd>
+    <dd class="govuk-summary-list__value">
+
+    </dd>
+    <dd class="govuk-summary-list__actions">
+
+    </dd>
+  </div>
+
+</dl>
+
+                  {% elseif data['other-parent'] === 'no' %}
 
 
-                                        </dd>
-                                        <dd class="govuk-summary-list__value">
+                  {% endif %}
 
-                                        </dd>
-                                        <dd class="govuk-summary-list__actions">
-
-                                        </dd>
-                                      </div>
-
-                                    </dl>
 
 
 

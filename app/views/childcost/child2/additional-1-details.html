@@ -74,17 +74,24 @@
                     <input class="govuk-input govuk-input--width-5" id="item1cost" name="item1cost" type="text" spellcheck="false">
                   </div>
                 </div>
+<!-- parent 2 -->
 
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-label--m" for="item1cost2">
-                      How much does {{data['parent1'] }} spend on {{data['child2item1'] }} for {{data['child2'] }}?
-                  </label>
+{% if data['other-parent'] === 'yes' %}
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--m" for="item1cost2">
+      How much does {{data['parent1'] }} spend on {{data['child2item1'] }} for {{data['child2'] }}?
+  </label>
 
-                  <div class="govuk-input__wrapper">
-                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
-                    <input class="govuk-input govuk-input--width-5" id="item1cost2" name="item1cost2" type="text" spellcheck="false">
-                  </div>
-                </div>
+  <div class="govuk-input__wrapper">
+    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+    <input class="govuk-input govuk-input--width-5" id="item1cost2" name="item1cost2" type="text" spellcheck="false">
+  </div>
+</div>
+                  {% elseif data['other-parent'] === 'no' %}
+
+
+                  {% endif %}
+
 
 
 

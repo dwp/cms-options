@@ -73,6 +73,8 @@
                   </div>
                 </div>
 
+                <!-- parent 2 -->
+                {% if data['other-parent'] === 'yes' %}
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-label--m" for="highchaircost2">
                       How much did {{data['parent1'] }} spend on a highchair for {{data['child2'] }}?
@@ -83,6 +85,12 @@
                     <input class="govuk-input govuk-input--width-5" id="highchaircost2" name="highchaircost2" type="text" spellcheck="false">
                   </div>
                 </div>
+                  {% elseif data['other-parent'] === 'no' %}
+                
+
+                  {% endif %}
+
+
 
 
 

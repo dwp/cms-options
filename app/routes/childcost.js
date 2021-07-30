@@ -23,7 +23,7 @@ router.post('/childcost/other-parent', function(req, res) {
   if (req.body['other-parent'] === 'yes') {
     res.redirect('parentnames');
   } else {
-    res.redirect('parentnames');
+    res.redirect('children-names');
   }
 });
 

@@ -56,6 +56,9 @@
                         </a>
                       </dd>
                     </div>
+
+
+                    {% if data['other-parent'] === 'yes' %}
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">
                         {{data['parent1'] }}'s contribution
@@ -91,6 +94,13 @@
 
 
                   </dl>
+
+                      {% elseif data['other-parent'] === 'no' %}
+
+
+                      {% endif %}
+
+
 
 
 
