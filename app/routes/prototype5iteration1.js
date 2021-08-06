@@ -115,7 +115,7 @@ router.post('/prototype5/iteration1/where-does-the-other-parent-live', function(
   if (req.body['where-does-the-other-parent-live'] === 'op-lives-in-uk') {
     res.redirect('will-you-be-paying-or-receiving');
   } else if (req.body['where-does-the-other-parent-live'] === 'op-lives-unknown') {
-    res.redirect('cannot-use-child-maintenance-service');
+    res.redirect('not-sure-where-parent-lives');
   } else {
     res.redirect('other-parent-outside-uk');
   }
