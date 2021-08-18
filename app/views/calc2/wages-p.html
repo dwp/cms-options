@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
+{{ serviceName }} - What is your weekly gross income?
+?
+
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }}
+{% endblock%}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">What is your total taxable income?
+</h1>
+        {% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: ""
+  },
+  hint: {
+    text: "This is the gross income from employment or self-employment, before tax and National Insurance, but after pension contributions."
+
+
+
+  },
+  classes: "govuk-input--width-10",
+  id: "national-insurance-number",
+  name: "national-insurance-number"
+}) }}
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+        Is this amount weekly, monthly or yearly?
+      </h1>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+          Weekly
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          Monthly
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+          Yearly
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<a href="nights-p" role="button" class="govuk-button">
+  Continue
+</a></div>
+</div>
+{% endblock %}

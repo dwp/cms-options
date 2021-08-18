@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
+{{ serviceName }} - What is the weekly gross income of the parent paying child maintenance?
+?
+
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }}
+{% endblock%}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">On average, how many nights a week do the children stay over with the paying parent?</h1>
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+
+        </legend>
+        <div class="govuk-radios">
+            <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+                        None
+                    </label>
+                </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+                     Less than 1 a week (less than 52 nights a year)
+                </label>
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                     1 to 2 nights a week (52 to 103 a year)
+                </label>
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                     2 to 3 nights a week (104 to 155 a year)
+                </label>
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                 3 nights a week (156 to 174 a year)
+                </label>
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                     More than 3 nights a week (175 or more a year)
+                </label>
+            </div>
+        </div>
+    </fieldset>
+</div>
+<a href="other-children-r" role="button" class="govuk-button">
+    Continue
+</a>
+        </div>
+{% endblock %}

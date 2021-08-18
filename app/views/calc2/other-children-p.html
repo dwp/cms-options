@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
+{{ serviceName }} - What is the weekly gross income of the parent paying child maintenance?
+?
+
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }}
+{% endblock%}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">How many other children live with you?</h1>
+
+
+        {% from "input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: ""
+  },
+  hint: {
+    text: "Do not include the children maintenance has to be paid for."
+  },
+  classes: "govuk-input--width-10",
+  id: "child-amount",
+  name: "child-amount"
+}) }}
+<a href="check-your-answers" role="button" class="govuk-button">
+  Continue
+</a>
+</div>
+</div>
+{% endblock %}

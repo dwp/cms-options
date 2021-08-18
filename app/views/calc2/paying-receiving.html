@@ -1,0 +1,40 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Is the child under 20 years old?
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="paying-receiving">
+
+            {{ govukRadios({ 
+                idPrefix: "paying-receiving", 
+                name: "paying-receiving", 
+                fieldset: { legend: { text: "Will you be paying or receiving child maintenance payments?",
+            isPageHeading: true, 
+            classes: "govuk-fieldset__legend--xl" } }, 
+            items: [ { 
+                name:"paying",
+                value: "paying", 
+                text: "Paying", 
+                checked: true if data['paying-receiving'] == "paying" }, 
+                { 
+                name: "receiving",    
+                value: "receiving", 
+                text: "Receiving", 
+                checked: true if data['child-age'] == "receiving" }
+            ] }) }} 
+            {{ 
+                govukButton({ text: "Continue" }) }}
+        </form>
+    </div>
+</div>
+{% endblock %}

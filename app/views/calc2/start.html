@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% from "button/macro.njk" import govukButton %} {% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %} {% block pageTitle %} {{ serviceName }} - Protecting yourself {% endblock %} {% block beforeContent
+%} {{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }} {% endblock%} {% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+        <h1 class="govuk-heading-xl">Work out child maintenance</h1>
+        <p>You can use this service to get a child maintenance calculation and share it with the child's other parent.</p>
+
+        <h3 class="govuk-heading-m">Before you start</h3>
+        <p>You'll need to know:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>whether the paying parent gets any government benefits or State Pension</li>
+            <li>the paying parent's total income</li>
+        </ul>
+
+        <a href="name" role="button" class="govuk-button govuk-button--start">
+            Start
+        </a>
+
+
+
+        <h3 class="govuk-heading-m">Other tools and guides</h3>
+
+        <p>This
+            <a href="https://www.cmoptions.org/en/pdfs/refresh/cost-of-raising-your-child.pdf" target="_blank">'cost of raising your child' guide (opens in new window or tab)</a> can help both parents think about the things
+            children need. Use it to work out the true cost of bringing up your child, and how you can share that cost.
+        </p>
+
+        <p>This
+            <a href="https://www.cmoptions.org/en/pdfs/refresh/family-based-arrangement-form-aug-2015.pdf" target="_blank">arrangement tool (opens in new window or tab) </a>might help some parents to reach an agreement for child maintenance.
+        </p>
+
+        <p>This
+            <a href="https://www.cmoptions.org/en/pdfs/refresh/discussion-guide.pdf" target="_blank"> discussion guide (opens in new window or tab)</a> might help you to prepare for what can be a difficult conversation
+            about arrangements for children.
+        </p>
+
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
+{{ serviceName }} - 
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }}
+{% endblock%}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="do-you-receive-benefits-p">
+
+            {{ govukRadios({
+                idPrefix: "do-you-receive-benefits-p",
+                name: "do-you-receive-benefits-p",
+                fieldset: { legend: { text: "Do you receive any government benefits or State Pension?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl" } },
+            items: [ {
+                name:"yes",
+                value: "yes", 
+                text: "Yes",
+                checked: true if data['do-you-receive-benefits-p'] == "yes" },
+                {
+                name: "no",
+                value: "no",
+                text: "No",
+                checked: true if data['do-you-receive-benefits-p'] == "no" }
+            ] }) }}
+            {{
+                govukButton({ text: "Continue" }) }}
+        </form>
+    </div>
+</div>
+{% endblock %}

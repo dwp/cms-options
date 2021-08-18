@@ -1,0 +1,34 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% from "input/macro.njk" import govukInput %}
+
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Is the child under 20 years old?
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">What is the receiving parents first name?</h1>
+       
+
+           
+<div class="govuk-form-group">
+    <label class="govuk-label" for="name">
+        First name
+    </label>
+    <input class="govuk-input" id="name" name="r-name" type="text">
+</div>            {{ 
+                govukButton({ text: "Continue",
+                              href: "paying-children"  
+            }) }}
+        </form>
+    </div>
+</div>
+{% endblock %}

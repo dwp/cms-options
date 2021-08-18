@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% from "button/macro.njk" import govukButton %}
+{% from "radios/macro.njk" import govukRadios%}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
+{{ serviceName }} - How many children are you paying child maintenance for?
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }}
+{% endblock%}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="recieving">
+
+            {{ govukRadios({
+                idPrefix: "receiving",
+                name: "receiving",
+                fieldset: { legend: { text: "How many children are you paying child maintenance for?",
+            isPageHeading: true,
+
+            classes: "govuk-fieldset__legend--xl" } },
+             hint: { text: "Include any children you have family based arrangements for." },
+            items: [ {
+                value: "1",
+                text: "1",
+                checked: true if data['receiving'] == "1" },
+                {
+                value: "2",
+                text: "2",
+                checked: true if data['receiving'] == "2" },
+                {
+                value: "3",
+                text: "3 or more",
+                checked: true if data['receiving'] == "3" }
+            ] }) }}
+<a href="benefits-q-p" role="button" class="govuk-button">
+    Continue
+</a>        </form>
+    </div>
+</div>
+{% endblock %}

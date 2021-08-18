@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+{% set serviceUrl = "/" %}
+{% block pageTitle %}
+{{ serviceName }} - Confirmation
+
+
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }}
+{% endblock%}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+                <a href="javascript:history.go(-1)" class="govuk-back-link">Back</a>
+
+
+
+<h1 class="govuk-heading-xl">Check your answers</h1>
+<table class="govuk-table">
+    <caption class="govuk-table__caption"></caption>
+    <br>
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <br>
+            <th class="govuk-table__header" scope="col">Questions</th>
+            <th class="govuk-table__header" scope="col">Answers</th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">What is your first name?</th>
+                <td class="govuk-table__cell">Sarah</td>
+                <td class="govuk-table__cell">
+                    <a href="">Change</a>
+                </td>
+            </tr>
+
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="row">What is the paying parents first name?</th>
+                    <td class="govuk-table__cell">Gareth</td>
+                    <td class="govuk-table__cell">
+                        <a href="">Change</a>
+                    </td>
+                </tr>
+
+       <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">How many children are you receiving child maintenance for?</th>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">
+                <a href="">Change</a>
+            </td>
+        </tr>
+
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">What is the child's first name?</th>
+                <td class="govuk-table__cell">Edward</td>
+                <td class="govuk-table__cell">
+                    <a href="">Change</a>
+                </td>
+            </tr>
+
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">How many children are you receiving child maintenance for?</th>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">
+                <a href="">Change</a>
+            </td>
+        </tr>
+
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">On average, how many nights a week do the children stay over with the paying parent?
+            </th>
+            <td class="govuk-table__cell">1 to 2 nights a week</td>
+            <td class="govuk-table__cell">
+                <a href="">Change</a>
+            </td>
+
+        </tr>
+
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">Does the paying parent receive any government benefits or State Pension?</th>
+            <td class="govuk-table__cell">No</td>
+            <td class="govuk-table__cell">
+                <a href="">Change</a>
+            </td>
+
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">What is the total income of the paying parent?</th>
+            <td class="govuk-table__cell">£433.89</td>
+            <td class="govuk-table__cell">
+                <a href="">Change</a>
+            </td>
+
+          </tr>
+          <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="row">Is this amount weekly, monthly or yearly?</th>
+              <td class="govuk-table__cell">Weekly</td>
+              <td class="govuk-table__cell">
+                  <a href="">Change</a>
+              </td>
+
+        </tr>
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="row">How many other children live in the household of the parent paying child maintenance?</th>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell">
+                <a href="">Change</a>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+<a href="calc-email" role="button" draggable="false" class="govuk-button">
+    Continue
+</a>
+
+</div>
+</div>
+{% endblock%}

@@ -1,0 +1,131 @@
+{% extends "layout.html" %} 
+{% from "button/macro.njk" import govukButton %} 
+{% from "radios/macro.njk" import govukRadios%} 
+{% set serviceUrl = "/" %} 
+{% block pageTitle %} 
+{{ serviceName }} - Do you get any of these benefits or state pensions?
+{% endblock %} 
+
+{% block beforeContent %} 
+{{ govukPhaseBanner({ tag: { text: "PROTOTYPE V6" }, html: '' }) }} 
+{% endblock%} 
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" action="recieving">
+          
+
+            {% from "checkboxes/macro.njk" import govukCheckboxes %}
+
+{{ govukCheckboxes({
+  idPrefix: "waste",
+  name: "waste",
+  fieldset: {
+    legend: {
+      text: "Do you get any of these benefits or state pensions?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--xl"
+    }
+  },
+  hint: {
+    text: "Select all that apply."
+  },
+  items: [
+    {
+      value: "carcasses",
+      text: "income support"
+    },
+    {
+      value: "mines",
+      text: "income-based Jobseeker’s Allowance"
+    },
+    {
+      value: "farm",
+      text: "income-related Employment and Support Allowance"
+    },
+      {
+      value: "mines",
+      text: "Pension Credit"
+    },
+      {
+      value: "mines",
+      text: "contribution-based Jobseeker’s Allowance"
+    },
+      {
+      value: "mines",
+      text: "State Pension"
+    },
+      {
+      value: "mines",
+      text: "Incapacity Benefit"
+    },
+      {
+      value: "mines",
+      text: "Training Allowance"
+    },
+      {
+      value: "mines",
+      text: "Armed Forces Compensation Scheme payments"
+    },
+      {
+      value: "mines",
+      text: "War Disablement Pension"
+    },
+      {
+      value: "mines",
+      text: "Bereavement Allowance"
+    },
+      {
+      value: "mines",
+      text: "Carer’s Allowance"
+    },
+      {
+      value: "mines",
+      text: "Maternity Allowance"
+    },
+      {
+      value: "mines",
+      text: "Severe Disablement Allowance"
+    },
+      {
+      value: "mines",
+      text: "Industrial Injuries Disablement Benefit"
+    },
+      {
+      value: "mines",
+      text: "Widowed Parent’s Allowance"
+    },
+      {
+      value: "mines",
+      text: "Widow’s pension"
+    },
+      {
+      value: "mines",
+      text: "Universal Credit with no earned income"
+    },
+      {
+      value: "mines",
+      text: "Skillseekers training"
+    },
+      {
+      value: "mines",
+      text: "War Widow’s, Widower’s or Surviving Civil Partner’s Pension"
+    },
+    
+      {
+      value: "mines",
+      text: "income-based Jobseeker’s Allowance"
+    }
+  ]
+}) }}
+
+
+<a href="wages-p" role="button" class="govuk-button">
+  Continue
+</a>
+
+</form>
+</div>
+</div>
+{% endblock %}
