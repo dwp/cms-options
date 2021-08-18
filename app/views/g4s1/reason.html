@@ -1,0 +1,92 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+
+                <h1 class="govuk-fieldset__heading">
+                  What best describes your reason for calling today?
+                </h1>
+              </legend>
+
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="information" name="research-2" type="radio" value="information">
+                  <label class="govuk-label govuk-radios__label" for="information">
+                    To get general information about child maintenance
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="cms" name="research-2" type="radio" value="cms">
+                  <label class="govuk-label govuk-radios__label" for="cms">
+                    To apply to use the Child Maintenance Service
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="private" name="research-2" type="radio" value="private">
+                  <label class="govuk-label govuk-radios__label" for="private">
+                    To get help making your own arrangement
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="calculation" name="research-2" type="radio" value="calculatio">
+                  <label class="govuk-label govuk-radios__label" for="calculatio">
+                    To find out how much child maintenance you might be entitled to
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="other" name="research-2" type="radio" value="other" data-aria-controls="get-info">
+                  <label class="govuk-label govuk-radios__label" for="other">
+                    Something else
+                  </label>
+                </div>
+
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="get-info">
+                  <div class="govuk-form-group">
+                    <p>
+                      Describe in your own words what your reason for calling is.
+                    <p>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="../index">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

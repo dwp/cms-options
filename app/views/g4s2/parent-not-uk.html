@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+
+                <h1 class="govuk-fieldset__heading">
+                  We cannot help you arrange child maintenance
+                </h1>
+
+              </legend>
+
+              <p>The Child Maintenance Service cannot help you make an arrangement because you live outside the UK and do not work for a British organisation.</p>
+
+              <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  Return to usual call-handling processes.
+                </strong>
+              </div>
+
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            End call
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

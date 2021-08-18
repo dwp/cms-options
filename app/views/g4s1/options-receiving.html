@@ -1,0 +1,180 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+
+                <h1 class="govuk-fieldset__heading">
+                  I'm now going to tell you about your options
+                </h1>
+
+              </legend>
+
+              <p>I have to tell you about both of your options, regardless of your personal circumstances. This is to make sure you have all the information you need to make the best decision for you and your children.</p>
+
+
+
+              <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Your first option is to make your own arrangement
+                      </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <ul class="govuk-list govuk-list--bullet">
+
+                        <li>
+                          this is a private arrangement between you and the other parent
+                        </li>
+                        <li>
+                          no one else has to be involved
+                        </li>
+                        <li>
+                          it can be whatever you and the other parent agree to
+                        </li>
+                      </ul>
+
+                      <p>You and the other parent can:</p>
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        come to an agreement about how much you will be paid
+                      </li>
+                      <li>
+                        change the amount if you need to
+                      </li>
+                      <li>
+                        decide how often you will be paid
+                      </li>
+                      <li>
+                        agree for the other parent to pay for specific things, like school uniforms or trips
+                      </li>
+                    </ul>
+
+
+                    <p>Making your own arrangement might be a good option if:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      you feel safe dealing with the other parent
+                    </li>
+                    <li>
+                      you think the other parent will stick to an agreement
+                    </li>
+                    <li>
+                      you and the other parent can communicate well
+                    </li>
+                  </ul>
+              <p><b>
+                    Do you have any questions about making your own arrangement?</b>
+                  </p>
+                  </div>
+                </div>
+
+
+
+
+
+                <!-- CMS Option -->
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                      Your second option is to use the Child Maintenance Service
+                      </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                      using the Child Maintenance Service is less flexible than making your own arrangement because the amount is based on the paying parent’s earnings
+                        </li>
+                        <li>it might be a good option if you do not feel safe dealing with the other parent or you do not think they will stick to an agreement </li>
+                      </ul>
+
+                      <p> <b> You will need to complete an application online or on the phone </b> </p>
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>there is a £20 fee to make an application – you will not need to pay the fee if you are under 19 or if you have experienced any domestic abuse</li>
+                          <li> the fee is non-refundable </li>
+                          <li> it does not guarantee an arrangement </li>
+                          </ul>
+
+                          <p> Then the Child Maintenance Service will: </p>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li> work out how much child maintenance you will be paid </li>
+                            <li> arrange for the other parent to pay you</li>
+                            <li> take action if payments are not made</li>
+                            <li> help find the other parent if you've lost contact </li>
+                            <li> recalculate the payment amount if changes in parents' circumstances are reported. For example, if the other parent's salary changes </li>
+                            <li> help if someone says they are not the parent of the child </li>
+                            </ul>
+
+                <h3 class="govuk-heading-m"> There are 2 ways you can receive child maintenance payments</h3>
+
+                <p><b>The first way to receive payments is called 'Direct Pay'</b></p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li> the other parent will pay maintenance directly to your bank account </li>
+                  <li> you do not need to have any contact with the other parent </li>
+                  <li> there is a £20 application fee to use the Child Maintenance Service, but there are no additional fees if you use Direct Pay</li>
+                  </ul>
+
+                  <p><b>The second way to receive payments is called 'Collect and Pay'</b></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li> the Child Maintenance Service will collect maintenance from the other parent and pass it on to you </li>
+                    <li> there is a £20 application fee to use the Child Maintenance Service and additional monthly fees for you and the other parent if you use Collect and Pay </li>
+                    <li> you can only start with Collect and Pay if the other parent agrees to it or if they do not respond to us</li>
+                    </ul>
+
+                    <p><b>There are extra fees for collect and pay, which are:</b></p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li> 20% will be added to the other parent's payment </li>
+                      <li> 4% will be taken off the payment you receive</li>
+                      </ul>
+                      <p> For example, if the payment amount was £100, you would get £96 and the other parent would pay £120 </p>
+
+
+                    <p> <b> Do you have any questions about using the Child Maintenance Service? </b></p>
+
+
+
+
+                  </div>
+                </div>
+
+
+
+
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="../index">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

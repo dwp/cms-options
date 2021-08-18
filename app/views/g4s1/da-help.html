@@ -1,0 +1,79 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+
+                <h1 class="govuk-fieldset__heading">
+                  You can get help with domestic abuse
+                </h1>
+
+              </legend>
+
+              <p>
+                If you want to get support for the behaviours you have experienced and you are able to write this down, I can give you the details of a website where you can get help.
+              </p>
+
+              <h2 class="govuk-heading-s">
+                Would you like me to read out the website?
+              </h2>
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="yes" name="da-help" type="radio" value="yes" data-aria-controls="get-help">
+                  <label class="govuk-label govuk-radios__label" for="yes">
+                    Yes
+                  </label>
+                </div>
+
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="get-help">
+                  <div class="govuk-form-group">
+                    <p>
+                      www.gov.uk/guidance/domestic-abuse-how-to-get-help
+                    <p>
+                  </div>
+                </div>
+
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="no" name="da-help" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="no">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="../index">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

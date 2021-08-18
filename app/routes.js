@@ -17,7 +17,9 @@ const telephonytool2 = require('./routes/telephonytool2');;
 const childcost = require('./routes/childcost');;
 const nonuk = require('./routes/nonuk');;
 const urnerror = require('./routes/urnerror');;
-const calc2 = require('./routes/calc2');;
+const g4s1 = require('./routes/g4s1');;
+const g4s2 = require('./routes/g4s2');;
+
 
 
 //copy the router use and update the sprint version
@@ -34,6 +36,7 @@ router.use(telephonytool2);
 router.use(childcost);
 router.use(nonuk);
 router.use(urnerror);
-router.use(calc2);
+router.use(g4s1);
+router.use(g4s2);
 
 module.exports = router
