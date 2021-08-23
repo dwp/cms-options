@@ -13,7 +13,7 @@ router.use((req, res, next) => {
 
 // start
 router.post('/g4s2/start', function(req, res) {
-    res.redirect('research-questions');
+    res.redirect('parent-live');
 });
 
 
@@ -51,7 +51,7 @@ router.post('/g4s2/domestic-abuse', function(req, res) {
   if (req.body['domestic-abuse'] === 'yes') {``
     res.redirect('da-help');
   } else {
-    res.redirect('parent-live');
+    res.redirect('court');
   }
 });
 
@@ -90,13 +90,13 @@ router.post('/g4s2/parent-organisations', function(req, res) {
 
 // parent-not-uk
 router.post('/g4s2/parent-not-uk', function(req, res) {
-    res.redirect('../index');
+    res.redirect('g4s2/index.html');
 });
 
 // other-parent-lives
 router.post('/g4s2/other-parent-lives', function(req, res) {
   if (req.body['other-parent-lives'] === 'uk') {``
-    res.redirect('court');
+    res.redirect('research-questions');
   } else {
     res.redirect('other-parent-organisations');
   }
