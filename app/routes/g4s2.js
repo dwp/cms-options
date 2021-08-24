@@ -35,7 +35,7 @@ router.post('/g4s2/find-number', function(req, res) {
 
 // reason
 router.post('/g4s2/reason', function(req, res) {
-    res.redirect('end-of-research');
+    res.redirect('domestic-abuse');
 });
 
 
