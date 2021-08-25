@@ -25,11 +25,19 @@
                 </div>
 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="search" name="research" type="radio" value="search">
-                  <label class="govuk-label govuk-radios__label" for="search">
-                    Google or internet search
+                  <input class="govuk-radios__input" id="other" name="research" type="radio" value="other" data-aria-controls="google">
+                  <label class="govuk-label govuk-radios__label" for="google">
+                  Google or internet search
                   </label>
                 </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="google">
+                  <div class="govuk-form-group">
+                  <label class="govuk-label" for="width-20">
+                    What words did you search?
+                  </label>
+                  <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"></div>
+                  </div>
+
 
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="friend" name="research" type="radio" value="friend">
@@ -44,7 +52,6 @@
                     Somewhere else
                   </label>
                 </div>
-
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="get-info">
                   <div class="govuk-form-group">
                     <p>
@@ -54,7 +61,7 @@
                 </div>
               </div>
 
-              <br><br><p>Thanks for answering that.</p>
+              <br><br><p>Thanks for answering that research question.</p>
 
 
 

@@ -11,28 +11,46 @@
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
-
-                <h1 class="govuk-fieldset__heading">
-                  Are you going to be paying or receiving child maintenance payments?
-                </h1>
-
+                  <h1 class="govuk-fieldset__heading">
+                    Do you have the main day to day care of the child?
+                  </h1>
+                  <div class="govuk-inset-text">
+                  If the caller has already indicated they will be either the receiving of paying parent, just clarify this.
+                  </div>
               </legend>
 
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other" name="dtd-yes" type="radio" value="dtd-yes" data-aria-controls="dtd-yes">
+                    <label class="govuk-label govuk-radios__label" for="dtd-yes">
+                      Yes
+                    </label>
+                  </div>
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" name="yes" value="yes" id="dtd-yes">
+                            <div class="govuk-form-group">
+                            <label class="govuk-label" for="width-20">
+                            That means you will be receiving child maintenance payments
+                            </label>
+                            </div>
+                      </div>
 
-              <div class="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="paying" name="paying-or-receiving" type="radio" value="paying">
-                  <label class="govuk-label govuk-radios__label" for="paying">
-                    Paying
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="receiving" name="paying-or-receiving" type="radio" value="receiving">
-                  <label class="govuk-label govuk-radios__label" for="receiving">
-                    Receiving
-                  </label>
-                </div>
-              </div>
+
+                      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="other" name="dtd-no" type="radio" value="dtd-no" data-aria-controls="dtd-no">
+                      <label class="govuk-label govuk-radios__label" for="dtd-no">
+                        No
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="dtd-no">
+                          <div class="govuk-form-group">
+                          <label class="govuk-label" for="width-20">
+                          That means you will be paying child maintenance to the other parent
+                          </label>
+                          </div>
+                    </div>
+                  </div>
+
             </fieldset>
           </div>
           <!--end-->

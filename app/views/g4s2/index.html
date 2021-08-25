@@ -1,28 +1,40 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <!--Feedback banner start-->
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-three-quarters">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
 
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
 
-<br>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Options telephony prototype</h1>
+        <h1 class="govuk-heading-xl">
+          <span class="govuk-caption-l">Version 2</span>
+          Options Telephony Prototype
+        </h1>
+        <p class="govuk-body-l">Use this tool only for the 'full' Options call. Quick queries can be handled as normal.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Please note:
+        </strong>
+      </div>
+          <div class="govuk-inset-text">
+            We use this grey line to give you prompts throughout this tool. You should not read this content out to the caller.
+          </div>
+      </div>
+    </div>
   </div>
 
+      <a href="start.html" class="govuk-button govuk-button--start">Start new call</a>
 
-
-
-  <div class="govuk-grid-column-full">
-
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        Use this tool only for the 'full' Options call.<br> Quick queries can be handled as normal.
-      </strong>
-    </div>
-
-
-    <a href="start.html" class="govuk-button govuk-button--start">Start new call</a>
 </div>
-
+</div>
+</div>
 {% endblock %}

@@ -10,70 +10,63 @@
           <!--start of radio-->
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
 
-                <h1 class="govuk-fieldset__heading">
-                  What best describes your reason for calling today?
-                </h1>
-              </legend>
-
-              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="information" name="research-2" type="radio" value="information">
-                  <label class="govuk-label govuk-radios__label" for="information">
-                    To get general information about child maintenance
-                  </label>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="cms" name="research-2" type="radio" value="cms">
-                  <label class="govuk-label govuk-radios__label" for="cms">
-                    To apply to use the Child Maintenance Service
-                  </label>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="private" name="research-2" type="radio" value="private">
-                  <label class="govuk-label govuk-radios__label" for="private">
-                    To get help making your own arrangement
-                  </label>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="calculation" name="research-2" type="radio" value="calculatio">
-                  <label class="govuk-label govuk-radios__label" for="calculatio">
-                    To find out how much child maintenance you might be entitled to
-                  </label>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="other" name="research-2" type="radio" value="other" data-aria-controls="get-info">
-                  <label class="govuk-label govuk-radios__label" for="other">
-                    Something else
-                  </label>
-                </div>
-
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="get-info">
-                  <div class="govuk-form-group">
-                    <p>
-                      Describe in your own words what your reason for calling is.
-                    <p>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                          What best describes your reason for calling today?
+                        </h1>
+                      </legend>
+                        <div id="countries-hint" class="govuk-hint">
+                          Select all countries that apply
+                        </div>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="countries" name="countries" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="countries">
+                              To get general information about child maintenance
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
+                            <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                              To apply to use the Child Maintenance Service
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+                              To get help making your own arrangement
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+                              To find out how much child maintenance you might be entitled to
+                            </label>
+                          </div><br>
+                          <div class="govuk-checkboxes__divider govuk-caption-l">or</div><br>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
+                            <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+                              Something else - Describe in your own words what your reason for calling is.
+                            </label>
+                          </div>
+                    </div>
+                    </fieldset>
                   </div>
+
                 </div>
               </div>
-            </fieldset>
-          </div>
+            </div>
+</div>
+
+
           <!--end-->
           <button type="submit" class="govuk-button">
             Continue
           </button>
           <p><a class="govuk-link" href="index.html">End call</a></p>
-        </form>
-      </div>
 
-    </div>
-  </main>
-</div>
 {% endblock %}
