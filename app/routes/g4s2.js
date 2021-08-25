@@ -159,6 +159,16 @@ router.post('/g4s2/paying-or-receiving', function(req, res) {
   }
 });
 
+// other-parent-income
+router.post('/g4s2/other-parent-income', function(req, res) {
+  if (req.body['dtd'] === 'dtd-no') {``
+    res.redirect('options-paying');
+  } else {
+    res.redirect('options-receiving');
+  }
+});
+
+
 // options-paying
 router.post('/g4s2/options-paying', function(req, res) {
     res.redirect('choice');
