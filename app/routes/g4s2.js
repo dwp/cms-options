@@ -48,7 +48,7 @@ router.post('/g4s2/end-of-research', function(req, res) {
 
 // domestic-abuse
 router.post('/g4s2/domestic-abuse', function(req, res) {
-  if (req.body['da-yes'] === 'yes') {``
+  if (req.body['DA-question'] === 'da-yes') {``
     res.redirect('da-help');
   } else {
     res.redirect('court');
@@ -97,6 +97,8 @@ router.post('/g4s2/parent-not-uk', function(req, res) {
 router.post('/g4s2/other-parent-lives', function(req, res) {
   if (req.body['other-parent-lives'] === 'uk') {``
     res.redirect('research-questions');
+  } else if (req.body['other-parent-lives'] === 'unknown')  {
+    res.redirect('bau2');
   } else {
     res.redirect('other-parent-organisations');
   }
@@ -105,7 +107,7 @@ router.post('/g4s2/other-parent-lives', function(req, res) {
 // other-parent-organisations
 router.post('/g4s2/other-parent-organisations', function(req, res) {
   if (req.body['other-parent-organisation'] === 'yes') {``
-    res.redirect('court');
+    res.redirect('research-questions');
   } else {
     res.redirect('other-parent-not-uk');
   }
@@ -150,10 +152,10 @@ router.post('/g4s2/court-order-still-valid', function(req, res) {
 
 // paying-or-receiving
 router.post('/g4s2/paying-or-receiving', function(req, res) {
-  if (req.body['paying-or-receiving'] === 'paying') {``
-    res.redirect('options-paying');
+  if (req.body['dtd'] === 'dtd-yes') {``
+    res.redirect('used-calculator-rp');
   } else {
-    res.redirect('options-receiving');
+    res.redirect('used-calculator-pp');
   }
 });
 
@@ -169,6 +171,15 @@ router.post('/g4s2/options-receiving', function(req, res) {
 
 // choice
 router.post('/g4s2/choice', function(req, res) {
+  if (req.body['choice'] === 'own-arrangement') {``
+    res.redirect('make-own-arrangement');
+  } else {
+    res.redirect('bau');
+  }
+});
+
+// make-own-arrangement
+router.post('/g4s2/make-own-arrangement', function(req, res) {
     res.redirect('bau');
 });
 
@@ -176,6 +187,26 @@ router.post('/g4s2/choice', function(req, res) {
 router.post('/g4s2/bau', function(req, res) {
     res.redirect('index.html');
 });
+
+// bau2
+router.post('/g4s2/bau2', function(req, res) {
+    res.redirect('index.html');
+});
+
+// used-calculator-rp
+router.post('/g4s2/used-calculator-rp', function(req, res) {
+  if (req.body['calc-used'] === 'calc-no') {``
+    res.redirect('other-parent-income');
+  } else {
+    res.redirect('options-receiving');
+  }
+  });
+
+// used-calculator-pp
+router.post('/g4s2/used-calculator-pp', function(req, res) {
+    res.redirect('options-paying');
+});
+
 
 
 // Routes end

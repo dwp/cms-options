@@ -1,0 +1,63 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you know the other parent's income?
+                    </h1>
+              </legend>
+
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other" name="income" type="radio" value="yes" data-aria-controls="yes">
+                    <label class="govuk-label govuk-radios__label" for="calc-yes">
+                      Yes
+                    </label>
+                  </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" name="yes" value="yes" id="yes">
+                          <div class="govuk-form-group">
+                          <label class="govuk-label" for="width-20">
+                            <strong>The calculator might be something you want to look at after this call.</strong><br><br>
+                            You just enter the other parent's income or information about any benefits they get and it will give you an idea of how much maintenance you could expect to receive.<br> <br>
+                            If you want to use it later, just search 'Child Maintenance Calculator' on Google.
+                          </label>
+                          </div>
+                    </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other" name="income" type="radio" value="no" data-aria-controls="no">
+                    <label class="govuk-label govuk-radios__label" for="no">
+                      No
+                    </label>
+                  </div>
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" name="no" value="no" id="no">
+                            <div class="govuk-form-group">
+                            <label class="govuk-label" for="width-20">
+                              <strong>The calculator is an online tool that tells you how much child maintenance you could expect to receive.</strong><br><br>
+                              The calculation won't be accurate though if you don't know the other parent's income.<br><br>
+                              However if you wanted to have a look at it later, just search 'Child Maintenance Calculator' on Google.
+                            </label>
+                            </div>
+                      </div>
+            </fieldset>
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+            <p><a class="govuk-link" href="index.html">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}
