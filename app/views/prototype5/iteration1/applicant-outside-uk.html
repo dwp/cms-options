@@ -1,0 +1,60 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+
+            <h1 class="govuk-heading-l">You cannot use Child Maintenance Service</h1>
+
+            <p class="govuk-body"> You cannot use the Child Maintenance Service because you live outside the UK and do not work for a British Organisation.</p>
+
+
+            <p class="govuk-body"><a href="https://www.gov.uk/child-maintenance-if-one-parent-lives-abroad" target="_blank" rel="noopener noreferrer">Find out how to get a child maintenance decision if one parent lives abroad</a>
+
+              <p class="govuk-body"><a href="https://www.gov.uk/making-child-maintenance-arrangement" target="_blank" rel="noopener noreferrer">Find out how to arrange child maintenance yourself</a>
+                <span class="govuk-hint">You can make your own child maintenance arrangements if one or both parents live abroad. No one else has to be involved. You and the other parent can organise everything yourselves.</span>
+              </p>
+
+
+
+
+
+
+
+
+
+            </div>
+
+          </form>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+
+        <div class="govuk-button--sticky">
+          <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+          data-module="govuk-button">
+          Hide this page
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

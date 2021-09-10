@@ -102,7 +102,7 @@ router.post('/prototype5/iteration1/where-do-you-live', function(req, res) {
 
 router.post('/prototype5/iteration1/outside-uk', function(req, res) {
   if (req.body['work-for-uk-organisation'] === 'no-uk-organisation') {
-    res.redirect('cannot-use-child-maintenance-service');
+    res.redirect('applicant-outside-uk');
   } else {
     res.redirect('where-does-the-other-parent-live');
   }
@@ -126,7 +126,7 @@ router.post('/prototype5/iteration1/where-does-the-other-parent-live', function(
 
 router.post('/prototype5/iteration1/other-parent-outside-uk', function(req, res) {
   if (req.body['op-work-for-uk-organisation'] === 'no-uk-organisation') {
-    res.redirect('cannot-use-child-maintenance-service');
+    res.redirect('other-parent-outside-uk-no-organisations');
   } else {
     res.redirect('will-you-be-paying-or-receiving');
   }
