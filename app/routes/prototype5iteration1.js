@@ -209,12 +209,15 @@ router.post('/prototype5/iteration1/email-or-text-message', function(req, res) {
 // confirm-email
 
 router.post('/prototype5/iteration1/confirm-email', function(req, res) {
-  if (req.body['confirm-email'] === 'yes') {
+  if (req.body['will-you-be-paying-or-receiving'] === 'yes') {
     res.redirect('email-sent');
   } else {
-    res.redirect('email-or-text-message');
+    res.redirect('your-application-reference-number');
   }
 });
+
+
+
 
 
 // confirm-mobile-number

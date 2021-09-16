@@ -43,15 +43,28 @@
                 <p class="govuk-body">The sender will be child-maintenance@dwp.gov.uk</p>
                 <p class="govuk-body">The email will include:</p>
                 <ul class="govuk-list govuk-list--bullet">
-                  {% if data['how-do-you-want-to-apply'] === 'online' and data['send-reference'] === 'yes2' %}
+                  <!-- {% if data['how-do-you-want-to-apply'] === 'online' and data['send-reference'] === 'yes2' %}
                       {% include './includes/email-online.html' %}{% endif %}
                     {% if data['how-do-you-want-to-apply'] === 'phone' and data['send-reference'] === 'yes2' %}
-                        {% include './includes/email-online.html' %}{% endif %}  
+                        {% include './includes/email-online.html' %}{% endif %}
                     {% if not data['how-do-you-want-to-apply'] === 'online' and not data['send-reference'] === 'yes' %}
                       {% include './includes/use-cms-generic.html' %}{% endif %}
                     {% if not data['how-do-you-want-to-apply'] === 'online' and data['send-reference'] === 'yes2' %}
                       {% include './includes/use-cms-generic.html' %}
-                    {% endif %}
+                    {% endif %} -->
+
+                    <li>
+                      your application reference number
+                    </li>
+                    <li>
+                    a link to complete your application online
+                    </li>
+                    <li>
+                      information about what you need before you start
+                      </li>
+
+                  </ul>
+
                 </ul>
 
 
