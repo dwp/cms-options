@@ -179,8 +179,14 @@ router.post('/prototype5/iteration1/get-more-information', function(req, res) {
   }
 });
 
-
-
+//how-do-you-want-to-apply
+router.post('/prototype5/iteration1/how-do-you-want-to-apply', function(req, res) {
+  if (req.body['how-do-you-want-to-apply'] === 'online') {
+    res.redirect('your-application-reference-number-online');
+  } else {
+    res.redirect('your-application-reference-number');
+  }
+});
 // your-application-reference-number
 
 router.post('/prototype5/iteration1/your-application-reference-number', function(req, res) {
@@ -192,6 +198,17 @@ router.post('/prototype5/iteration1/your-application-reference-number', function
     res.redirect('write-down-your-reference');
   }
 });
+
+router.post('/prototype5/iteration1/your-application-reference-number-online', function(req, res) {
+  if (req.body['send-reference'] === 'yes') {
+    res.redirect('confirm-mobile-number-online');
+  } else if (req.body['send-reference'] === 'yes2'){
+    res.redirect('confirm-email-online');
+  } else {
+    res.redirect('write-down-your-reference');
+  }
+});
+
 
 
 
@@ -209,13 +226,22 @@ router.post('/prototype5/iteration1/email-or-text-message', function(req, res) {
 // confirm-email
 
 router.post('/prototype5/iteration1/confirm-email', function(req, res) {
-  if (req.body['will-you-be-paying-or-receiving'] === 'yes') {
-    res.redirect('email-sent');
+  if (req.body['confirm-email'] === 'yes') {
+    res.redirect('email-sent-by-phone');
   } else {
     res.redirect('your-application-reference-number');
   }
 });
 
+
+
+router.post('/prototype5/iteration1/confirm-email-online', function(req, res) {
+  if (req.body['confirm-email'] === 'yes') {
+    res.redirect('email-sent');
+  } else {
+    res.redirect('your-application-reference-number-online');
+  }
+});
 
 
 
@@ -229,6 +255,15 @@ router.post('/prototype5/iteration1/confirm-mobile-number', function(req, res) {
     res.redirect('email-or-text-message');
   }
 });
+
+router.post('/prototype5/iteration1/confirm-mobile-number-online', function(req, res) {
+  if (req.body['confirm-mobile-number'] === 'yes') {
+    res.redirect('text-message-sent-online');
+  } else {
+    res.redirect('your-application-reference-number-online');
+  }
+});
+
 
 
 
