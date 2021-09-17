@@ -175,7 +175,7 @@ router.post('/prototype5/iteration1/get-more-information', function(req, res) {
   if (req.body['more-info-choice'] === 'more-info-make-own-arrangement') {
     res.redirect('help-making-your-own-arrangement');
   } else {
-    res.redirect('how-do-you-want-to-apply');
+    res.redirect('you-application-reference-number');
   }
 });
 
