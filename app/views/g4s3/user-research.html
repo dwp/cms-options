@@ -1,0 +1,52 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        Before we move on, would you be happy for a researcher to contact you in the future about improving this service?
+                      </h1>
+                    </legend>
+                    <div id="changed-name-hint" class="govuk-hint">
+                      Taking part in research will not affect your child maintenance choice.
+                    </div><br>
+                      <div class="govuk-radios govuk-radios--inline">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="changed-name">
+                              Yes
+                            </label>
+                          </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                No
+                              </label>
+                            </div>
+                        </div>
+                  </fieldset>
+                </div>
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="../index.html">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

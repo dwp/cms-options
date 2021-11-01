@@ -1,0 +1,37 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+
+                <h1 class="govuk-fieldset__heading">
+                  This is the end of the voluntary research questions
+                </h1>
+              </legend>
+
+              <p>The next questions I ask will be to check if you are eligible to use the Child Maintenance Service and what your options are.</p>
+
+
+
+            </fieldset>
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+            <p><a class="govuk-link" href="index.html">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

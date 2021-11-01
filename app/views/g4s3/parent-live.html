@@ -1,0 +1,57 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+
+                <h1 class="govuk-fieldset__heading">
+                  Do you live in England, Scotland, Wales or Northern Ireland?
+                </h1>
+              </legend>
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="uk" name="where-do-you-live" type="radio" value="uk">
+                  <label class="govuk-label govuk-radios__label" for="uk">
+                    England, Scotland or Wales
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="northern-ireland" name="where-do-you-live" type="radio" value="northern-ireland">
+                  <label class="govuk-label govuk-radios__label" for="northern-ireland">
+                    Northern Ireland
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="other" name="where-do-you-live" type="radio" value="other">
+                  <label class="govuk-label govuk-radios__label" for="other">
+                    Somewhere else
+                  </label>
+                </div>
+              </div>
+
+
+
+
+            </fieldset>
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+            <p><a class="govuk-link" href="../index.html">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

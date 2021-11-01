@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Do you have the main day-to-day care of the children?
+                  </h1>
+                  <div class="govuk-inset-text">
+                  If the caller has already talked about who has the day-to-day care, confirm whether they are going to pay or receive child maintenance.
+                  </div>
+              </legend>
+
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other" name="dtd" type="radio" value="dtd-yes" data-aria-controls="dtd-yes">
+                    <label class="govuk-label govuk-radios__label" for="dtd-yes">
+                      Yes
+                    </label>
+                  </div>
+
+
+                      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="other" name="dtd" type="radio" value="dtd-no" data-aria-controls="dtd-no">
+                      <label class="govuk-label govuk-radios__label" for="dtd-no">
+                        No
+                      </label>
+                    </div>
+                    </div>
+                  </div>
+
+            </fieldset>
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+            <p><a class="govuk-link" href="../index.html">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

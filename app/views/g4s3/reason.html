@@ -1,0 +1,75 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                          What best describes your reason for calling today?
+                        </h1>
+                        <div class="govuk-inset-text">
+                          Read out these options if the reason for calling is unclear.
+                        </div>
+                      </legend>
+                        <div id="countries-hint" class="govuk-hint">
+                          Select all that apply
+                        </div>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="countries" name="countries" type="checkbox" value="france">
+                            <label class="govuk-label govuk-checkboxes__label" for="countries">
+                              To get general information about child maintenance
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
+                            <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+                              To apply to use the Child Maintenance Service
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+                              To get help making your own arrangement
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+                            <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+                              To find out how much child maintenance you might receive or pay
+                            </label>
+                          </div><br>
+                          <div class="govuk-checkboxes__divider govuk-caption-l">or</div><br>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
+                            <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+                              Something else<br><strong>Can you describe what your reason for calling is?</strong>
+                            </label>
+                          </div>
+                    </div>
+                    </fieldset>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+</div>
+
+
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="../index.html">End call</a></p>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  If you and the other parent choose to make your own arrangement, there is support available online
+                </h1>
+
+              </legend>
+
+              <p class="govuk-body">For example:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>you can work out the cost of raising your children</li>
+                <li>a guide you can follow when talking about child maintenance with the other parent</li>
+                <li>guidance on how you can record your agreement</li></ul>
+              <p>You can find support online by searching 'making a child maintenance arrangement'.</p>
+
+
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+            <p><a class="govuk-link" href="../index.html">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

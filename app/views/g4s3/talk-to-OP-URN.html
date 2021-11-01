@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Would you like me to send you a reference number in case you decide to use the Child Maintenance Service?
+                </h1>
+              </legend>
+
+              <p class="govuk-body">This means that you will not have to call us again to make your application.
+                You can apply online using the reference number we send.
+                The reference number does not expire and you do not have to apply if you do not want to.</p><br>
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="own-arrangement" name="choice" type="radio" value="own-arrangement">
+                  <label class="govuk-label govuk-radios__label" for="own-arrangement">
+                  Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="use-cms" name="choice" type="radio" value="use-cms">
+                  <label class="govuk-label govuk-radios__label" for="use-cms">
+                    No
+                  </label>
+                  </div>
+                  <br>
+            </div>
+        </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+            <p><a class="govuk-link" href="../index.html">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

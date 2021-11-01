@@ -1,0 +1,74 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+
+                <h1 class="govuk-fieldset__heading">
+                  Where did you find this number?
+                </h1>
+              </legend>
+
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="govuk" name="research" type="radio" value="govuk">
+                  <label class="govuk-label govuk-radios__label" for="govuk">
+                    The GOV.UK website
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="other" name="research" type="radio" value="other" data-aria-controls="google">
+                  <label class="govuk-label govuk-radios__label" for="google">
+                  Internet search or search engine
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="google">
+                  <div class="govuk-form-group">
+                  <label class="govuk-label" for="width-20">
+                    What did you search for?
+                  </label>
+                  <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text"></div>
+                  </div>
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="friend" name="research" type="radio" value="friend">
+                  <label class="govuk-label govuk-radios__label" for="friend">
+                    A friend, family member or co-worker
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="other" name="research" type="radio" value="other" data-aria-controls="get-info">
+                  <label class="govuk-label govuk-radios__label" for="other">
+                    Somewhere else
+                  </label>
+                </div>
+                </div>
+                </div>
+              </div>
+              </div>
+
+              <br><br><p>Thanks for answering that research question.</p>
+
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+            <p><a class="govuk-link" href="../index.html">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

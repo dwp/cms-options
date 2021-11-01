@@ -1,0 +1,55 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Have you ever used the online Child Maintenance Calculator?
+                    </h1>
+
+                  </legend>
+
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other" name="calc-used" type="radio" value="calc-yes" data-aria-controls="calc-yes">
+                    <label class="govuk-label govuk-radios__label" for="calc-yes">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" name="calc-used" value="calc-yes" id="calc-yes">
+                        <div class="govuk-form-group">
+                        <label class="govuk-label" for="width-20">
+                          Do you have any questions about your calculation?
+                        </label>
+                        </div>
+                        </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other" name="calc-used" type="radio" value="calc-no" data-aria-controls="calc-no">
+                    <label class="govuk-label govuk-radios__label" for="calc-no">
+                      No
+                    </label>
+                  </div>
+
+            </fieldset>
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+            <p><a class="govuk-link" href="../index.html">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}

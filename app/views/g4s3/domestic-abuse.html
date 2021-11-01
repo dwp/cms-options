@@ -1,0 +1,74 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Have you or your children experienced any of the following behaviours?
+                </h1>
+                <div class="govuk-inset-text">
+                  You can skip this question if the caller has already talked about domestic abuse.<br><br>
+                  <b>If the caller wants to know why we ask this question, you can explain:</b><br>
+                    "We're asking you this so we can show you where to get help if you need it."<br>
+                </div>
+              </legend>
+
+              <ul class="govuk-list govuk-list--bullet">
+                <li>psychological or emotional abuse</li>
+                <li>physical or sexual abuse</li>
+                <li>financial or economic abuse</li>
+                <li>coercive control (an act or pattern of acts of assault, threats, humiliation, intimidation, degradation, isolation, or control)</li>
+                <li> harrassment and stalking </li>
+                <li> online or digital abuse </li>
+              </ul>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+                  </legend>
+
+                    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="other" name="DA-question" type="radio" value="da-yes" data-aria-controls="da-yes">
+                        <label class="govuk-label govuk-radios__label" for="da-yes">
+                          Yes
+                        </label>
+                      </div>
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" name="yes" value="yes" id="da-yes">
+                                <div class="govuk-form-group">
+                                <label class="govuk-label" for="width-20">
+                                  If you decide to apply to the Child Maintenance Service there is a £20 application fee. You may not have to pay this if you have experienced domestic abuse.
+                                </label>
+                                </div>
+                          </div>
+                          <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="govuk" name="DA-question" type="radio" value="da-no" data-aria-controls="da-no">
+                          <label class="govuk-label govuk-radios__label" for="da-no">
+                            No
+                          </label>
+                        </div>
+                      </div>
+              </div>
+
+          <!--end-->
+          <br><br><button type="submit" class="govuk-button">
+            Continue
+          </button>
+
+          <p><a class="govuk-link" href="../index.html">End call</a></p>
+        </form>
+      </div>
+
+
+    </div>
+  </main>
+</div>
+{% endblock %}

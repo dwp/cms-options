@@ -1,0 +1,37 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    The calculator might be something you want to look at after this call
+                    </h1>
+              </legend><br>
+              <p>The calculator is available on GOV.UK and will work out how much child maintenance we would expect you to pay.<br><br>
+              You'll need to enter your income or any benefits you receive.
+              The calculator will give you an idea of how much child maintenance you will pay.<br><br>
+              If you want to use it later, just search 'Child Maintenance Calculator' online.<br></p>
+
+
+            </fieldset>
+          </div>
+          <!--end-->
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+            <p><a class="govuk-link" href="../index.html">End call</a></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+{% endblock %}
