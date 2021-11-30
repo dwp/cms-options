@@ -21,44 +21,45 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <form method="post" novalidate>
+            <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        How do you want to apply?
+      </h1>
+    </legend>
+    <div id="contact-hint" class="govuk-hint">
+      Making an application online is usually quicker than by phone.
+    </div>
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Online
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            You need to apply by phone if you are not the child's biological or adoptive parent.
+          </label>
+          </div>
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="live-uk-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l govuk-fieldset__legend--l">
-                <h1 class ="govuk-fieldset__heading">
-                  How do you want to apply?
-                </h1>
-              </legend>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          Phone
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
 
-              <p class="govuk-hint">Making an application online is usually quicker than by phone.</p>
+      </div>
 
-              <div class="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="online" name="how-do-you-want-to-apply" type="radio" value="online">
-                  <label class="govuk-label govuk-radios__label" for="online">
-                    Online
-                  </label> </div>
-                  <div class="govuk-radios__item">
-                    <!-- <input class="govuk-radios__input" id="phone" name="how-do-you-want-to-apply" type="radio" value="{% if data['answer-some-questions'] === 'yes'%}phone~/prototype5/iteration1/answer-some-questions-q3.html{% else %}phone~/prototype5/iteration1/your-application-reference-number.html{% endif %}" > -->
-                    <input class="govuk-radios__input" id="phone" name="how-do-you-want-to-apply" type="radio" value="phone" >
+    </div>
 
-                    <label class="govuk-label govuk-radios__label" for="phone">
-                      Phone
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <details class="govuk-details" data-module="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                If you are not the child's biological or adoptive parent
-                </span>
-              </summary><br>
-              <div class="govuk-details__text">
-              You need to apply by phone if you are not the child's biological or adoptive parent.
-              </div>
-            </details>
+  </fieldset>
+</div>
 
 
             <button type="submit" class="govuk-button">
