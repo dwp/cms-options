@@ -184,16 +184,16 @@ router.post('/prototype5/iteration1/how-do-you-want-to-apply', function(req, res
   if (req.body['how-do-you-want-to-apply'] === 'online') {
     res.redirect('your-application-reference-number-online');
   } else {
-    res.redirect('your-application-reference-number');
+    res.redirect('your-application-reference-number-online');
   }
 });
 // your-application-reference-number
 
 router.post('/prototype5/iteration1/your-application-reference-number', function(req, res) {
   if (req.body['send-reference'] === 'yes') {
-    res.redirect('confirm-mobile-number');
+    res.redirect('confirm-mobile-number-online');
   } else if (req.body['send-reference'] === 'yes2'){
-    res.redirect('confirm-email');
+    res.redirect('confirm-email-online');
   } else {
     res.redirect('write-down-your-reference');
   }
@@ -281,7 +281,7 @@ router.post('/prototype5/iteration1/confirm-mobile-number-online', function(req,
 
 // text-message-sent
 
-router.post('/prototype5/iteration1/text-message-sent', function(req, res) {
+router.post('/prototype5/iteration1/text-message-sent-online', function(req, res) {
   if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
     res.redirect('apply-by-phone');
   } else {
