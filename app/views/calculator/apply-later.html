@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<!--Feedback banner stop-->
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Continue your application later</h1>
+
+        <!--If user specified no contact-->
+        {% if data['send-reference'] === 'no' %}
+        <p class="govuk-body">You can apply online later when you are ready by going to:</p>
+        <p class="govuk-body"><a href="start-apply-journey" target="_blank" rel="noopener noreferrer">child-maintenance.service.gov.uk/apply</a></p>
+        <p class="govuk-body">You can write this down or save it as a bookmark using your browser.</p>
+
+        <!--If user asked for email-->
+        {% elseif data['email-or-text-message'] === 'email' %}
+        <p class="govuk-body">You can apply later using the instructions in the email you've been sent.</p>
+
+        <!--If user asked for text-->
+        {% elseif data['email-or-text-message'] === 'text' %}
+        <p class="govuk-body">You can apply later by using the instructions in the text message you've been sent.</p>
+
+        <!--If something has gone wonky (yes to contact question, but somehow progressed with no contact given / has skipped straight to this page)-->
+        {% else %}
+        <p class="govuk-body">You can apply online later when you are ready by going to:</p>
+        <p class="govuk-body"><a href="/start-apply-journey">child-maintenance.service.gov.uk/apply</a></p>
+        <p class="govuk-body">You can write this down or save it as a bookmark using your browser.</p>
+        {% endif %}
+
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-button--sticky">
+          <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+          data-module="govuk-button">
+          Hide this page
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
