@@ -1,0 +1,45 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<!--Service unavailble content start-->
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">A calculation cannot be made</h1>
+
+          <p class="govuk-body">
+            To make a calculation we need to know the income of the parent who will be paying child maintenance.
+          </p>
+
+          <p class="govuk-body">
+            If you don’t know the income of the paying parent, the <a class="govuk-link" href="#"> cost of raising your child guide (downloads a PDF) </a> 
+            may help you to work out how much maintenance your child might need.</p>
+
+          <p class="govuk-body">
+          <p>If a private arrangement isn't right for you, <a href="welcome.html">get help arranging child maintenance</a> from the Child Maintenance Service.</p>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+<!--Service unavailble content end-->
+
+
+{% endblock %}
