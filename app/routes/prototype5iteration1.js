@@ -252,7 +252,7 @@ router.post('/prototype5/iteration1/confirm-mobile-number', function(req, res) {
   if (req.body['confirm-mobile-number'] === 'yes') {
     res.redirect('text-message-sent');
   } else {
-    res.redirect('email-or-text-message');
+    res.redirect('your-application-reference-number');
   }
 });
 
