@@ -14,7 +14,7 @@ router.use((req, res, next) => {
 
 // answer-some-questions
 
-router.post('/prototype5/iteration1/answer-some-questions', function(req, res) {
+router.post('/prototype6/iteration1/answer-some-questions', function(req, res) {
   if (req.body['answer-some-questions'] === 'yes') {
     res.redirect('answer-some-questions-q1');
   } else {
@@ -24,7 +24,7 @@ router.post('/prototype5/iteration1/answer-some-questions', function(req, res) {
 
 // answer-some-questions-q1
 
-router.post('/prototype5/iteration1/answer-some-questions-q1', function(req, res) {
+router.post('/prototype6/iteration1/answer-some-questions-q1', function(req, res) {
   if (req.body['how-did-you-find'] === 'calculator') {
     res.redirect('answer-some-questions-q2');
   } else if (req.body['how-did-you-find'] === 'work-coach'){
@@ -40,7 +40,7 @@ router.post('/prototype5/iteration1/answer-some-questions-q1', function(req, res
 
 // answer-some-questions-q2
 
-router.post('/prototype5/iteration1/answer-some-questions-q2', function(req, res) {
+router.post('/prototype6/iteration1/answer-some-questions-q2', function(req, res) {
   if (req.body['reason-for-using'] === 'general-info') {
     res.redirect('where-do-you-live');
   } else if (req.body['reason-for-using'] === 'apply-to-use-cms'){
@@ -62,7 +62,7 @@ router.post('/prototype5/iteration1/answer-some-questions-q2', function(req, res
 
 // answer-some-questions-q3
 
-router.post('/prototype5/iteration1/answer-some-questions-q3', function(req, res) {
+router.post('/prototype6/iteration1/answer-some-questions-q3', function(req, res) {
   if (req.body['why-by-phone'] === 'accessibility') {
     res.redirect('your-application-reference-number');
   } else if (req.body['why-by-phone'] === 'english-not-first-language'){
@@ -87,7 +87,7 @@ router.post('/prototype5/iteration1/answer-some-questions-q3', function(req, res
 });
 
 // where-do-you-live
-router.post('/prototype5/iteration1/where-do-you-live', function(req, res) {
+router.post('/prototype6/iteration1/where-do-you-live', function(req, res) {
   if (req.body['where-do-you-live'] === 'lives-in-gb') {
     res.redirect('where-does-the-other-parent-live');
   } else if (req.body['where-do-you-live'] === 'lives-in-northern-ireland'){
@@ -100,7 +100,7 @@ router.post('/prototype5/iteration1/where-do-you-live', function(req, res) {
 
 // outside-uk
 
-router.post('/prototype5/iteration1/outside-uk', function(req, res) {
+router.post('/prototype6/iteration1/outside-uk', function(req, res) {
   if (req.body['work-for-uk-organisation'] === 'no-uk-organisation') {
     res.redirect('applicant-outside-uk');
   } else {
@@ -111,7 +111,7 @@ router.post('/prototype5/iteration1/outside-uk', function(req, res) {
 
 // where-does-the-other-parent-live
 
-router.post('/prototype5/iteration1/where-does-the-other-parent-live', function(req, res) {
+router.post('/prototype6/iteration1/where-does-the-other-parent-live', function(req, res) {
   if (req.body['where-does-the-other-parent-live'] === 'op-lives-in-uk') {
     res.redirect('will-you-be-paying-or-receiving');
   } else if (req.body['where-does-the-other-parent-live'] === 'op-lives-unknown') {
@@ -124,7 +124,7 @@ router.post('/prototype5/iteration1/where-does-the-other-parent-live', function(
 
 // other-parent-outside-uk
 
-router.post('/prototype5/iteration1/other-parent-outside-uk', function(req, res) {
+router.post('/prototype6/iteration1/other-parent-outside-uk', function(req, res) {
   if (req.body['op-work-for-uk-organisation'] === 'no-uk-organisation') {
     res.redirect('other-parent-outside-uk-no-organisations');
   } else {
@@ -135,7 +135,7 @@ router.post('/prototype5/iteration1/other-parent-outside-uk', function(req, res)
 
 // will-you-be-paying-or-receiving
 
-router.post('/prototype5/iteration1/will-you-be-paying-or-receiving', function(req, res) {
+router.post('/prototype6/iteration1/will-you-be-paying-or-receiving', function(req, res) {
   if (req.body['will-you-be-paying-or-receiving'] === 'paying') {
     res.redirect('have-you-had-a-court-decision');
   } else if (req.body['will-you-be-paying-or-receiving'] === 'receiving') {
@@ -148,7 +148,7 @@ router.post('/prototype5/iteration1/will-you-be-paying-or-receiving', function(r
 
 // have-you-had-a-court-decision
 
-router.post('/prototype5/iteration1/have-you-had-a-court-decision', function(req, res) {
+router.post('/prototype6/iteration1/have-you-had-a-court-decision', function(req, res) {
   if (req.body['have-you-had-a-court-decision'] === 'yes') {
     res.redirect('cannot-use-child-maintenance-service');
   } else {
@@ -158,7 +158,7 @@ router.post('/prototype5/iteration1/have-you-had-a-court-decision', function(req
 
 
 // what-do-you-want-to-do
-router.post('/prototype5/iteration1/what-do-you-want-to-do', function(req, res) {
+router.post('/prototype6/iteration1/what-do-you-want-to-do', function(req, res) {
   if (req.body['what-do-you-want-to-do'] === 'make-own-arrangement') {
     res.redirect('help-making-your-own-arrangement');
   } else if (req.body['what-do-you-want-to-do'] === 'use-cms-pp'){
@@ -171,7 +171,7 @@ router.post('/prototype5/iteration1/what-do-you-want-to-do', function(req, res) 
 });
 
 // get-more-information
-router.post('/prototype5/iteration1/get-more-information', function(req, res) {
+router.post('/prototype6/iteration1/get-more-information', function(req, res) {
   if (req.body['more-info-choice'] === 'more-info-make-own-arrangement') {
     res.redirect('help-making-your-own-arrangement');
   } else {
@@ -180,7 +180,7 @@ router.post('/prototype5/iteration1/get-more-information', function(req, res) {
 });
 
 //how-do-you-want-to-apply
-router.post('/prototype5/iteration1/how-do-you-want-to-apply', function(req, res) {
+router.post('/prototype6/iteration1/how-do-you-want-to-apply', function(req, res) {
   if (req.body['how-do-you-want-to-apply'] === 'online') {
     res.redirect('your-application-reference-number-online');
   } else {
@@ -189,7 +189,7 @@ router.post('/prototype5/iteration1/how-do-you-want-to-apply', function(req, res
 });
 // your-application-reference-number
 
-router.post('/prototype5/iteration1/your-application-reference-number', function(req, res) {
+router.post('/prototype6/iteration1/your-application-reference-number', function(req, res) {
   if (req.body['send-reference'] === 'yes') {
     res.redirect('confirm-mobile-number');
   } else if (req.body['send-reference'] === 'yes2'){
@@ -199,7 +199,7 @@ router.post('/prototype5/iteration1/your-application-reference-number', function
   }
 });
 
-router.post('/prototype5/iteration1/your-application-reference-number-online', function(req, res) {
+router.post('/prototype6/iteration1/your-application-reference-number-online', function(req, res) {
   if (req.body['send-reference'] === 'yes') {
     res.redirect('confirm-mobile-number-online');
   } else if (req.body['send-reference'] === 'yes2'){
@@ -214,7 +214,7 @@ router.post('/prototype5/iteration1/your-application-reference-number-online', f
 
 // email-or-text-message
 
-router.post('/prototype5/iteration1/email-or-text-message', function(req, res) {
+router.post('/prototype6/iteration1/email-or-text-message', function(req, res) {
   if (req.body['email-or-text-message'] === 'email') {
     res.redirect('confirm-email');
   } else {
@@ -225,7 +225,7 @@ router.post('/prototype5/iteration1/email-or-text-message', function(req, res) {
 
 // confirm-email
 
-router.post('/prototype5/iteration1/confirm-email', function(req, res) {
+router.post('/prototype6/iteration1/confirm-email', function(req, res) {
   if (req.body['confirm-email'] === 'yes') {
     res.redirect('email-sent-by-phone');
   } else {
@@ -235,7 +235,7 @@ router.post('/prototype5/iteration1/confirm-email', function(req, res) {
 
 
 
-router.post('/prototype5/iteration1/confirm-email-online', function(req, res) {
+router.post('/prototype6/iteration1/confirm-email-online', function(req, res) {
   if (req.body['confirm-email'] === 'yes') {
     res.redirect('email-sent');
   } else {
@@ -248,7 +248,7 @@ router.post('/prototype5/iteration1/confirm-email-online', function(req, res) {
 
 // confirm-mobile-number
 
-router.post('/prototype5/iteration1/confirm-mobile-number', function(req, res) {
+router.post('/prototype6/iteration1/confirm-mobile-number', function(req, res) {
   if (req.body['confirm-mobile-number'] === 'yes') {
     res.redirect('text-message-sent');
   } else {
@@ -256,7 +256,7 @@ router.post('/prototype5/iteration1/confirm-mobile-number', function(req, res) {
   }
 });
 
-router.post('/prototype5/iteration1/confirm-mobile-number-online', function(req, res) {
+router.post('/prototype6/iteration1/confirm-mobile-number-online', function(req, res) {
   if (req.body['confirm-mobile-number'] === 'yes') {
     res.redirect('text-message-sent-online');
   } else {
@@ -268,7 +268,7 @@ router.post('/prototype5/iteration1/confirm-mobile-number-online', function(req,
 
 // // email-sent
 //
-// router.post('/prototype5/iteration1/email-sent', function(req, res) {
+// router.post('/prototype6/iteration1/email-sent', function(req, res) {
 //   if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
 //     res.redirect('apply-by-phone');
 //   } else {
@@ -279,7 +279,7 @@ router.post('/prototype5/iteration1/confirm-mobile-number-online', function(req,
 
 // text-message-sent
 
-router.post('/prototype5/iteration1/text-message-sent-online', function(req, res) {
+router.post('/prototype6/iteration1/text-message-sent-online', function(req, res) {
   if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
     res.redirect('apply-by-phone');
   } else {
@@ -289,7 +289,7 @@ router.post('/prototype5/iteration1/text-message-sent-online', function(req, res
 
 // // write-down-your-reference
 //
-// router.post('/prototype5/iteration1/write-down-your-reference', function(req, res) {
+// router.post('/prototype6/iteration1/write-down-your-reference', function(req, res) {
 //   if (req.body['will-you-be-paying-or-receiving'] === 'paying'){
 //     res.redirect('apply-by-phone');
 //   } else {
@@ -299,7 +299,7 @@ router.post('/prototype5/iteration1/text-message-sent-online', function(req, res
 
 // start-your-application
 
-router.post('/prototype5/iteration1/start-your-application', function(req, res) {
+router.post('/prototype6/iteration1/start-your-application', function(req, res) {
   if (req.body['start-your-application'] === 'yes') {
     res.redirect(href="https://cmg-apply.herokuapp.com/apply/current/eligibility/intro");
   } else {
