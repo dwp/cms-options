@@ -1,0 +1,69 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.<br><br>
+      <a href="text-message-content" target="_blank" rel="noopener noreferrer">Text message content</a>
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                    <!--start of radio-->
+                    <form class="form" action="
+                    {% if data['how-do-you-want-to-apply'] == 'phone' %}apply-by-phone{% endif %}
+                    {% if data['how-do-you-want-to-apply'] == 'online' %}start-your-application{% endif %}
+                    {% if data['will-you-be-paying-or-receiving'] =='paying' and not data['how-do-you-want-to-apply']%}apply-by-phone{% endif %}">
+
+                <h1 class="govuk-heading-l">
+                  A text message has been sent to: <br>
+                          <span class="govuk-caption-xl">
+                    {% if data['contact-by-text'] %}
+                    {{data['contact-by-text']}}
+                    {% else %}
+                    07123 456 789
+                    {% endif %}
+                  </span>
+                </h1>
+
+                <p class="govuk-body">The sender: will be 'DWP Child Maintenance'</p>
+                <p class="govuk-body">The text message will include:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  {% if data['how-do-you-want-to-apply'] === 'online' and data['send-reference'] === 'yes' %}
+                      {% include './includes/email-phone.html' %}
+                  {% else %}
+                    {% include './includes/text-phone.html' %}
+                  {% endif %}
+                </ul>
+
+              <a href="apply-by-phone" class="govuk-button">Continue</a><br>
+
+
+                    <!--end-->
+
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-button--sticky">
+                    <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                        data-module="govuk-button">
+                        Hide this page
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+{% endblock %}

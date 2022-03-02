@@ -1,0 +1,210 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+
+<div class="govuk-width-container">
+
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+
+          <main class="govuk-main-wrapper  govuk-main-wrapper--l" id="main-content" role="main">
+
+
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+
+
+                    <h1 class="govuk-visually-hidden">Child maintenance calculator result</h1>
+
+
+
+          <div class="govuk-panel govuk-panel--confirmation">
+              <div class="govuk-panel__body">
+                  Your child maintenance <br>
+                   calculation is <br>
+                  <strong><span id="weekly-amount">£46.02 a week</span></strong>  or  <strong><span id="monthly-amount">£199.28 a month</span></strong>
+              </div>
+          </div>
+
+                    <p class="govuk-body">Based on the information you gave us, the Child Maintenance Service would calculate this as the amount you should receive from the other parent.</p>
+
+                    <p class="govuk-body">This amount will be less if the other parent has to pay maintenance for children they have with someone else.</p>
+
+
+
+                  <p class="govuk-body">These figures can be used to agree an arrangement between you and the other parent  for your children.</p>
+
+
+
+            <p class="govuk-body">The Child Maintenance Service uses rules to make sure payments are split fairly between children and adjusted if they stay overnight with the paying parent.</p>
+
+            <table class="govuk-table">
+              <caption class="govuk-table__caption govuk-!-margin-bottom-4">Your calculation per child:</caption>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header govuk-!-width-one-half" scope="col">Child</th>
+                  <th class="govuk-table__header govuk-table__header--numeric" scope="col">Month</th>
+                  <th class="govuk-table__header govuk-table__header--numeric" scope="col">Week</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">1</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric"> £99.64</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric"> £23.01</td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="row">2</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric"> £99.64</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric"> £23.01</td>
+                    </tr>
+
+              </tbody>
+            </table>
+
+
+
+                  <p class="govuk-body"><a href="download" class="govuk-link">Download a copy of your answers and calculation (downloads a PDF)</a> to save or share with the other parent.</p>
+
+                  <p class="govuk-body">If you need to you can <a href="details/will-you-be-paying-or-receiving-child-maintenance-payments" class="govuk-link">make another calculation</a>.</p>
+
+                  <h2 class="govuk-heading-m">Next steps</h2>
+
+          <p class="govuk-body">Use this calculation as a starting point to help you agree how you will share the costs of raising your children.<br><br>
+
+        If a private arrangement isn't right for you, <a href="welcome.html">get help arranging child maintenance</a> from the Child Maintenance Service.<br><br>
+
+
+<!-- RELATED CONTENT SECTION -->
+
+
+              </div>
+
+              <div class="govuk-grid-column-one-third">
+            <aside class="app-related-items" role="complementary">
+                <div class="govuk-header__container govuk-!-margin-bottom-4">&nbsp;</div>
+
+                <h2 id="related-nav-related_items" class="govuk-heading-m">Related content</h2>
+
+                <nav role="navigation" aria-labelledby="related-nav-related_items">
+                  <ul class="govuk-list govuk-!-font-size-16">
+
+
+                      <li>
+                        <a class="govuk-link" href="existing-cases-with-the-child-maintenance-service">
+                          If you already have a Child Maintenance Service case
+                        </a>
+                      </li>
+
+                  </ul>
+                </nav>
+
+                <h2 id="related-nav-related_guides" class="govuk-heading-m">Related guides</h2>
+                <p class="govuk-body-s">You may find it useful to download these PDF guides:</p>
+
+                <nav role="navigation" aria-labelledby="related-nav-related_items">
+                  <ul class="govuk-list govuk-!-font-size-16">
+                  <li>
+                        <a class="govuk-link" href="https://www.gov.uk/government/publications/working-out-the-cost-of-raising-your-children" target="_blank">Work out the cost of raising your child</a>
+                    </li>
+                    <li>
+                        <a class="govuk-link" href="https://www.gov.uk/government/publications/planning-your-child-maintenance-conversation" target="_blank">Child maintenance discussion guide</a>
+                    </li>
+                    <li>
+                        <a class="govuk-link" href="https://www.gov.uk/government/publications/your-child-maintenance-arrangement" target="_blank">Child maintenance arrangement tool</a>
+                    </li>
+                  </ul>
+                </nav>
+
+                <hr class="govuk-!-margin-bottom-4">
+
+                <h3 id="related-nav-topics" class="govuk-heading-s">Explore the topic</h3>
+
+                <nav role="navigation" aria-labelledby="related-nav-topics">
+                  <ul class="govuk-list govuk-!-font-size-16">
+                    <li>
+                      <a class="govuk-link" href="https://www.gov.uk/browse/births-deaths-marriages/marriage-divorce">
+                        Marriage, civil partnership and divorce
+                      </a>
+                    </li>
+                    <li>
+                      <a class="govuk-link" href="https://www.gov.uk/browse/childcare-parenting/divorce-separation-legal">
+                        Divorce, separation and legal issues
+                      </a>
+                    </li>
+                    <li>
+                      <a class="govuk-link" href="https://www.gov.uk/browse/births-deaths-marriages/child-adoption">
+                        Having a child, parenting and adoption
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+            </aside>
+          </div>
+          </div>
+
+                  </main>
+
+      </div>
+</div>
+
+
+
+<style>
+    .survey-heading a {
+        background-color: #005ea5;
+        font-family: "nta", Arial, sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.11111;
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .survey-heading a:hover {
+
+        text-decoration: underline;
+    }
+
+    .survey-heading {
+        text-align: center;
+        margin: 0px;
+
+    }
+
+    c-related-navigation {
+        color: #0b0c0c;
+        border-top: 2px solid #005ea5;
+    }
+
+    .app-related-items {
+        border-top: 0px solid #005ea5;
+        padding-top: 0px;
+    }
+</style>
+
+{% endblock %}

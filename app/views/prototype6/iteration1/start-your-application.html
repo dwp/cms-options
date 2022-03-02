@@ -1,0 +1,199 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+
+          <!--start of radio-->
+                    <div class="govuk-form-group">
+
+                                <h1 class="govuk-heading-xl">
+                                    Start your application
+                                </h1>
+
+                            {% if data['email-or-text-message'] === 'email' %}
+                            <div class="govuk-inset-text">
+                              <p class="govuk-body">You can apply later by using the information in the email you've been sent.</p>
+                            </div>
+                            {% endif %}
+
+                            {% if data['email-or-text-message'] === 'text' %}
+                            <div class="govuk-inset-text">
+                              <p class="govuk-body">You can come back and apply later by using the information in the text message you've been sent.</p>
+                            </div>
+                            {% endif %}
+
+                            <p class="govuk-body">Before you start you will need:
+
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                  your application reference number
+                                </li>
+                                <li>
+                                  your National Insurance number
+                                </li>
+                                <li>
+                                your telephone number
+                                </li>
+                                <li>
+                                  your email address if you want to set up an online account or get a confirmation email after you apply
+                                  </li>
+                                <li>
+                                  details of the children you're applying
+                                  </li>
+                                  <li>
+                                    the other parent's name and as such information about them as you can give - for example, where they live or their phone number
+                                    </li>
+                                    <li> your bank or builiding society account details, if you need us to give them to the other parent
+                                      </li>
+                                      <li>the application fee is £20 and cannot be refunded. You'll need a debit or credit card to pay this. It does not guarantee an agreement
+                                        </li>
+</ul></p>
+
+
+
+
+
+                              <h2 class="govuk-heading-s">You will not have to pay the application fee if you:</h2>
+                                <ul class="govuk-list govuk-list--bullet">
+                                  <li>
+                                    are under 19 years old
+                                    </li>
+                                    <li>
+                                      have experience domestic abuse
+                                     </li>
+                                    </ul>
+
+
+
+<!--question here-->
+                              <fieldset class="govuk-fieldset">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-fieldset__legend--m ">
+                                  <h2 class="govuk-fieldset__heading">
+                                    Do you want to start your application now?
+                                  </h2>
+                                </legend>
+                            <div class="govuk-radios govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="yes" name="start-your-application" type="radio" value="yes">
+                                    <label class="govuk-label govuk-radios__label" for="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="no" name="start-your-application" type="radio" value="no">
+                                    <label class="govuk-label govuk-radios__label" for="no">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!--end-->
+                    <button type="submit" class="govuk-button">
+                        Continue
+                    </button>
+                </form>
+
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      I do not know my National Insurance number
+                    </span>
+                  </summary>
+                  <p>You can find your National Insurance number on your payslip, P60, or letters about tax, pensions and benefits. You can also find it through your personal tax account and download a confirmation letter.</p>
+                  <p>If you still cannot find it, you can either:</p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a href="https://www.gov.uk/government/publications/national-insurance-get-your-national-insurance-number-in-writing-ca5403">fill in form CA5403</a> and send it to the address on the form</li>
+                    <li>contact the <a href="https://www.gov.uk/government/organisations/hm-revenue-customs/contact/national-insurance-numbers">National Insurance numbers helpline</a> and answer some questions (you’ll need to fill in form CA5403 if you cannot answer the questions)</li>
+                  </ul>
+                  <p> HM Revenue and Customs (HMRC) will not tell you your National Insurance number over the phone. They’ll post it to you and it will arrive within 15 working days.</p>
+                  <p>You do not need a National Insurance plastic card. HMRC no longer sends these cards out.</p>
+                </details>
+
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      I’ve never had a National Insurance number
+                    </span>
+                  </summary>
+                <div class="contact">
+                  <p>You’ll need to apply by phone.</p>
+                  <div class="govuk-inset-text">
+                    <p>
+                      <strong>Child Maintenance Service</strong>
+                      <br> Telephone: 0800 171 2345
+                      <br> Textphone: 18001 0800 171 2345
+                      <br>
+                      <br>
+                      <a href="https://dwpnino.signvideo.net/">Video relay service</a> for British Sign Language (BSL) users -
+                      <a href="https://www.youtube.com/watch?v=Osx7FFxFpNY">check you can use the Video Relay Service</a>
+                      <br>
+                      <br> Monday to Friday, 9.30am to 3.30pm (excluding bank holidays)
+                      <br>
+                      <a href="https://www.gov.uk/call-charges">Find out about call charges</a>.
+                    </p>
+                  </div>
+                </div>
+                </details>
+
+
+
+
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      I do not have a bank account
+                    </span>
+                  </summary><br><br>
+                  <div class="contact">
+                    <p>You’ll need to apply by phone.</p>
+                    <div class="govuk-inset-text">
+                      <p><strong>Child Maintenance Service</strong><br>
+                      <br>
+                      Telephone: 0800 171 2345<br>
+                      Relay UK: 18001 171 2345 <br/>
+                      Welsh language: 0800 232 1979 <br/>
+                      Monday to Friday, 9:30am to 3:30pm (excluding bank holidays) <br>
+                      Calls to the Child Maintenance Service are free from landlines and mobiles.
+                      <br>
+                      <p><strong>If you use British Sign Language</strong><br>
+                        <a href="https://www.youtube.com/watch?v=Osx7FFxFpNY">Check if you can use the video sign language relay service </a> <br/>
+                        <a href="https://dwpcmgoptions.signvideo.net/">Video relay service for British Sign Language (BSL) users </a> <br/>
+                        Monday to Friday, 9:30am to 3:30pm (excluding bank holidays)<br/>
+                    </div>
+                  </div>
+                </details>
+
+
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-button--sticky">
+                    <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                        data-module="govuk-button">
+                        Hide this page
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+{% endblock %}
