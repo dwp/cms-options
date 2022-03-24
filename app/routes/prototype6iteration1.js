@@ -162,7 +162,7 @@ router.post('/prototype6/iteration1/what-do-you-want-to-do', function(req, res) 
   if (req.body['what-do-you-want-to-do'] === 'make-own-arrangement') {
     res.redirect('help-making-your-own-arrangement');
   } else if (req.body['what-do-you-want-to-do'] === 'use-cms-pp'){
-    res.redirect('your-application-reference-number');
+    res.redirect('how-do-you-want-to-apply');
   } else if (req.body['what-do-you-want-to-do'] === 'use-cms'){
     res.redirect('how-do-you-want-to-apply');
   } else {
@@ -187,6 +187,8 @@ router.post('/prototype6/iteration1/how-do-you-want-to-apply', function(req, res
     res.redirect('your-application-reference-number');
   }
 });
+
+
 // your-application-reference-number
 
 router.post('/prototype6/iteration1/your-application-reference-number', function(req, res) {
@@ -221,6 +223,19 @@ router.post('/prototype6/iteration1/email-or-text-message', function(req, res) {
     res.redirect('confirm-mobile-number');
   }
 });
+
+
+// email-sent-by-phone
+router.post('/prototype6/iteration1/email-sent-by-phone', function(req, res) {
+  const howDoYouWantToApply = req.session.data['how-do-you-want-to-apply']
+  if (howDoYouWantToApply === 'online') {
+    res.redirect('https://cmg-apply.herokuapp.com/apply/february2022PP/1-start-eligibility/welcome');
+  } else {
+    res.redirect('apply-by-phone');
+  }
+});
+
+
 
 
 // confirm-email
