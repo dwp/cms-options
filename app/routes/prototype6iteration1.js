@@ -229,7 +229,7 @@ router.post('/prototype6/iteration1/email-or-text-message', function(req, res) {
 router.post('/prototype6/iteration1/email-sent-by-phone', function(req, res) {
   const howDoYouWantToApply = req.session.data['how-do-you-want-to-apply']
   if (howDoYouWantToApply === 'online') {
-    res.redirect('https://cmg-apply.herokuapp.com/apply/february2022PP/1-start-eligibility/welcome');
+    res.redirect('calculator-finalpage');
   } else {
     res.redirect('apply-by-phone');
   }
