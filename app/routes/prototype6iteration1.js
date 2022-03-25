@@ -260,6 +260,8 @@ router.post('/prototype6/iteration1/confirm-email', function(req, res) {
 
 
 
+
+
 router.post('/prototype6/iteration1/confirm-email-online', function(req, res) {
   if (req.body['confirm-email'] === 'yes') {
     res.redirect('email-sent');
@@ -311,6 +313,20 @@ router.post('/prototype6/iteration1/text-message-sent-online', function(req, res
     res.redirect('start-your-application');
   }
 });
+
+
+// write-down-your-reference
+
+router.post('/prototype6/iteration1/writeDownYourReference', function(req, res) {
+  const contact = req.session.data['contact-method']
+    if (contact === 'phone') {
+    res.redirect('apply-by-phone');
+  } else {
+    res.redirect('https://cmg-apply.herokuapp.com/apply/february2022PP/1-start-eligibility/welcome');
+  }
+});
+
+
 
 // // write-down-your-reference
 //
