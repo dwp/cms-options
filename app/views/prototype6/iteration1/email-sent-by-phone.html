@@ -12,18 +12,19 @@
   </p>
 </div>
 
+
+
+
 <!--Feedback banner stop-->
 
+
 <div class="govuk-width-container">
-  <!-- <form class="" action="/prototype6/iteration1/email-sent-by-phone" method="post"> -->
-    <form method="post" novalidate>
+    <form method="post" action="/prototype6/iteration1/emailSentAnswer" novalidate>
     {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
     <main class="govuk-main-wrapper " id="main-content" role="main">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-
                       <h1 class="govuk-heading-l">
-
                   An email has been sent to: <br>
                         <span class="govuk-caption-xl">
                     {% if data['contact-by-email'] %}
@@ -33,7 +34,6 @@
                     {% endif %}
                   </span>
                 </h1>
-
                 <p class="govuk-body">The sender will be child-maintenance@dwp.gov.uk</p>
                 <p class="govuk-body">The email will include:</p>
                 <ul class="govuk-list govuk-list--bullet">
@@ -46,18 +46,14 @@
                   <li>
                 information about what you need before you start
                   </li>
-
                 </ul>
-
-
                 <div class="govuk-button-group">
-                  <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+                  <button class="govuk-button" data-module="govuk-button"> Continue </button>
                 </div>
-                
               </form>
 
-                    <!--end-->
 
+                    <!--end-->
             </div>
             <div class="govuk-grid-column-one-third">
                 <div class="govuk-button--sticky">
@@ -67,8 +63,8 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </main>
 </div>
+
 {% endblock %}

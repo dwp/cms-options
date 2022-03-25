@@ -226,15 +226,25 @@ router.post('/prototype6/iteration1/email-or-text-message', function(req, res) {
 
 
 // email-sent-by-phone
-router.post('/prototype6/iteration1/email-sent-by-phone', function(req, res) {
-  const howDoYouWantToApply = req.session.data['how-do-you-want-to-apply']
-  if (howDoYouWantToApply === 'online') {
-    res.redirect('calculator-finalpage');
+router.post('/prototype6/iteration1/emailSentAnswer', function(req, res) {
+  const contact = req.session.data['contact-method']
+    if (contact === 'phone') {
+    res.redirect('apply-by-phone.html');
   } else {
-    res.redirect('apply-by-phone');
+    res.redirect('https://cmg-apply.herokuapp.com/apply/february2022PP/1-start-eligibility/welcome');
   }
 });
 
+// text-message-sent
+
+router.post('/prototype6/iteration1/textMessageSent', function(req, res) {
+  const contact = req.session.data['contact-method']
+    if (contact === 'phone') {
+    res.redirect('apply-by-phone');
+  } else {
+    res.redirect('https://cmg-apply.herokuapp.com/apply/february2022PP/1-start-eligibility/welcome');
+  }
+});
 
 
 
