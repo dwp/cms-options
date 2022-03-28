@@ -175,7 +175,7 @@ router.post('/prototype6/iteration1/get-more-information', function(req, res) {
   if (req.body['more-info-choice'] === 'more-info-make-own-arrangement') {
     res.redirect('help-making-your-own-arrangement');
   } else {
-    res.redirect('your-application-reference-number-online');
+    res.redirect('how-do-you-want-to-apply');
   }
 });
 
@@ -231,7 +231,7 @@ router.post('/prototype6/iteration1/emailSentAnswer', function(req, res) {
     if (contact === 'phone') {
     res.redirect('apply-by-phone.html');
   } else {
-    res.redirect('https://cmg-apply.herokuapp.com/apply/february2022PP/1-start-eligibility/welcome');
+    res.redirect('start-your-application');
   }
 });
 
@@ -242,7 +242,7 @@ router.post('/prototype6/iteration1/textMessageSent', function(req, res) {
     if (contact === 'phone') {
     res.redirect('apply-by-phone');
   } else {
-    res.redirect('https://cmg-apply.herokuapp.com/apply/february2022PP/1-start-eligibility/welcome');
+    res.redirect('start-your-application');
   }
 });
 
@@ -322,7 +322,7 @@ router.post('/prototype6/iteration1/writeDownYourReference', function(req, res) 
     if (contact === 'phone') {
     res.redirect('apply-by-phone');
   } else {
-    res.redirect('https://cmg-apply.herokuapp.com/apply/february2022PP/1-start-eligibility/welcome');
+    res.redirect('start-your-application');
   }
 });
 
@@ -342,7 +342,7 @@ router.post('/prototype6/iteration1/writeDownYourReference', function(req, res) 
 
 router.post('/prototype6/iteration1/start-your-application', function(req, res) {
   if (req.body['start-your-application'] === 'yes') {
-    res.redirect(href="https://cmg-apply.herokuapp.com/apply/current/eligibility/intro");
+    res.redirect(href="https://cmg-apply.herokuapp.com/apply/february2022PP/1-start-eligibility/welcome");
   } else {
     res.redirect('apply-later');
   }
