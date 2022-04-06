@@ -31,9 +31,9 @@ router.post('/information/what-do-you-want-to-do', function(req, res) {
   if (req.body['what-do-you-want-to-do'] === 'not-ready') {
     res.redirect('what-do-you-want-to-do-next');
   } else if (req.body['what-do-you-want-to-do'] === 'make-own-arrangement'){
-    res.redirect('/prototype6/iteration1/make-your-own-arrangement');
+    res.redirect('/prototype6/iteration1/help-making-your-own-arrangement');
   } else if (req.body['what-do-you-want-to-do'] === 'use-service'){
-    res.redirect('/prototype6/iteration1/use-the-child-maintenance-service');
+    res.redirect('/prototype6/iteration1/how-do-you-want-to-apply');
   }
 });
 
