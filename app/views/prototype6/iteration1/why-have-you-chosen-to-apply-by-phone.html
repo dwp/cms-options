@@ -1,0 +1,144 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<!--Feedback banner start-->
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<!--Feedback banner stop-->
+
+<div class="govuk-width-container">
+    {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form method="post" novalidate>
+                    <!--start of checkboxes-->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="maintenance-liability-hint">
+                         
+                            <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                    <h1 class="govuk-fieldset__heading">
+                                        Why have you chosen to apply for child maintenance by phone?
+                                    </h1>
+                                  </legend>
+                                  <div id="waste-hint" class="govuk-hint">
+                                    Select all that apply.
+                                  </div>
+                                  <div class="govuk-inset-text">
+                                    This question is for research only. It will not affect your application.
+                                  </div>
+
+                                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                      <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                        I have an existing or closed case with the Child Maintenance Service
+                                      </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                                      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                        I'm not sure if I'm eligible to use the Child Maintenance Service
+                                      </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        I do not have reliable access to the internet
+                                      </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        I have accessibility needs which make completing online forms difficult
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                       I have experienced domestic abuse and want support
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                       My situation is complicated and needs to be explained
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        I still have questions before I apply
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        I need help or reassurance from a person
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        I do not want to give my personal details online
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        Something else
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                        Prefer not to say
+                                        </label>
+                                      </div>
+                                  </div>
+                              
+                                </fieldset>
+                              </div>
+                         
+
+                            
+
+                     
+
+                        </fieldset>
+                    </div>
+
+
+                    <!--end-->
+               
+                      <!--Hard coded button-->
+                    <a href="/prototype6/iteration1/apply-by-phone" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+                      Continue
+                      </a>
+
+
+                </form>
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <div class="govuk-button--sticky">
+                    <a href="https://www.bbc.co.uk/weather" role="button" draggable="false" class="govuk-button govuk-button--warning govuk-!-padding-5 govuk-button--sticky govuk-!-width-full govuk-button--stick hide-on-small"
+                        data-module="govuk-button">
+                        Hide this page
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+{% endblock %}

@@ -16,9 +16,9 @@ router.use((req, res, next) => {
 
 router.post('/prototype6/iteration1/answer-some-questions', function(req, res) {
   if (req.body['answer-some-questions'] === 'yes') {
-    res.redirect('answer-some-questions-q1');
+    res.redirect('why-have-you-chosen-to-apply-by-phone');
   } else {
-    res.redirect('where-do-you-live');
+    res.redirect('apply-by-phone');
   }
 });
 
@@ -229,7 +229,7 @@ router.post('/prototype6/iteration1/email-or-text-message', function(req, res) {
 router.post('/prototype6/iteration1/emailSentAnswer', function(req, res) {
   const contact = req.session.data['contact-method']
     if (contact === 'phone') {
-    res.redirect('apply-by-phone.html');
+    res.redirect('answer-some-questions.html');
   } else {
     res.redirect('start-your-application');
   }
@@ -240,7 +240,7 @@ router.post('/prototype6/iteration1/emailSentAnswer', function(req, res) {
 router.post('/prototype6/iteration1/textMessageSent', function(req, res) {
   const contact = req.session.data['contact-method']
     if (contact === 'phone') {
-    res.redirect('apply-by-phone');
+    res.redirect('answer-some-questions.html');
   } else {
     res.redirect('start-your-application');
   }
@@ -320,7 +320,7 @@ router.post('/prototype6/iteration1/text-message-sent-online', function(req, res
 router.post('/prototype6/iteration1/writeDownYourReference', function(req, res) {
   const contact = req.session.data['contact-method']
     if (contact === 'phone') {
-    res.redirect('apply-by-phone');
+    res.redirect('answer-some-questions.html');
   } else {
     res.redirect('start-your-application');
   }
