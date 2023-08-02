@@ -29,14 +29,14 @@
             <h3 class="govuk-heading-m">On GOV.UK</h3>
 
             <p class="govuk-body"><a href="web-arrange-child-maintenance-yourself" target="_blank" rel="noopener noreferrer">Making your own arrangement</a>
-              <span class="govuk-hint">More information about making your own arrangement and resources to help you do it.</span></p>
+              <br><span class="govuk-body">More information about making your own arrangement and resources to help you do it.</span></p>
 
               <p class="govuk-body"><a href="web-using-child-maintenance-service" target="_blank" rel="noopener noreferrer">Using the Child Maintenance Service</a>
-                <span class="govuk-hint">More information about using the Child Maintenance Service including how it works, eligibility, fees and more.</span>
+                <br><span class="govuk-body">More information about using the Child Maintenance Service including how it works, eligibility, fees and more.</span>
               </p>
 
               <p class="govuk-body"><a href="https://www.gov.uk/calculate-child-maintenance" target="_blank" rel="noopener noreferrer">Calculate your child maintenance</a>
-                <span class="govuk-hint">You can get an estimate of how much you would pay or receive if you used the Child Maintenance Service. You can use this amount to discuss making your own arrangement with the other parent.</span>
+                <br><span class="govuk-body">You can get an estimate of how much you would pay or receive if you used the Child Maintenance Service. You can use this amount to discuss making your own arrangement with the other parent.</span>
               </p>
 
               <h3 class="govuk-heading-m">Talk to someone</h3>
@@ -66,17 +66,32 @@
                 </legend>
                 <div class="govuk-radios govuk-radios--inline">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="more-info-make-own-arrangement" name="more-info-choice" type="radio" value="more-info-make-own-arrangement">
-                    <label class="govuk-label govuk-radios__label" for="more-info-make-own-arrangement">
+                    <input class="govuk-radios__input" id="make-own-arrangement" name="what-do-you-want-to-do" type="radio" value="make-own-arrangement">
+                    <label class="govuk-label govuk-radios__label" for="make-own-arrangement">
                       I want to make my own child maintenance arrangement
-                    </label>
+                    </label> 
                   </div>
+
+                  <!--This if/else will identify cases that cannot apply online and redirect to phone, skipping the channel choice-->
+                  {%  if ( data['will-you-be-paying-or-receiving'] === 'paying'
+                      or data['where-do-you-live'] === 'lives-somewhere-else'
+                      or data['where-does-the-other-parent-live'] === 'op-lives-outside-uk' )
+                  %}
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="more-info-use-cms" name="more-info-choice" type="radio" value="more-info-use-cms">
-                    <label class="govuk-label govuk-radios__label" for="more-info-use-cms">
+                    <input class="govuk-radios__input" id="use-cms-pp" name="what-do-you-want-to-do" type="radio" value="use-cms-pp">
+                    <label class="govuk-label govuk-radios__label" for="use-cms-pp">
                       I want to use the Child Maintenance Service
-                    </label>
+                    </label> 
                   </div>
+                  {% else %}
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="use-cms" name="what-do-you-want-to-do" type="radio" value="use-cms">
+                    <label class="govuk-label govuk-radios__label" for="use-cms">
+                      I want to use the Child Maintenance Service
+                    </label> 
+                  </div>
+                  {% endif %}
+
                 </div>
               </fieldset>
 
